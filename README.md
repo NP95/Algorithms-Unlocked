@@ -1113,6 +1113,33 @@ int main(void)
 }
 ```
 
+### Fast XOR Range : 
+
+```cpp
+
+#include <iostream>
+#include <stdio.h>
+#include <vector>
+using namespace std;
+
+long long xor_helper(long long a) {
+	long long result[] = {a, 1, a + 1, 0};
+	return result[a % 4]; // Awesome. 
+}
+
+long long XOR(long long a, long long b) {
+	return (xor_helper(b) ^ xor_helper(a - 1));
+}
+
+int main()
+{
+	long long a, b;
+	cout << "Enter numbers : " << endl;
+	cin >> a >> b;
+	cout << endl << "XOR of the range is : " << XOR(a, b) << endl;
+	return 0;
+}
+```
 
 ### Later Additions : 
 
