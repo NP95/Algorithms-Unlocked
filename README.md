@@ -1,4 +1,4 @@
-# Algorithms Unlocked (Code dive in Modern C++)
+# Algorithms (A code dive into using Modern C++)
 
 ### ```Code because you like to not because you have to. It is an art. It is a passion of high order.```
 
