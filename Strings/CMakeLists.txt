@@ -2,8 +2,9 @@
 cmake_minimum_required (VERSION 3.0 FATAL_ERROR)
 
 # Build Type
-set (CMAKE_BUILD_TYPE Debug)
+set (CMAKE_BUILD_TYPE Release)
 set (CMAKE_CXX_FLAGS "-std=c++17")
+message("CMAKE_BUILD_TYPE = ${CMAKE_BUILD_TYPE}")
 
 project (coding_ground)
 set (CODING_GROUND_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
