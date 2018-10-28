@@ -1,0 +1,18 @@
+version: "3"
+services:
+  node-processing-service:
+    build: .
+    container_name: node-microservice
+    depends_on:
+    - mongo-db-instance
+    ports:
+    - "8000:8000"
+  mongo-db-instance:
+    image: mongo
+    container_name: mongodb-service
+    logging: # For logging delete this part.
+      driver: "none"
+    #volumes:
+      #- ./db_dump:/data/db
+    ports:
+    - "27017:27017"
