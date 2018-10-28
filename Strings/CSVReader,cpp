@@ -32,7 +32,7 @@ std::vector<string> SplitWordsTokenizerCSVRead (string input_string)
         /* Find the next token and push it back. */
     }
     /* Last part of the string is still left out. */
-    auto temp = input_string.substr(i, std::min(pos, input_string.length()) - i + 1);
+    auto temp = input_string.substr(i, std::min(pos, input_string.length()));
     temp.erase(0, 1);
     split_tokens.push_back(temp);
     /* Return vector of tokens */
@@ -44,7 +44,7 @@ int main(int argc, char **argv)
     std::string input = "";
     std::vector<std::vector<std::string> > CSVTokens;
     std::fstream fileCSVReader(argv[1], std::fstream::in);
-    while(fileCSVReader.good() && std::getline(fileCSVReader, input))
+    while(fileCSVReader.good() && std::getline(cin, input))
     {
         auto dump = SplitWordsTokenizerCSVRead(input);
         CSVTokens.push_back(dump);
@@ -56,5 +56,6 @@ int main(int argc, char **argv)
             std::cout << "Token :" << b << std::endl; 
         }
     }
+    std::cout << "Done" << std::endl;
     return 0;
 }
