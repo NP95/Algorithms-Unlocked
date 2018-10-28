@@ -4,6 +4,7 @@
 #include <vector>
 #include <fstream>
 #include <algorithm>
+#include <stdlib.h>
 using namespace std;
 /* Read, Tokenize, Write CSV */
 std::vector<string> SplitWordsTokenizerCSVRead (string input_string)
@@ -41,7 +42,12 @@ std::vector<string> SplitWordsTokenizerCSVRead (string input_string)
 
 int main(int argc, char **argv)
 {
+    if(argc < 2) {
+        fprintf(stdout,"Usage: %s file_name\n",argv[0]);
+        exit(EXIT_FAILURE);
+    }    
     std::string input = "";
+    // atoi(argv[0]), atof(argv[1])
     std::vector<std::vector<std::string> > CSVTokens;
     std::fstream fileCSVReader(argv[1], std::fstream::in);
     while(fileCSVReader.good() && std::getline(cin, input))
