@@ -20,7 +20,7 @@ First Basic C++  & Node.js Syntax & Coding Practices are discussed.
 The folder ```Source Files``` contains basic ```C++``` & ```Node.js``` tutorials for beginners.
 It will give someone a feel as to how coding in ```C++``` or ```Node.js``` is. 
 
-Build files and code for ```Windows Application (Using C++)``` & ```Node.js``` Website for problem solving and Competitive Programming will be put in soon under ```Windows Application``` & ```Nodejs Website``` folder.
+Build files and code for ```Windows Application (Using C++)``` & ```Node.js``` Website for problem solving and Competitive Programming will be put in soon under ```Windows Application``` & ```Nodejs Website``` folder. ```DockerFile``` and ```docker-compose.yml``` files added for docker build. ```run.cpp``` file needed in top dicrectory. Keep code in ```run.cpp``` file. 
 
 Please check other repositores in my account as well. I have made and online compiler capable of running C++/C code. Below a screen shot of the same. Please feel free to contact me for any C/C++ or Node.js Application. I will be happy to help.
 
