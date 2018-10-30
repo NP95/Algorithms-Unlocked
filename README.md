@@ -1763,3 +1763,18 @@ void random_raw_fill()
 
 }
 ```
+
+```C++
+    std::random_device rd;
+    std::default_random_engine seed(rd());
+    std::uniform_int_distribution<int> random_engine_block(MIN_RANGE, MAX_RANGE);
+    auto random = std::bind(random_engine_block, seed); 
+    for(auto i = 0; i < 5000; i++){
+        for(auto j = 0; j < 15; j++){
+            std::cout << random() << ",";
+        }
+        std::cout << std::endl;
+    }
+```
+
+
