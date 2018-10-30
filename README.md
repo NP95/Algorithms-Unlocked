@@ -1741,5 +1741,25 @@ timesfunc :
 	mov esp, ebp
 	pop ebp
 	ret
-```	
+```
+
 ![alt-tag](https://raw.githubusercontent.com/SpawnTree/AlgorithmsUnlocked/master/Images/bash.JPG)
+
+### Computing Random seed numbers.
+
+```C++
+#define MIN_RANGE 21
+#define MAX_RANGE 999999999
+
+void random_raw_fill()
+{
+    std::random_device rd;
+    std::default_random_engine seed(rd());
+    std::uniform_int_distribution<int> random_engine_block(MIN_RANGE, MAX_RANGE);
+    auto random = std::bind(random_engine_block, seed); 
+    for(auto i = 0; i < 4000000; i++){
+        std::cout << random() << std::endl;
+    }
+
+}
+```
