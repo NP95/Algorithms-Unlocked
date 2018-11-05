@@ -783,6 +783,38 @@ void TrimExtraWhiteSpace(string &str)
 	cout << "Modified String : " << str.substr(0, write_idx);
 }
 ```
+### Remove Extra-duplicate entries in a sorted array and get return the length upto unique elements. 
+
+```cpp
+#include <iostream>
+#include <vector>
+using namespace std;
+ 
+int RemoveDuplicates(std::vector<int> &input)
+{
+	size_t write_idx = 0;
+	for(auto i = 0; i < input.size(); i++)
+	{
+    	// Don't increment the write_index when the elements are same. 
+    	if(input[i] != input[write_idx]){
+    	input[++write_idx] = input[i];
+    }
+  }
+  return write_idx; 
+}
+ 
+ 
+int main() {
+	std::vector<int> input = {1,1,2,2,2,3,3,4};
+	auto dump = RemoveDuplicates(input);
+	cout << dump << endl;
+	for(const auto& e : input)
+	{
+		cout << e << ",";
+	}
+	return 0;
+}
+```
 
 ### Given two strings find the Longest common Subsequence and Longest common substring between the two strings (X, Y)
 
