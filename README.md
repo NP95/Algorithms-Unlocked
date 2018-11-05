@@ -24,7 +24,7 @@ Build files and code for ```Windows Application (Using C++)``` & ```Node.js``` W
 
 Please check other repositores in my account as well. I have made and online compiler capable of running C++/C code. Below a screen shot of the same. Please feel free to contact me for any C/C++ or Node.js Application. I will be happy to help.
 
-![alt-tag](https://raw.githubusercontent.com/SpawnTree/AlgorithmsUnlocked/master/Updated.JPG)
+![alt-tag](https://raw.githubusercontent.com/SpawnTree/AlgorithmsUnlocked/master/Images/Updated.JPG)
 
 
 #### Basic Algorithms on seaching, sorting, merging, recursion, dynamic-programming, thread-concurrency and graph traversal algorithms have been updated. 
@@ -36,7 +36,7 @@ Please check other repositores in my account as well. I have made and online com
 
 #### Note : Please ask all necessary questions to the interviwer, incase it comes up in an interview.
 
-![alt-tag](https://raw.githubusercontent.com/SpawnTree/AlgorithmsUnlocked/master/graph.jpg)
+![alt-tag](https://raw.githubusercontent.com/SpawnTree/AlgorithmsUnlocked/master/Images/graph2.jpg)
 
 C++ Code to perform the following tasks : 
 
@@ -534,7 +534,7 @@ int main()
 }
 ```
 
-![alt-tag](https://raw.githubusercontent.com/SpawnTree/AlgorithmsUnlocked/master/sets.bmp)
+![alt-tag](https://raw.githubusercontent.com/SpawnTree/AlgorithmsUnlocked/master/Images/sets.bmp)
 
 ### 6. Compare Prim & Kruskal Algorithms.
 
@@ -760,7 +760,7 @@ int main()
 }
 ```
 
-![alt-tag](https://raw.githubusercontent.com/SpawnTree/AlgorithmsUnlocked/master/Capture.JPG)
+![alt-tag](https://raw.githubusercontent.com/SpawnTree/AlgorithmsUnlocked/master/Images/Capture.JPG)
 
 ### Remove extra-white spaces without using stringstream or extra-space (no new string object/ array is allowed) in O(n) time where n is the number of characters. 
 
