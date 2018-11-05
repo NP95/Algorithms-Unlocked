@@ -1,7 +1,5 @@
 #include <iostream>
-#include <stdlib.h>
-int main (void)
+int main()
 {
-  std::cout << "Build Working...! << std::endl;
-  return 0;
+    return 0;
 }
