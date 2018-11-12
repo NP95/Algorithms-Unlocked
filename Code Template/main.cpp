@@ -1,14 +1,15 @@
-#include "Headers/allheaders.h"
-#include "Headers/static.h"
-using namespace std;
+//
+//  main.cpp
+//  Codechef_codes
+//
+//  Created by SUMIT  LAHIRI on 11/13/18.
+//  Copyright © 2018 Google PPLNS. All rights reserved.
+//
 
-int main(int argc, char *argv[])
-{
-    freopen(STDIN_FILE_REDIRECT, "r+", stdin);
-    freopen(STDOUT_FILE_REDIRECT, "w+", stdout);
-    freopen(STDOUT_LOGGER_ERROR_REDIRECT, "w+", stderr);
-    std::cout << "NO ERROR. " << std::endl;
-    
-    close();
-    exit(EXIT_SUCCESS);
+#include <iostream>
+
+int main(int argc, const char * argv[]) {
+    // insert code here...
+    std::cout << "Hello, World!\n";
+    return 0;
 }
