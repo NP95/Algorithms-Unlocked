@@ -12,7 +12,7 @@
 #endif /* constants_h */
 
 #ifndef GLOBAL_DIR
-#define GLOBAL_DIR ""
+#define GLOBAL_DIR "/Users/sumitlahiri/Documents/ProjectStudio/Google_Code/"
 #endif
 
 #ifndef STDIN_FILE_REDIRECT
