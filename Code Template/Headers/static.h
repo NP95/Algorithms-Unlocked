@@ -9,6 +9,10 @@
 #ifndef static_h
 #define static_h
 
+#include <openssl/sha.h>
+#include <curlpp/Easy.hpp>
+#include <curlpp/Options.hpp>
+#include <curlpp/cURLpp.hpp>
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>

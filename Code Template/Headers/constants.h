@@ -28,7 +28,7 @@
 #endif
 
 #ifndef STDOUT_LOGGER_ERROR_REDIRECT
-#define STDOUT_LOGGER_ERROR_REDIRECT "./Logs/error_log.txt"
+#define STDOUT_LOGGER_ERROR_REDIRECT "./logs/error_log.txt"
 #endif
 
 #ifndef MIN_RANGE
