@@ -1,5 +1,4 @@
-/* Error & Run Logs .*/
-
+/* Error & Run Logs */
 
 Build ID : 329481462, Build Hash : 449f22471719f7d16965acde5a262a201bc2416934c6f5c1e6b34f73ba678829
 Time : 0.000569 sec, Ticks : 569
@@ -104,3 +103,5 @@ Read Test : Read using custom function
 Time : 5.79386 sec, Ticks : 5793860
 Read and write data using cin, printf
 Time : 2.83137 sec, Ticks : 2831373
+Build ID : 12852999, Build Hash : 9c4ef9b6ab2961d2dab25f8fd9ca5861b81b5a32974b5fa9c8ef9fcb31c4581
+Time : 0.00075 sec, Ticks : 750
