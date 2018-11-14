@@ -23,6 +23,14 @@
 #define STDOUT_FILE_REDIRECT "./Output/output.txt"
 #endif
 
+#ifndef STDOUT_CODECHEF_REDIRECT
+#define STDOUT_CODECHEF_REDIRECT "./codechef.cpp"
+#endif
+
+#ifndef MAIN
+#define MAIN "./code.cpp"
+#endif
+
 #ifndef STDIN_TEST_REDIRECT
 #define STDIN_TEST_REDIRECT "./Cases/testcase.txt"
 #endif

@@ -1,14 +1,74 @@
-//
-//  methods.h
-//  Google_Code
-//
-//  Created by SUMIT  LAHIRI on 11/4/18.
-//  Copyright © 2018 Google PPLNS. All rights reserved.
-//
+/**
+ * CodeObsess
+ * Copyright © 2018 CodeObsess All rights reserved
+ */
 
-#ifndef methods_h
-#define methods_h
-#include "static.h"
+#ifdef __clang__
+#    pragma clang system_header
+#elif defined __GNUC__
+#    pragma GCC system_header
+#endif
+
+#ifndef MIN_RANGE
+#define MIN_RANGE 0
+#endif
+
+#ifndef MAX_RANGE
+#define MAX_RANGE 655369636
+#endif
+
+#ifndef RANDOM_RANGE
+#define RANDOM_RANGE 854412
+#endif
+
+#include <iostream>
+#include <stdio.h>
+#include <cstdio>
+#include <cstring>
+#include <cstdlib>
+#include <cassert>
+#include <stdlib.h>
+#include <unistd.h>
+#include <vector>
+#include <algorithm>
+#include <map>
+#include <set>
+#include <unordered_map>
+#include <unordered_set>
+#include <queue>
+#include <deque>
+#include <array>
+#include <bitset>
+#include <functional>
+#include <stack>
+#include <string>
+#include <fstream>
+#include <sstream>
+#include <memory>
+#include <math.h>
+#include <thread>
+#include <forward_list>
+#include <list>
+#include <ios>
+#include <streambuf>
+#include <atomic>
+#include <future>
+#include <mutex>
+#include <thread>
+#include <numeric>
+#include <random>
+#include <regex>
+#include <utility>
+#include <typeinfo>
+#include <exception>
+#include <ctime>
+#include <time.h>
+#include <chrono>
+#include <system_error>
+#include <initializer_list>
+#include <tuple>
+#include <stdexcept>
+#include <iomanip>
 
 /* #define */
 #define bit(x, i) ( x & (1<<i) )  //select the bit of position i of x
@@ -16,7 +76,7 @@
 #define hBit(msb, n) asm("bsrl %1,%0" : "=r"(msb) : "r"(n)) //get the highest bit of x, maybe the fastest
 #define MOD 10000000003
 #define print(vec) for (const auto& i : vec) cout << i << endl;
-#define fori(vec) for (const auto& i : vec) 
+#define fori(vec) for (const auto& i : vec)
 #define fill(vec,size) for (auto i = 0; i < size; i++) { vec.pb(i); }
 #define input(ss, inputbuffer) while(cin.good()) { getline(cin, inputbuffer); ss << inputbuffer << endl; }
 #define inputLL(j, vec) while(cin.good()) { cin >> j;  vec.pb(j); }
@@ -31,7 +91,7 @@
 #define itn int
 #define mp make_pair
 #define mt make_tuple
-#define pb push_back 
+#define pb push_back
 #define pf push_front
 #define popf pop_front
 #define popb pop_back
@@ -40,7 +100,7 @@
 #define rall(x) (x).rbegin(), (x).rend()
 #define rev(A) std::reverse(A.begin(), A.end())
 #define sort(A) std::sort(A.begin(),A.end())
-#define present(c,x) ((c).find(x) != (c).end()) 
+#define present(c,x) ((c).find(x) != (c).end())
 #define cpresent(c,x) (find(all(c),x) != (c).end())
 #define forn(i, n) for (int i = 0; i < (int)(n); ++i)
 #define for1(i, n) for (int i = 1; i <= (int)(n); ++i)
@@ -62,7 +122,15 @@ template<typename T> T extended_euclid(T a, T b, T &x, T &y){T xx=0,yy=1;y=0;x=1
 template<typename T> T mod_inverse(T a, T n){T x,y;T d = extended_euclid(a, n, x, y);return (d>1?-1:mod_neg(x,n));}
 template <typename T> T InverseEuler(T a, T m){return (a==1? 1 : power(a, m-2, m));}
 template <typename T> T gcd(T a, T b){return (!b)? a:gcd(b,a%b);}
-template <typename T> T lcm(T a, T b){return (a*(b/gcd(a,b)));}
+template <typename T> T lcm(T a, T b){return (a*(b/gcd(a,b)));
+    
+using namespace std;
 
-#endif /* methods_h */
+std::random_device rd;
+std::default_random_engine seed(rd());
+std::uniform_int_distribution<int> random_engine_block(MIN_RANGE, MAX_RANGE);
+auto rd_ints = std::bind(random_engine_block, seed);
+clock_t start_time, end_time;
+
+/* Appended code here using freopen() */
 
