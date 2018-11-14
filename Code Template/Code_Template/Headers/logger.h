@@ -34,7 +34,24 @@ void random_logger()
 {
     std::string build_base = std::to_string(rd_ints());
     std::string str = "Build ID : " + build_base;
+    std::cerr << "----------------------------------------------------------------------------------------------------------------------------------------------" << std::endl;
     std::cerr << str << ", Build Hash : " << sha256(str) << std::endl;
+}
+
+void log(clock_t end_time, int &argc, char* *argv)
+{
+    std::cerr << "Running with " << argc << " " << argv[1] << " Time : " << ((float)end_time)/CLOCKS_PER_SEC << " sec, " << "Ticks : " << end_time << std::endl;
+}
+
+void ioutil()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    /* STDIN, STDOUT, STDERR */
+    freopen(STDIN_FILE_REDIRECT, "r+", stdin);
+    freopen(STDOUT_FILE_REDIRECT, "a+", stdout);
+    freopen(STDOUT_LOGGER_ERROR_REDIRECT, "a+", stderr);
+    random_logger();
 }
 
 #endif /* logger_h */

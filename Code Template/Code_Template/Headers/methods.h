@@ -52,7 +52,7 @@ using namespace std;
 /* Templates */
 template<class T> bool smaller(T &a, T &b) { return a < b ? true : false; }
 template<class T> bool bigger(T &a, T &b) { return a > b ? true : false; }
-template<class T, class U> modulo(T& a, U& b) { return a % b; }
+template<class T, class U> T modulo(T& a, U& b) { return a % b; }
 
 #endif /* methods_h */
 
