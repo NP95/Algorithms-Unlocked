@@ -1,0 +1,106 @@
+/* Error & Run Logs .*/
+
+
+Build ID : 329481462, Build Hash : 449f22471719f7d16965acde5a262a201bc2416934c6f5c1e6b34f73ba678829
+Time : 0.000569 sec, Ticks : 569
+
+Read Test  :
+
+Build ID : 619412771, Build Hash : 77ffcc6fd475112c151ee5cbf1156ed7aab38a93f7d9ff65bf0497ad91e75
+Read Test : Read using cin
+Time : 0.095891 sec, Ticks : 95891
+Build ID : 417242357, Build Hash : cc8ebefa1b93843d7eebe59206b9ad7c589d389e25dfe405d5125a39d623473
+Read Test : Read using cin
+Time : 0.108859 sec, Ticks : 108859
+
+Build ID : 215858314, Build Hash : e8919fd35cc5c4aeff6abf4c82d5c92fe698d4281d2f751af4cea192a2e52
+Read Test : Read using scanf
+Time : 0.836591 sec, Ticks : 836591
+Build ID : 151313805, Build Hash : d1562d3f8dd7673c36287b91476d6419f59c6a7f7c3179f6de311035ea9
+Read Test : Read using scanf
+Time : 0.953818 sec, Ticks : 953818
+Build ID : 440815676, Build Hash : 3be26de1575b7d5c8dae5c752d4732ea027ae17f6a222ce923dc2a753bc2f1
+Read Test : Read using scanf
+Time : 0.793196 sec, Ticks : 793196
+
+Write Test :
+
+Build ID : 513691416, Build Hash : 813f6baf3240265ac4b9ca20567a2cde83a350723d98e7b4db5b2694bfa9e16
+Write Test : cout used
+Time : 4.42538 sec, Ticks : 4425376
+Build ID : 233517955, Build Hash : 43216eae4879be643a5e49766291280b52b71495683915d5090c4a435dc05f
+Write Test : cout used
+Time : 4.48256 sec, Ticks : 4482559
+
+Build ID : 202562417, Build Hash : b3526b6781ac6bc44cdad5092c4e4144af19b25614cfc2dd33e31f4977ad52a
+Write Test :  printf used
+Time : 2.55878 sec, Ticks : 2558780
+Build ID : 112863911, Build Hash : e4cbd7ee28cbea8315ecfeade4190b6e7e1ce577476109a60f89cb3b85925bc
+Write Test :  printf used
+Time : 2.58027 sec, Ticks : 2580273
+			
+Read & Write Test :
+
+Build ID : 204093499, Build Hash : 5660bbd2fde32833adb7736132c0191611c83fb9f244febc57a67c26a423b4c
+Read Test : Read using cin
+Write Test : cout used
+Time : 4.62564 sec, Ticks : 4625637
+Build ID : 172839204, Build Hash : 8b4478347a037d4fc9b5f469a42690ec919a79c9d7de5223cf6429b68587
+Read Test : Read using cin
+Write Test : cout used
+Time : 4.59435 sec, Ticks : 4594353
+Build ID : 430782049, Build Hash : 6b276a89e17ceb36958a76e69d505b733ac1d2386cccf45bd9ebc494de68a0e0
+Read Test : Read using scanf
+Write Test : cout used
+Time : 5.33596 sec, Ticks : 5335960
+Build ID : 310221566, Build Hash : cae480d3c54596742825f6c2268ce7395719323d652177fc6bde477ef88e445
+Read Test : Read using scanf
+Write Test : cout used
+Time : 5.21029 sec, Ticks : 5210289
+Build ID : 86486328, Build Hash : ea42659221de92eb1346ed39d4ce2a9608ab33b463ab14737ece832fd6e28
+Read Test : Read using cin
+Write Test :  printf used
+Time : 2.6481 sec, Ticks : 2648097
+Build ID : 332917968, Build Hash : d4e4ac3e0d92566571019c379b25ee93d8b291dc7ca11e6ab15d59eaebf8a0
+Read Test : Read using cin
+Write Test :  printf used
+Time : 2.31694 sec, Ticks : 2316939
+Build ID : 63881800, Build Hash : 919b94f4f4ca199ec2826b35e5aa2d945668cb34fe243a8ca2c6dad221ff2fd
+Read Test : Read using scanf
+Write Test :  printf used
+Time : 3.29252 sec, Ticks : 3292524
+Build ID : 175026168, Build Hash : c38012435b6caf3d9d2aa57ada82b9cbb5c145ffb80f26bffcd49176b99732
+Read Test : Read using scanf
+Write Test :  printf used
+Time : 4.85897 sec, Ticks : 4858972
+
+
+Build ID : 550018747, Build Hash : f1fce1c51842e622c7dac0cff2b41db6ed912c76695f5217e56d6ed1594b828
+Read Test : Read using cin
+Read Test : Read using scanf
+Time : 1.01965 sec, Ticks : 1019653
+Build ID : 405299211, Build Hash : 9c46443549c17c33b67e955aba0293c6eccb6f3714322c7849565d0e95327e
+Write Test : cout used
+Write Test :  printf used
+Time : 6.83317 sec, Ticks : 6833174
+Build ID : 137288939, Build Hash : ea80e2b98f83d468e2e219ea166d3ec6a24a3823d93790754046da33fed23b
+Read Test : Read using cin
+Read Test : Read using scanf
+Write Test : cout used
+Write Test :  printf used
+Time : 7.49201 sec, Ticks : 7492013
+
+
+Time : 0.000226 sec, Ticks : 226
+Time : 0.000339 sec, Ticks : 339
+Time : 0.000128 sec, Ticks : 128
+
+Read Test : Read using cin
+Read Test : Read using scanf
+Write Test : cout used
+Write Test :  printf used
+Time : 64.0762 sec, Ticks : 64076199
+Read Test : Read using custom function
+Time : 5.79386 sec, Ticks : 5793860
+Read and write data using cin, printf
+Time : 2.83137 sec, Ticks : 2831373
