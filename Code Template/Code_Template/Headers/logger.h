@@ -84,6 +84,10 @@ void ioutil(const string& type = "stdin")
     	freopen(STDIN_FILE_REDIRECT, "r+", stdin);
     else if (type == "testcase")
     	freopen(STDIN_TEST_REDIRECT, "r+", stdin);
+    else if (type == "codejam-small")
+        freopen(STDIN_CODEJAM_SMALL_REDIRECT, "r+", stdin);
+    else if (type == "codejam-large")
+        freopen(STDIN_CODEJAM_LARGE_REDIRECT, "r+", stdin);
     else
         freopen(type.c_str(), "r+", stdin);
 
