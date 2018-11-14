@@ -53,4 +53,5 @@ void ioutil()
     freopen(STDOUT_LOGGER_ERROR_REDIRECT, "a+", stderr);
     random_logger();
 }
+
 #endif /* logger_h */

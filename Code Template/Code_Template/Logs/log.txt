@@ -105,3 +105,18 @@ Read and write data using cin, printf
 Time : 2.83137 sec, Ticks : 2831373
 Build ID : 12852999, Build Hash : 9c4ef9b6ab2961d2dab25f8fd9ca5861b81b5a32974b5fa9c8ef9fcb31c4581
 Time : 0.00075 sec, Ticks : 750
+----------------------------------------------------------------------------------------------------------------------------------------------
+Build ID : 491258687, Build Hash : d946a84d2856952cdd49afc279fd24c13de0ca25c4a77be911c39854c7d16a59
+Running with 3 -NSShowNonLocalizedStrings Time : 0.000491 sec, Ticks : 491
+----------------------------------------------------------------------------------------------------------------------------------------------
+Build ID : 135168574, Build Hash : bf24757d62888d407d8445c3c0a7c64ec495dfb21a254622928678256ff6e5c
+Running with 3 -NSShowNonLocalizedStrings Time : 0.00046 sec, Ticks : 460
+----------------------------------------------------------------------------------------------------------------------------------------------
+Build ID : 35109785, Build Hash : eb47f05eab4bcbc27b9a83d697b39201fe3dd3847c983ee1447ed93755e1e2
+Running with 3 -NSShowNonLocalizedStrings Time : 0.000505 sec, Ticks : 505
+----------------------------------------------------------------------------------------------------------------------------------------------
+Build ID : 309264704, Build Hash : 20a7f14b8e2096c63857c5b379f9797eb5355a2aef49517dca62c3a7bfd92f
+Running with 3 -NSShowNonLocalizedStrings Time : 0.000339 sec, Ticks : 339
+----------------------------------------------------------------------------------------------------------------------------------------------
+Build ID : 84348654, Build Hash : f0913c361935f9953e653794d4917922fad7cac719149b6e748d3f3f8dfda83
+Running with 3 -NSShowNonLocalizedStrings Time : 0.000509 sec, Ticks : 509
