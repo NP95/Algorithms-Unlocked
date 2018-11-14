@@ -47,7 +47,7 @@ void ioutil()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
-    /* STDIN, STDOUT, STDERR */
+    /* STDIN, STDOUT, STDERR, Test cases : STDIN_TEST_REDIRECT */
     freopen(STDIN_FILE_REDIRECT, "r+", stdin);
     freopen(STDOUT_FILE_REDIRECT, "a+", stdout);
     freopen(STDOUT_LOGGER_ERROR_REDIRECT, "a+", stderr);
