@@ -1,1 +1,1 @@
-/* Input File .*/
+/* Input File */

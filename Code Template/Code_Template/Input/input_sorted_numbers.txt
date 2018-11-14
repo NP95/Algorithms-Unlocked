@@ -1,1 +1,1 @@
-/* Full sorted I/O .*/
+/* Full sorted I/O */
