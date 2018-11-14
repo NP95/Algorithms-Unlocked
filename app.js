@@ -1,5 +1,7 @@
+/* Automate Build using Node.js */
+
 var spawn = require('child_process').spawn;
-var start = spawn('ls');
+var start = spawn('ls'); // Changes fork program in Windows .
 start.on('close', function(data){
   if(data === 0) {
     var compile = spawn('g++',['run.cpp','-O3','-W','-pedantic','-march=native','-o','run.exe']);

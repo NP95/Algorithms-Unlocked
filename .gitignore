@@ -43,3 +43,9 @@ Linux Console/obj
 /Competitve Standards/.vs
 /Testing MSVC/.vs/JordanTester/v15
 /Testing MSVC/x64/Debug
+*.txt
+*.in
+*.out
+*.hxx
+*.cxx
+

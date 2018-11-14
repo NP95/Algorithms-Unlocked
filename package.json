@@ -1,7 +1,7 @@
 {
   "name": "node-microservice",
   "version": "1.0.0",
-  "description": "node-redis-bitcoin-processing application. ",
+  "description": "node application. ",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
@@ -12,10 +12,10 @@
   },
   "keywords": [
     "node.js",
-    "bitcoin",
-    "bitcoin-js",
     "app.js",
     "redis-cache"
+    "competitve-programming"
+    "C++"
   ],
   "author": "SUMIT LAHIRI <shekharhiran@hotmail.com>",
   "license": "ISC",
