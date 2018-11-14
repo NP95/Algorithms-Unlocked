@@ -1,9 +1,9 @@
 #include "Headers/allheaders.h"
-const string input_type = "stdin";
+
 int main(int argc, char* argv[])
 {
     start_time = clock();
-    ioutil(input_type);
+    ioutil("stdin");
     /* Your Code here */
     
     

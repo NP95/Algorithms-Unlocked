@@ -47,13 +47,18 @@ void ioutil(const string& type)
 {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
+    
     /* STDIN, STDOUT, STDERR, Test cases : STDIN_TEST_REDIRECT */
     if(type == "stdin")
     	freopen(STDIN_FILE_REDIRECT, "r+", stdin);
-    else
+    else if (type == "testcase")
     	freopen(STDIN_TEST_REDIRECT, "r+", stdin);
+    else
+        freopen(type.c_str(), "r+", stdin);
+
     freopen(STDOUT_FILE_REDIRECT, "a+", stdout);
     freopen(STDOUT_LOGGER_ERROR_REDIRECT, "a+", stderr);
+    
     random_logger();
 }
 
