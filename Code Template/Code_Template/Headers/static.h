@@ -89,6 +89,7 @@
 #include <tuple>
 #include <stdexcept>
 #include <iomanip>
+#include "constants.h"
 using namespace std;
 
 /* Random Global */
@@ -97,9 +98,5 @@ std::default_random_engine seed(rd());
 std::uniform_int_distribution<int> random_engine_block(MIN_RANGE, MAX_RANGE);
 auto rd_ints = std::bind(random_engine_block, seed);
 clock_t start_time, end_time;
-
-#ifndef ONLINE_JUDGE
-// paste main here and upload.
-#endif
 
 #endif /* static_h */

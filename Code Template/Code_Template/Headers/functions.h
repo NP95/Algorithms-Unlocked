@@ -10,6 +10,7 @@
 #define functions_h
 #include "static.h"
 #include "methods.h"
+#include "constants.h"
 
 void copy_codechef()
 {

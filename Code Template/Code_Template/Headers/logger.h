@@ -63,7 +63,7 @@ void random_logger()
     std::cerr << "--------------------------------------------------------------------BUILD---------------------------------------------------------------------" << std::endl;
 #ifdef __APPLE__
     std::cerr << str << ", Build Hash : " << sha256(str) << std::endl;
-#elif
+#elif _WIN64 || _WIN32
     std::cerr << str << std::endl;
 #endif
 }
