@@ -43,12 +43,15 @@ void log_time(clock_t end_time, int &argc, char* *argv)
     std::cerr << "Running with " << argc << " " << argv[1] << " Time : " << ((float)end_time)/CLOCKS_PER_SEC << " sec, " << "Ticks : " << end_time << std::endl;
 }
 
-void ioutil()
+void ioutil(const string& type)
 {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     /* STDIN, STDOUT, STDERR, Test cases : STDIN_TEST_REDIRECT */
-    freopen(STDIN_FILE_REDIRECT, "r+", stdin);
+    if(type == "stdin")
+    	freopen(STDIN_FILE_REDIRECT, "r+", stdin);
+    else
+    	freopen(STDIN_TEST_REDIRECT, "r+", stdin);
     freopen(STDOUT_FILE_REDIRECT, "a+", stdout);
     freopen(STDOUT_LOGGER_ERROR_REDIRECT, "a+", stderr);
     random_logger();
