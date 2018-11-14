@@ -53,8 +53,7 @@ using namespace std;
 template<class T> bool smaller(T &a, T &b) { return a < b ? true : false; }
 template<class T> bool bigger(T &a, T &b) { return a > b ? true : false; }
 template<class T, class U> T modulo(T& a, U& b) { return a % b; }
-<<<<<<< HEAD
-=======
+
 
 void ioutil()
 {
@@ -65,7 +64,5 @@ void ioutil()
     freopen(STDOUT_FILE_REDIRECT, "a+", stdout);
     freopen(STDOUT_LOGGER_ERROR_REDIRECT, "a+", stderr);
 }
->>>>>>> 50f6c09ec5ca23875d3985c927b21537844e5307
-
 #endif /* methods_h */
 
