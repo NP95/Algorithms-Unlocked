@@ -38,6 +38,7 @@ void random_logger()
     std::cerr << str << ", Build Hash : " << sha256(str) << std::endl;
 }
 
+<<<<<<< HEAD
 void log(clock_t end_time, int &argc, char* *argv)
 {
     std::cerr << "Running with " << argc << " " << argv[1] << " Time : " << ((float)end_time)/CLOCKS_PER_SEC << " sec, " << "Ticks : " << end_time << std::endl;
@@ -53,5 +54,8 @@ void ioutil()
     freopen(STDOUT_LOGGER_ERROR_REDIRECT, "a+", stderr);
     random_logger();
 }
+=======
+
+>>>>>>> 50f6c09ec5ca23875d3985c927b21537844e5307
 
 #endif /* logger_h */
