@@ -1,5 +1,5 @@
 /**
- * CodeObsess
+ * CodeObsess (SpawnTree)
  * Copyright © 2018 CodeObsess All rights reserved
  */
 
@@ -15,10 +15,6 @@
 
 #ifndef MAX_RANGE
 #define MAX_RANGE 655369636
-#endif
-
-#ifndef RANDOM_RANGE
-#define RANDOM_RANGE 854412
 #endif
 
 #include <iostream>
@@ -106,7 +102,6 @@
 #define for1(i, n) for (int i = 1; i <= (int)(n); ++i)
 #define forvec(container, it) for(decltype(container.begin()) it = container.begin(); it != container.end(); it++)
 #define Assert(x) {if(!(x)){cerr<<"Assertion failed at line "<<__LINE__<<": "<<#x<<" = "<<(x)<<"\n";exit(1);}}
-#define trace(...) __f(#__VA_ARGS__, __VA_ARGS__)
 #define abs(x) ( x < 0 ? (-x) : x) // big bug here if "-x" is not surrounded by "()"
 #define LL long long int
 using std::chrono::duration_cast;
@@ -123,8 +118,6 @@ template<typename T> T mod_inverse(T a, T n){T x,y;T d = extended_euclid(a, n, x
 template <typename T> T InverseEuler(T a, T m){return (a==1? 1 : power(a, m-2, m));}
 template <typename T> T gcd(T a, T b){return (!b)? a:gcd(b,a%b);}
 template <typename T> T lcm(T a, T b){return (a*(b/gcd(a,b)));
-    
-using namespace std;
 
 std::random_device rd;
 std::default_random_engine seed(rd());

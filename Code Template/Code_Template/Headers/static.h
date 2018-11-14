@@ -1,3 +1,8 @@
+/**
+ * CodeObsess (SpawnTree)
+ * Copyright © 2018 CodeObsess All rights reserved
+ */
+
 #ifndef static_h
 #define static_h
 
