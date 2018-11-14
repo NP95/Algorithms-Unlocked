@@ -42,5 +42,3 @@
 #ifndef RANDOM_RANGE
 #define RANDOM_RANGE 854412
 #endif
-
-#define print "PRINT"

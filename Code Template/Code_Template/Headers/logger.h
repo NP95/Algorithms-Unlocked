@@ -37,4 +37,6 @@ void random_logger()
     std::cerr << str << ", Build Hash : " << sha256(str) << std::endl;
 }
 
+
+
 #endif /* logger_h */

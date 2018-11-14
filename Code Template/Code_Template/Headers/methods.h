@@ -52,7 +52,17 @@ using namespace std;
 /* Templates */
 template<class T> bool smaller(T &a, T &b) { return a < b ? true : false; }
 template<class T> bool bigger(T &a, T &b) { return a > b ? true : false; }
-template<class T, class U> modulo(T& a, U& b) { return a % b; }
+template<class T, class U> T modulo(T& a, U& b) { return a % b; }
+
+void ioutil()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    /* STDIN, STDOUT, STDERR */
+    freopen(STDIN_FILE_REDIRECT, "r+", stdin);
+    freopen(STDOUT_FILE_REDIRECT, "a+", stdout);
+    freopen(STDOUT_LOGGER_ERROR_REDIRECT, "a+", stderr);
+}
 
 #endif /* methods_h */
 
