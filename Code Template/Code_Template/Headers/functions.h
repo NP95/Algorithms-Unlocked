@@ -73,9 +73,4 @@ int file_download()
     return 0;
 }
 
-unsigned int Add_Nums(unsigned int a, unsigned int b)
-{
-    return a + b;
-}
-
 #endif /* functions_h */
