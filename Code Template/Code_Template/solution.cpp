@@ -95,7 +95,7 @@
 #define full_all(x) (x).begin(), (x).end()
 #define rall(x) (x).rbegin(), (x).rend()
 #define rev(A) std::reverse(A.begin(), A.end())
-#define sort(A) std::sort(A.begin(),A.end())
+#define container_sort(A) std::sort(A.begin(),A.end())
 #define present(c,x) ((c).find(x) != (c).end())
 #define cpresent(c,x) (find(all(c),x) != (c).end())
 #define forn(i, n) for (int i = 0; i < (int)(n); ++i)
@@ -104,7 +104,6 @@
 #define Assert(x) {if(!(x)){cerr<<"Assertion failed at line "<<__LINE__<<": "<<#x<<" = "<<(x)<<"\n";exit(1);}}
 #define abs(x) ( x < 0 ? (-x) : x) // big bug here if "-x" is not surrounded by "()"
 #define LL long long int
-using std::chrono::duration_cast;
 using namespace std;
 
 /* Templates */
@@ -123,7 +122,6 @@ std::random_device rd;
 std::default_random_engine seed(rd());
 std::uniform_int_distribution<int> random_engine_block(MIN_RANGE, MAX_RANGE);
 auto rd_ints = std::bind(random_engine_block, seed);
-clock_t start_time, end_time;
 
 /* Appended code here using freopen() */
 
