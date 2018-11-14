@@ -99,7 +99,7 @@ using namespace std;
 
 /* Random Global */
 std::random_device rd;
-std::default_random_engine seed(rd());
+std::mt19937 seed(rd());
 std::uniform_int_distribution<int> random_engine_block(MIN_RANGE, MAX_RANGE);
 auto rd_ints = std::bind(random_engine_block, seed);
 clock_t start_time, end_time;
