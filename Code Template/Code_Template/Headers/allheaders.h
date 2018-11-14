@@ -17,5 +17,6 @@
 #include "exception_handler.h"
 #include "logger.h"
 #include "static.h"
+#include "testcases.h"
 
 #endif /* allheaders_h */

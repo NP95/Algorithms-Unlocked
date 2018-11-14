@@ -36,7 +36,7 @@
 #define popf pop_front
 #define popb pop_back
 #define max(a, b) (a < b ? b : a)
-#define all(x) (x).begin(), (x).end()
+#define full_all(x) (x).begin(), (x).end()
 #define rall(x) (x).rbegin(), (x).rend()
 #define rev(A) std::reverse(A.begin(), A.end())
 #define sort(A) std::sort(A.begin(),A.end())
