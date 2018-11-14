@@ -1,6 +1,7 @@
-#include "Headers/allheaders.h"
+#include <bits/stdc++.h>
 
-/* Functions Here */
+using namespace std;
+
 const int N = 1234567;
 
 int to[N], ta[N], tb[N];
@@ -23,16 +24,8 @@ int match(int j, int i) {
   return wait;
 }
 
-/* Main Here */
-
-int main(int argc, char* argv[])
-{
-#ifdef /*__APPLE__ || */ _WIN32 || _WIN64
-    start_time = clock();
-    ioutil("codejam-large-c");
-#endif
-    
-    int tt;
+int main() {
+  int tt;
   scanf("%d", &tt);
   for (int qq = 1; qq <= tt; qq++) {
     printf("Case #%d: ", qq);
@@ -133,13 +126,5 @@ int main(int argc, char* argv[])
     }
     printf("%d\n", res);
   }
-
-#ifdef /*__APPLE__ || */ _WIN32 || _WIN64
-    copy_codechef();
-    log_time(start_time, argc, argv);
-    close();
-#endif
-    return 0;
+  return 0;
 }
-
-/* Finished */

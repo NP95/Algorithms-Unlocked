@@ -36,7 +36,7 @@
 #define full_all(x) (x).begin(), (x).end()
 #define rall(x) (x).rbegin(), (x).rend()
 #define rev(A) std::reverse(A.begin(), A.end())
-#define sort(A) std::sort(A.begin(),A.end())
+#define container_sort(A) std::sort(A.begin(),A.end())
 #define present(c,x) ((c).find(x) != (c).end()) 
 #define cpresent(c,x) (find(all(c),x) != (c).end())
 #define forn(i, n) for (int i = 0; i < (int)(n); ++i)

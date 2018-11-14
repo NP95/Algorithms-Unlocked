@@ -21,7 +21,7 @@
 #endif
 
 #ifndef STDOUT_CODECHEF_REDIRECT
-#define STDOUT_CODECHEF_REDIRECT "./codechef.cpp"
+#define STDOUT_CODECHEF_REDIRECT "./solution.cpp"
 #endif
 
 #ifndef MAIN
@@ -31,6 +31,39 @@
 #ifndef STDIN_TEST_REDIRECT
 #define STDIN_TEST_REDIRECT "./Cases/testcase.txt"
 #endif
+
+#ifndef STDIN_CODEJAM_SMALL_REDIRECTA
+#define STDIN_CODEJAM_SMALL_REDIRECTA "./Cases/A-small-practice.in"
+#endif
+
+#ifndef STDIN_CODEJAM_LARGE_REDIRECTA
+#define STDIN_CODEJAM_LARGE_REDIRECTA "./Cases/A-large-practice.in"
+#endif
+
+#ifndef STDIN_CODEJAM_SMALL_REDIRECTB
+#define STDIN_CODEJAM_SMALL_REDIRECTB "./Cases/B-small-practice.in"
+#endif
+
+#ifndef STDIN_CODEJAM_LARGE_REDIRECTB
+#define STDIN_CODEJAM_LARGE_REDIRECTB "./Cases/B-large-practice.in"
+#endif
+
+#ifndef STDIN_CODEJAM_SMALL_REDIRECTC
+#define STDIN_CODEJAM_SMALL_REDIRECTC "./Cases/C-small-practice.in"
+#endif
+
+#ifndef STDIN_CODEJAM_LARGE_REDIRECTC
+#define STDIN_CODEJAM_LARGE_REDIRECTC "./Cases/C-large-practice.in"
+#endif
+
+#ifndef STDIN_CODEJAM_SMALL_REDIRECTD
+#define STDIN_CODEJAM_SMALL_REDIRECTD "./Cases/D-small-practice.in"
+#endif
+
+#ifndef STDIN_CODEJAM_LARGE_REDIRECTD
+#define STDIN_CODEJAM_LARGE_REDIRECTD "./Cases/D-large-practice.in"
+#endif
+
 
 #ifndef STDOUT_LOGGER_ERROR_REDIRECT
 #define STDOUT_LOGGER_ERROR_REDIRECT "./Logs/log.txt"
