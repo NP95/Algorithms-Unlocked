@@ -1,5 +1,7 @@
 #include "Headers/headers.h"
-char * const parameters[] = { "/usr/bin/unzip", "-o", "./Code/cpp-variadics-testcases.zip", NULL };
+
+char * const file_parameters[] = { "/bin/cp", "./../CodeChef_Codes", "./../../ProjectStudio/Algorithms-Unlocked/Code\ Template/Code_Template", NULL};
+char * const zip_parameters[] = { "/usr/bin/unzip", "-o", "-qq" ,"./Code/download.zip", "-d", "Code", NULL };
 
 /* Main Here */
 int main(int argc, char* argv[], char* envp[])
@@ -8,36 +10,16 @@ int main(int argc, char* argv[], char* envp[])
     start_time = clock();
     ioutil("testcase");
     random_logger();
-    run_prog_from_args(parameters);
+    run_prog_from_args(file_parameters);
+    // run_prog_from_args(zip_parameters);
 #endif
 /* Start */
 
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
 /* End */
-#ifdef OFFLINE_END_BUILD
+#ifdef OFFLINE_START_BUILD
     copy_code();
     log_time(start_time, argc, argv, envp);
 #endif

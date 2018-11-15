@@ -1,37 +1,24 @@
-
 --------------------------------------------------------------------BUILD---------------------------------------------------------------------
-Build ID : 624763146, Build Hash : f18bde67179338c27f0d2db53691e51d23de15bbd6e569542e2971437989
+Build ID : 65964411, Build Hash : e27946de74305e141d58fd9b6e4abe22e1452f24192c69af4acd4c9bb4e2fb48
+cp: ./ is a directory (not copied).
 --------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
-Running with -YES $SHELL=/bin/bash Time : 0.001581 sec, Ticks : 1581 (3)
+Running with -CA_ASSERT_MAIN_THREAD_TRANSACTIONS=0 $SHELL=/bin/bash Time : 0.001429 sec, Ticks : 1429 (1)
 --------------------------------------------------------------------BUILD---------------------------------------------------------------------
-Build ID : 513486138, Build Hash : e599ef63ac638eda6cef82f1295f75806d18f8e28c4e5b4f7fe0ca57f8112
+Build ID : 58509856, Build Hash : 978874719ff3db8653266554744bfd49a5bc2c999b40cfc17fdd9ed745b5ea
 --------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
-Running with -YES $SHELL=/bin/bash Time : 0.001951 sec, Ticks : 1951 (3)
+Running with -CA_ASSERT_MAIN_THREAD_TRANSACTIONS=0 $SHELL=/bin/bash Time : 0.001428 sec, Ticks : 1428 (1)
+mv: rename ./ to ./../../ProjectStudio/Algorithms-Unlocked/Code TemplateCode_Template: Invalid argument
 --------------------------------------------------------------------BUILD---------------------------------------------------------------------
-Build ID : 229450167, Build Hash : face1d7035b85374577cdaa4aa3b84c7f81416271c627fd95225e438b433ad
+Build ID : 603190941, Build Hash : 35205f3e634e4f7cbaf1cf9f30bc7f6aef164b4ad5e434f7f3d61a1bce148
 --------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
-Running with -YES $SHELL=/bin/bash Time : 0.001804 sec, Ticks : 1804 (3)
+Running with -CA_ASSERT_MAIN_THREAD_TRANSACTIONS=0 $SHELL=/bin/bash Time : 0.001972 sec, Ticks : 1972 (1)
+mv: rename ./ to ./../../ProjectStudio/Algorithms-Unlocked/Code Template/Code_Template/./: Invalid argument
 --------------------------------------------------------------------BUILD---------------------------------------------------------------------
-Build ID : 192940280, Build Hash : 82f56a67b4f872729d4adeace543bbe6d3845cddcb3fd1ea1c58b09d7d
+Build ID : 183208708, Build Hash : b67b516a1726e245f56e3c53746c1b48cd8317fab85d77a9ab88f36ba72deef9
 --------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
-Running with -YES $SHELL=/bin/bash Time : 0.001562 sec, Ticks : 1562 (3)
+Running with -CA_ASSERT_MAIN_THREAD_TRANSACTIONS=0 $SHELL=/bin/bash Time : 0.001342 sec, Ticks : 1342 (1)
 --------------------------------------------------------------------BUILD---------------------------------------------------------------------
-Build ID : 382708192, Build Hash : cfdb27a4511855938be64f2232ff9a26d77b7aa38ee849410f753205da2897
+Build ID : 36687444, Build Hash : d08584c9052d43b84158228f227eab1b092952ad2cd934a14497b33fed6434
+cp: ./../CodeChef_Codes is a directory (not copied).
 --------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
-Running with -YES $SHELL=/bin/bash Time : 0.001594 sec, Ticks : 1594 (3)
---------------------------------------------------------------------BUILD---------------------------------------------------------------------
-Build ID : 387055352, Build Hash : f63ad3692dda8339dbb7d984f37bb79ad5cb305046c0a56bf4c8fbffee6f8095
---------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
-Running with -YES $SHELL=/bin/bash Time : 0.002133 sec, Ticks : 2133 (3)
---------------------------------------------------------------------BUILD---------------------------------------------------------------------
-Build ID : 202929399, Build Hash : 7a8ef76df4918a430a9d047b4cd77a33e87545f8d5efc89fcc805feaf198
---------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
-Running with -YES $SHELL=/bin/bash Time : 0.002154 sec, Ticks : 2154 (3)
---------------------------------------------------------------------BUILD---------------------------------------------------------------------
-Build ID : 523447682, Build Hash : e8f6622cdb679cad9603fdfa6588865b8cb1fa33cea36e87e9279046518
---------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
-Running with -YES $SHELL=/bin/bash Time : 0.001892 sec, Ticks : 1892 (3)
---------------------------------------------------------------------BUILD---------------------------------------------------------------------
-Build ID : 292891048, Build Hash : bc5a013dc428529d0a2acc89a853b291669fdced1571a872d96bc2c2319dc9a
---------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
-Running with -YES $SHELL=/bin/bash Time : 0.001591 sec, Ticks : 1591 (3)
+Running with -CA_ASSERT_MAIN_THREAD_TRANSACTIONS=0 $SHELL=/bin/bash Time : 0.001623 sec, Ticks : 1623 (1)

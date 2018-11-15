@@ -1,6 +1,7 @@
 /**
  * CodeObsess (SpawnTree)
  * Copyright © 2018 CodeObsess All rights reserved
+ * Feel free to use this code as you like. --attribute please.
  */
 
 #ifdef __clang__
@@ -14,7 +15,7 @@
 #endif
 
 #ifndef MAX_RANGE
-#define MAX_RANGE 655369636
+#define MAX_RANGE 972150001
 #endif
 
 #include <iostream>
@@ -67,9 +68,9 @@
 #include <iomanip>
 
 /* #define */
-#define bit(x, i) ( x & (1<<i) )  //select the bit of position i of x
-#define lowbit(x) ( (x)&((x)^((x)-1)) ) //get the lowest bit of x
-#define hBit(msb, n) asm("bsrl %1,%0" : "=r"(msb) : "r"(n)) //get the highest bit of x, maybe the fastest
+#define bit(x, i) ( x & (1<<i) )
+#define lowbit(x) ( (x)&((x)^((x)-1)) )
+#define hBit(msb, n) asm("bsrl %1,%0" : "=r"(msb) : "r"(n))
 #define MOD 10000000003
 #define print(vec) for (const auto& i : vec) cout << i << endl;
 #define fori(vec) for (const auto& i : vec)
@@ -83,7 +84,7 @@
 #define q(T) std::queue<T>
 #define arr(T) std::array<T>
 #define bits(T) std::bitset<T>
-#define SIZE 65536
+#define SIZE 655360
 #define itn int
 #define mp make_pair
 #define mt make_tuple
@@ -102,7 +103,7 @@
 #define for1(i, n) for (int i = 1; i <= (int)(n); ++i)
 #define forvec(container, it) for(decltype(container.begin()) it = container.begin(); it != container.end(); it++)
 #define Assert(x) {if(!(x)){cerr<<"Assertion failed at line "<<__LINE__<<": "<<#x<<" = "<<(x)<<"\n";exit(1);}}
-#define abs(x) ( x < 0 ? (-x) : x) // big bug here if "-x" is not surrounded by "()"
+#define abs(x) ( x < 0 ? (-x) : x)
 #define LL long long int
 using namespace std;
 
@@ -118,6 +119,7 @@ template <typename T> T InverseEuler(T a, T m){return (a==1? 1 : power(a, m-2, m
 template <typename T> T gcd(T a, T b){return (!b)? a:gcd(b,a%b); }
 template <typename T> T lcm(T a, T b){return (a*(b/gcd(a,b))); }
 
+/* Random bits */
 std::random_device rd;
 std::default_random_engine seed(rd());
 std::uniform_int_distribution<int> random_engine_block(MIN_RANGE, MAX_RANGE);
@@ -125,7 +127,9 @@ auto rd_ints = std::bind(random_engine_block, seed);
 
 /* Appended working code here using freopen() */
 
-char * const parameters[] = { "/usr/bin/unzip", "-o", "./Code/cpp-variadics-testcases.zip", NULL };
+
+char * const file_parameters[] = { "/bin/cp", "./../CodeChef_Codes", "./../../ProjectStudio/Algorithms-Unlocked/Code\ Template/Code_Template", NULL};
+char * const zip_parameters[] = { "/usr/bin/unzip", "-o", "-qq" ,"./Code/download.zip", "-d", "Code", NULL };
 
 /* Main Here */
 int main(int argc, char* argv[], char* envp[])
@@ -134,36 +138,16 @@ int main(int argc, char* argv[], char* envp[])
     start_time = clock();
     ioutil("testcase");
     random_logger();
-    run_prog_from_args(parameters);
+    run_prog_from_args(file_parameters);
+    // run_prog_from_args(zip_parameters);
 #endif
 /* Start */
 
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
 /* End */
-#ifdef OFFLINE_END_BUILD
+#ifdef OFFLINE_START_BUILD
     copy_code();
     log_time(start_time, argc, argv, envp);
 #endif

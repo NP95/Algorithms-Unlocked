@@ -1,3 +1,0 @@
-Archive:  ./Code/cpp-variadics-testcases.zip
-  inflating: input/input00.txt       
-  inflating: output/output00.txt     
