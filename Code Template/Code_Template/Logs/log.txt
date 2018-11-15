@@ -1,24 +1,17 @@
+
 --------------------------------------------------------------------BUILD---------------------------------------------------------------------
-Build ID : 65964411, Build Hash : e27946de74305e141d58fd9b6e4abe22e1452f24192c69af4acd4c9bb4e2fb48
-cp: ./ is a directory (not copied).
+Build ID : 624859974, Build Hash : 9364175f1a206f59f13f9a47d823a344b41afaed75874b6ca7c11b18ed9eb9
 --------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
-Running with -CA_ASSERT_MAIN_THREAD_TRANSACTIONS=0 $SHELL=/bin/bash Time : 0.001429 sec, Ticks : 1429 (1)
+Running with -CA_ASSERT_MAIN_THREAD_TRANSACTIONS=0 $SHELL=/bin/bash Time : 0.000777 sec, Ticks : 777 (1)
 --------------------------------------------------------------------BUILD---------------------------------------------------------------------
-Build ID : 58509856, Build Hash : 978874719ff3db8653266554744bfd49a5bc2c999b40cfc17fdd9ed745b5ea
+Build ID : 586315768, Build Hash : a963aee0a7b5d8cef141169b519ae4f8f063a3f7e54ff14986252be60a0a4d9
 --------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
-Running with -CA_ASSERT_MAIN_THREAD_TRANSACTIONS=0 $SHELL=/bin/bash Time : 0.001428 sec, Ticks : 1428 (1)
-mv: rename ./ to ./../../ProjectStudio/Algorithms-Unlocked/Code TemplateCode_Template: Invalid argument
+Running with -CA_ASSERT_MAIN_THREAD_TRANSACTIONS=0 $SHELL=/bin/bash Time : 0.000771 sec, Ticks : 771 (1)
 --------------------------------------------------------------------BUILD---------------------------------------------------------------------
-Build ID : 603190941, Build Hash : 35205f3e634e4f7cbaf1cf9f30bc7f6aef164b4ad5e434f7f3d61a1bce148
+Build ID : 7969718, Build Hash : 99af4bcbfa86cabbde434bdc8d28c3fa1543fb3c532d8dce945084b887c080
 --------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
-Running with -CA_ASSERT_MAIN_THREAD_TRANSACTIONS=0 $SHELL=/bin/bash Time : 0.001972 sec, Ticks : 1972 (1)
-mv: rename ./ to ./../../ProjectStudio/Algorithms-Unlocked/Code Template/Code_Template/./: Invalid argument
+Running with -CA_ASSERT_MAIN_THREAD_TRANSACTIONS=0 $SHELL=/bin/bash Time : 0.000877 sec, Ticks : 877 (1)
 --------------------------------------------------------------------BUILD---------------------------------------------------------------------
-Build ID : 183208708, Build Hash : b67b516a1726e245f56e3c53746c1b48cd8317fab85d77a9ab88f36ba72deef9
+Build ID : 51025918, Build Hash : 53d84065703f2bb1eac8f2b2b4314f15544f446bfd8982582d697b2f8142e
 --------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
-Running with -CA_ASSERT_MAIN_THREAD_TRANSACTIONS=0 $SHELL=/bin/bash Time : 0.001342 sec, Ticks : 1342 (1)
---------------------------------------------------------------------BUILD---------------------------------------------------------------------
-Build ID : 36687444, Build Hash : d08584c9052d43b84158228f227eab1b092952ad2cd934a14497b33fed6434
-cp: ./../CodeChef_Codes is a directory (not copied).
---------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
-Running with -CA_ASSERT_MAIN_THREAD_TRANSACTIONS=0 $SHELL=/bin/bash Time : 0.001623 sec, Ticks : 1623 (1)
+Running with -CA_ASSERT_MAIN_THREAD_TRANSACTIONS=0 $SHELL=/bin/bash Time : 0.000742 sec, Ticks : 742 (1)

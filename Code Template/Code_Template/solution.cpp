@@ -128,17 +128,17 @@ auto rd_ints = std::bind(random_engine_block, seed);
 /* Appended working code here using freopen() */
 
 
-char * const file_parameters[] = { "/bin/cp", "./../CodeChef_Codes", "./../../ProjectStudio/Algorithms-Unlocked/Code\ Template/Code_Template", NULL};
-char * const zip_parameters[] = { "/usr/bin/unzip", "-o", "-qq" ,"./Code/download.zip", "-d", "Code", NULL };
+// char * const file_parameters[] = { "/bin/cp", "./../CodeChef_Codes", "./../../ProjectStudio/Algorithms-Unlocked/Code\ Template/Code_Template", NULL};
+// char * const zip_parameters[] = { "/usr/bin/unzip", "-o", "-qq" ,"./Code/download.zip", "-d", "./Code", NULL };
 
 /* Main Here */
 int main(int argc, char* argv[], char* envp[])
 {
 #ifdef OFFLINE_START_BUILD
     start_time = clock();
-    ioutil("testcase");
+    ioutil("testcase"); // ./Code/
     random_logger();
-    run_prog_from_args(file_parameters);
+    // run_prog_from_args(file_parameters);
     // run_prog_from_args(zip_parameters);
 #endif
 /* Start */
