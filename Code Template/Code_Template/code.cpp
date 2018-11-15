@@ -11,12 +11,14 @@ int main(int argc, char* argv[])
 
     
     
+    
+    
+    
+    
 #ifdef OFFLINE_END_BUILD
-    // copy_codechef();
+    copy_code();
     log_time(start_time, argc, argv);
-    close();
 #endif
     return 0;
 }
-
 /* Finished */

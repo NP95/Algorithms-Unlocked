@@ -12,6 +12,11 @@
 #define GLOBAL_DIR ""
 #endif
 
+#ifndef DUMP_HEADERS
+#define DUMP_HEADERS "./Headers/dump.h"
+#endif
+
+
 #ifndef STDIN_FILE_REDIRECT
 #define STDIN_FILE_REDIRECT "./Input/input.txt"
 #endif

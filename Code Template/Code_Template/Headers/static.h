@@ -98,6 +98,7 @@
 using namespace std;
 
 /* Random Global */
+
 std::random_device rd;
 std::mt19937 seed(rd());
 std::uniform_int_distribution<int> random_engine_block(MIN_RANGE, MAX_RANGE);

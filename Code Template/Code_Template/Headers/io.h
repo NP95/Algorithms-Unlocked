@@ -11,13 +11,6 @@
 
 long long int reader;
 
-void close()
-{
-    fclose(stderr);
-    fclose(stdin);
-    fclose(stdout);
-}
-
 int readInt() {
     bool minus = false;
     int result = 0;
@@ -93,12 +86,16 @@ void read_data_write()
     }
 }
 
-void copy_codechef()
+void copy_code()
 {
-    fclose(stdin);
-    fclose(stdout);
     std::string str;
     freopen(MAIN, "r+", stdin);
+    freopen(STDOUT_CODECHEF_REDIRECT, "w+", stdout);
+    std::fstream file(DUMP_HEADERS, std::fstream::in);
+    while(std::getline(file, str)){
+        printf("%s\n", str.c_str());
+    }
+    file.close();
     freopen(STDOUT_CODECHEF_REDIRECT, "a+", stdout);
     std::getline(std::cin, str);
     while(std::getline(std::cin, str)){
