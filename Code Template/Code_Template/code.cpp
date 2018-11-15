@@ -1,5 +1,7 @@
 #include "Headers/headers.h"
 
+
+
 /* Main Here */
 int main(int argc, char* argv[])
 {
@@ -9,9 +11,6 @@ int main(int argc, char* argv[])
     random_logger();
 #endif
 
-    
-    
-    
     
     
     

@@ -7,6 +7,8 @@
 #define reader_h
 #include "static.h"
 #include "constants.h"
+
+
 #endif /* reader_h */
 
 long long int reader;
@@ -88,6 +90,8 @@ void read_data_write()
 
 void copy_code()
 {
+    fclose(stdin);
+    fclose(stdout);
     std::string str;
     freopen(MAIN, "r+", stdin);
     freopen(STDOUT_CODECHEF_REDIRECT, "w+", stdout);
