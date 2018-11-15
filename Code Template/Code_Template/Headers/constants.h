@@ -16,6 +16,9 @@
 #define DUMP_HEADERS "./Headers/dump.h"
 #endif
 
+#ifndef STDIN_CSV_REDIRECT
+#define STDIN_CSV_REDIRECT "./Input/input.csv"
+#endif
 
 #ifndef STDIN_FILE_REDIRECT
 #define STDIN_FILE_REDIRECT "./Input/input.txt"

@@ -20,11 +20,11 @@ void random_logger()
 #endif
 }
 
-void log_time(clock_t start_time, int &argc, char* *argv)
+void log_time(clock_t start_time, int &argc, char* *argv, char* *envp)
 {
     clock_t end_time = clock() - start_time;
     std::cerr << "--------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------" << std::endl;
-    std::cerr << "Running with " << argc << " " << argv[1] << " Time : " << ((float)end_time)/CLOCKS_PER_SEC << " sec, " << "Ticks : " << end_time << std::endl;
+    std::cerr << "Running with -"<< argv[2] << " $" << envp[9] << " Time : " << ((float)end_time)/CLOCKS_PER_SEC << " sec, " << "Ticks : " << end_time << " (" << argc << ")" << std::endl;
 }
 
 void log(const string& log_str)
