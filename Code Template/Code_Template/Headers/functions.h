@@ -12,6 +12,8 @@ using namespace std;
 
 void copy_codechef()
 {
+    fclose(stdin);
+    fclose(stdout);
     std::string str;
     freopen(MAIN, "r+", stdin);
     freopen(STDOUT_CODECHEF_REDIRECT, "a+", stdout);

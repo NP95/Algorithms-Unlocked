@@ -13,14 +13,7 @@ string to_hex(unsigned char s) {
     return ss.str();
 }
 
-#ifdef _WIN32
-//define something for Windows (32-bit and 64-bit, this part is common)
-#ifdef _WIN64
-//define something for Windows (64-bit only)
-#else
-//define something for Windows (32-bit only)
-#endif
-#elif __APPLE__
+#ifdef HASH
     string sha256(string line) {
         unsigned char hash[SHA256_DIGEST_LENGTH];
         SHA256_CTX sha256;
@@ -34,23 +27,6 @@ string to_hex(unsigned char s) {
         }
         return output;
     }
-#if TARGET_IPHONE_SIMULATOR
-// iOS Simulator
-#elif TARGET_OS_IPHONE
-// iOS device
-#elif TARGET_OS_MAC
-// Other kinds of Mac OS
-#else
-#   error "Unknown Apple platform"
-#endif
-#elif __linux__
-
-#elif __unix__ // all unices not caught above
-// Unix
-#elif defined(_POSIX_VERSION)
-// POSIX
-#else
-#   error "Unknown compiler"
 #endif
 
 void random_logger()
@@ -58,7 +34,7 @@ void random_logger()
     std::string build_base = std::to_string(rd_ints());
     std::string str = "Build ID : " + build_base;
     std::cerr << "--------------------------------------------------------------------BUILD---------------------------------------------------------------------" << std::endl;
-#ifdef __APPLE__
+#ifdef HASH
     std::cerr << str << ", Build Hash : " << sha256(str) << std::endl;
 #elif _WIN64 || _WIN32
     std::cerr << str << std::endl;
@@ -69,17 +45,17 @@ void log_time(clock_t start_time, int &argc, char* *argv)
 {
     clock_t end_time = clock() - start_time;
     std::cerr << "--------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------" << std::endl;
-    std::cerr << "Running with " << argc << " " << argv[0] << " Time : " << ((float)end_time)/CLOCKS_PER_SEC << " sec, " << "Ticks : " << end_time << std::endl;
+    std::cerr << "Running with " << argc << " " << argv[1] << " Time : " << ((float)end_time)/CLOCKS_PER_SEC << " sec, " << "Ticks : " << end_time << std::endl;
 }
 
 void ioutil(const string& type = "stdin")
 {
-#ifdef ONLINE_JUDGE /* || __APPLE__*/ || _WIN32 || _WIN64
+#ifdef ONLINE_JUDGE
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
 #endif
-    /* STDIN, STDOUT, STDERR, Test cases : STDIN_TEST_REDIRECT */
+
     if(type == "stdin")
     	freopen(STDIN_FILE_REDIRECT, "r+", stdin);
     else if (type == "testcase")
@@ -105,7 +81,6 @@ void ioutil(const string& type = "stdin")
 
     freopen(STDOUT_FILE_REDIRECT, "w+", stdout);
     freopen(STDOUT_LOGGER_ERROR_REDIRECT, "a+", stderr);
-    
     random_logger();
 }
 

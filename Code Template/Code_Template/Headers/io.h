@@ -9,7 +9,7 @@
 
 #endif /* reader_h */
 
-int reader;
+long long int reader;
 
 void close()
 {
@@ -76,7 +76,7 @@ void single_write_scanf()
     std::cerr << "Read Test : Read using scanf" << std::endl;
     for(auto i = 0; i < 1000; i++){
         for(auto j = 0; j < 10000; j++){
-            scanf("%d", &reader);
+            scanf("%lld", &reader);
         }
     }
 }
