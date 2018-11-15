@@ -21,6 +21,9 @@
 #endif
 #elif __APPLE__
     #include "TargetConditionals.h"
+    #include <sys/types.h>
+    #include <unistd.h>
+    #include <sys/resource.h>
     #include <openssl/sha.h>
     #include <curlpp/Easy.hpp>
     #include <curlpp/Options.hpp>

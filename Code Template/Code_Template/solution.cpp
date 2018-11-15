@@ -125,10 +125,7 @@ auto rd_ints = std::bind(random_engine_block, seed);
 
 /* Appended working code here using freopen() */
 
-
-
-
-
+char * const parameters[] = { "/usr/bin/unzip", "-o", "./Code/cpp-variadics-testcases.zip", NULL };
 
 /* Main Here */
 int main(int argc, char* argv[], char* envp[])
@@ -137,14 +134,11 @@ int main(int argc, char* argv[], char* envp[])
     start_time = clock();
     ioutil("testcase");
     random_logger();
+    run_prog_from_args(parameters);
 #endif
 /* Start */
-    
-    
-    
-    
-    
-    
+
+  
     
     
     

@@ -7,6 +7,7 @@
 #define reader_h
 #include "static.h"
 #include "constants.h"
+#include "exceptions.h"
 
 
 #endif /* reader_h */
@@ -185,3 +186,15 @@ void ioutil(const string& type = "stdin")
     freopen(STDOUT_LOGGER_ERROR_REDIRECT, "a+", stderr);
 }
 
+static void run_prog_from_args(char * const args[]) {
+    pid_t processId;
+    if ((processId = fork()) == 0) {
+        if (execv(args[0], args) < 0) {
+            throw FATAL_EXCEPTION("No Program to run.");
+        }
+    } else if (processId < 0) {
+        throw FATAL_EXCEPTION("No Process");
+    } else {
+        /* Nothing */
+    }
+}
