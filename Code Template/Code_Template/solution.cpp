@@ -124,3 +124,24 @@ std::uniform_int_distribution<int> random_engine_block(MIN_RANGE, MAX_RANGE);
 auto rd_ints = std::bind(random_engine_block, seed);
 
 /* Appended working code here using freopen() */
+
+/* Main Here */
+int main(int argc, char* argv[])
+{
+#ifdef OFFLINE_START_BUILD
+    start_time = clock();
+    ioutil("testcase");
+#endif
+
+    
+    
+#ifdef OFFLINE_END_BUILD
+    log("Offline Build.");
+    copy_codechef();
+    log_time(start_time, argc, argv);
+    close();
+#endif
+    return 0;
+}
+
+/* Finished */

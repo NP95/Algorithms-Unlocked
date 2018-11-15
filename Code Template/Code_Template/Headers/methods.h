@@ -42,8 +42,6 @@
 #define forn(i, n) for (int i = 0; i < (int)(n); ++i)
 #define for1(i, n) for (int i = 1; i <= (int)(n); ++i)
 #define forvec(container, it) for(decltype(container.begin()) it = container.begin(); it != container.end(); it++)
-#define Assert(x) {if(!(x)){cerr<<"Assertion failed at line "<<__LINE__<<": "<<#x<<" = "<<(x)<<"\n";exit(1);}}
-#define trace(...) __f(#__VA_ARGS__, __VA_ARGS__)
 #define abs(x) ( x < 0 ? (-x) : x) // big bug here if "-x" is not surrounded by "()"
 #define LL long long int
 using std::chrono::duration_cast;

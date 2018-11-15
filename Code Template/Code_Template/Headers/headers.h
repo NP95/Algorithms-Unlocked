@@ -14,6 +14,7 @@
 #include "exceptions.h"
 #include "logger.h"
 #include "static.h"
+#include "structures.h"
 #include "testcases.h"
 
 #endif /* allheaders_h */

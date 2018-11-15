@@ -6,7 +6,7 @@
 #ifndef reader_h
 #define reader_h
 #include "static.h"
-
+#include "constants.h"
 #endif /* reader_h */
 
 long long int reader;
@@ -90,5 +90,18 @@ void read_data_write()
             std::cout << reader;
         }
         std::cout << "/n";
+    }
+}
+
+void copy_codechef()
+{
+    fclose(stdin);
+    fclose(stdout);
+    std::string str;
+    freopen(MAIN, "r+", stdin);
+    freopen(STDOUT_CODECHEF_REDIRECT, "a+", stdout);
+    std::getline(std::cin, str);
+    while(std::getline(std::cin, str)){
+        printf("%s\n", str.c_str());
     }
 }
