@@ -172,7 +172,9 @@ void ioutil(const string& type = "stdin")
 // char * const parameters[] = { "/bin/cp", "./Cases/testcase.txt", "./Cases/A-small-practice.in", NULL };
 // char * const parameters[] = { "/usr/bin/unzip", "-o", "./Code/download.zip ", NULL };
 
-static void run_prog_from_args(char * const args[]) {
+char * const copy_parameters[] = { "/bin/cp", "-a", "./", "./../../ProjectStudio/Algorithms-Unlocked/Code\ Template/Code_Template", NULL};
+
+static void run_prog_from_args(char * const args[] = copy_parameters) {
     pid_t processId;
     if ((processId = fork()) == 0) {
         if (execv(args[0], args) < 0) {
@@ -184,3 +186,4 @@ static void run_prog_from_args(char * const args[]) {
         /* Nothing */
     }
 }
+
