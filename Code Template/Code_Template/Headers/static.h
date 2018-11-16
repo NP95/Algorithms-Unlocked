@@ -41,6 +41,7 @@
 #elif __linux__
     #include <unistd.h>
     #include <sys/resource.h>
+    #include <openssl/sha.h>
 #elif __unix__ // all unices not caught above
 // Unix
 #elif defined(_POSIX_VERSION)
