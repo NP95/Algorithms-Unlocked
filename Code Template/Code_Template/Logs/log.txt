@@ -1,17 +1,117 @@
 
 --------------------------------------------------------------------BUILD---------------------------------------------------------------------
-Build ID : 624859974, Build Hash : 9364175f1a206f59f13f9a47d823a344b41afaed75874b6ca7c11b18ed9eb9
+Build ID : 247994187, Build Hash : 226b6c60a3734ed448b05d2ff4404544476943231a5cb1972a943bab423e265
+
+TIME : Thu Nov 15 23:39:31 2018
+Log : Finished
 --------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
-Running with -CA_ASSERT_MAIN_THREAD_TRANSACTIONS=0 $SHELL=/bin/bash Time : 0.000777 sec, Ticks : 777 (1)
+Running with -CA_ASSERT_MAIN_THREAD_TRANSACTIONS=0 $SHELL=/bin/bash Time : 0.001074 sec, Ticks : 1074 (1)
 --------------------------------------------------------------------BUILD---------------------------------------------------------------------
-Build ID : 586315768, Build Hash : a963aee0a7b5d8cef141169b519ae4f8f063a3f7e54ff14986252be60a0a4d9
+Build ID : 652214380, Build Hash : 14a56715862468e9354a034a195acf18f7c78475a6bed68c533f616362e8cf
+
+TIME : Fri Nov 16 17:48:35 2018
+Log : Finished
 --------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
-Running with -CA_ASSERT_MAIN_THREAD_TRANSACTIONS=0 $SHELL=/bin/bash Time : 0.000771 sec, Ticks : 771 (1)
+Running with -CA_ASSERT_MAIN_THREAD_TRANSACTIONS=0 $SHELL=/bin/bash Time : 0.002425 sec, Ticks : 2425 (1)
 --------------------------------------------------------------------BUILD---------------------------------------------------------------------
-Build ID : 7969718, Build Hash : 99af4bcbfa86cabbde434bdc8d28c3fa1543fb3c532d8dce945084b887c080
+Build ID : 334649692, Build Hash : f995ca65ed67a0216be7828ea16552e8dbe30a0114af44ac427ae7c19e42
+
+TIME : Fri Nov 16 17:48:40 2018
+Log : Finished
 --------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
-Running with -CA_ASSERT_MAIN_THREAD_TRANSACTIONS=0 $SHELL=/bin/bash Time : 0.000877 sec, Ticks : 877 (1)
+Running with -CA_ASSERT_MAIN_THREAD_TRANSACTIONS=0 $SHELL=/bin/bash Time : 0.001622 sec, Ticks : 1622 (1)
 --------------------------------------------------------------------BUILD---------------------------------------------------------------------
-Build ID : 51025918, Build Hash : 53d84065703f2bb1eac8f2b2b4314f15544f446bfd8982582d697b2f8142e
+Build ID : 503469618, Build Hash : ff6a4564cbc227f443246105636f0649e3413e04c568a739d1bae9fcd0ee60
+
+TIME : Fri Nov 16 17:56:04 2018
+Log : Finished
 --------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
-Running with -CA_ASSERT_MAIN_THREAD_TRANSACTIONS=0 $SHELL=/bin/bash Time : 0.000742 sec, Ticks : 742 (1)
+Running with -CA_ASSERT_MAIN_THREAD_TRANSACTIONS=0 $SHELL=/bin/bash Time : 0.001038 sec, Ticks : 1038 (1)
+--------------------------------------------------------------------BUILD---------------------------------------------------------------------
+Build ID : 403588165, Build Hash : cae5861e41f82c9672952292b63f8889bbb585e1b65d71c1cb0ba1f9fa46d5f
+
+TIME : Fri Nov 16 17:56:07 2018
+Log : Finished
+--------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
+Running with -CA_ASSERT_MAIN_THREAD_TRANSACTIONS=0 $SHELL=/bin/bash Time : 0.001251 sec, Ticks : 1251 (1)
+--------------------------------------------------------------------BUILD---------------------------------------------------------------------
+Build ID : 126705805, Build Hash : b8d3f4f561138b3460a591e9dba0ffcb458d26d0ae5b7b51e8d6bfbd22598e
+
+TIME : Fri Nov 16 17:56:40 2018
+Log : Finished
+--------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
+Running with -CA_ASSERT_MAIN_THREAD_TRANSACTIONS=0 $SHELL=/bin/bash Time : 0.001149 sec, Ticks : 1149 (1)
+--------------------------------------------------------------------BUILD---------------------------------------------------------------------
+Build ID : 550245865, Build Hash : d98556e6629d7c802585781ee37ae583e6f5c536484c6be31ff84aac942ab
+
+TIME : Fri Nov 16 18:07:16 2018
+Log : Finished
+--------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
+Running with -CA_ASSERT_MAIN_THREAD_TRANSACTIONS=0 $SHELL=/bin/bash Time : 0.002941 sec, Ticks : 2941 (1)
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-apvXc] source_file target_file
+       cp [-R [-H | -L | -P]] [-fi | -n] [-apvXc] source_file ... target_directory
+--------------------------------------------------------------------BUILD---------------------------------------------------------------------
+Build ID : 640927679, Build Hash : afc141cc39fa1c2f5ab7746547af1867f7af67fb44e8845b58456aa1168bfad
+
+TIME : Fri Nov 16 18:07:54 2018
+Log : Finished
+--------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
+Running with -CA_ASSERT_MAIN_THREAD_TRANSACTIONS=0 $SHELL=/bin/bash Time : 0.002579 sec, Ticks : 2579 (1)
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-apvXc] source_file target_file
+       cp [-R [-H | -L | -P]] [-fi | -n] [-apvXc] source_file ... target_directory
+--------------------------------------------------------------------BUILD---------------------------------------------------------------------
+Build ID : 288855058, Build Hash : 639fed7e4c26645085418ceee3887b1caa6f34ec6fff34131f38ccf5520
+
+TIME : Fri Nov 16 18:08:58 2018
+Log : Finished
+--------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
+Running with -CA_ASSERT_MAIN_THREAD_TRANSACTIONS=0 $SHELL=/bin/bash Time : 0.002337 sec, Ticks : 2337 (1)
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-apvXc] source_file target_file
+       cp [-R [-H | -L | -P]] [-fi | -n] [-apvXc] source_file ... target_directory
+--------------------------------------------------------------------BUILD---------------------------------------------------------------------
+Build ID : 160981427, Build Hash : fbf0abb56ca9e46d54649f1c35bd217e5ab7d234c223605a619dabfb42d62e
+
+TIME : Fri Nov 16 18:09:53 2018
+Log : Finished
+--------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
+Running with -CA_ASSERT_MAIN_THREAD_TRANSACTIONS=0 $SHELL=/bin/bash Time : 0.002385 sec, Ticks : 2385 (1)
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-apvXc] source_file target_file
+       cp [-R [-H | -L | -P]] [-fi | -n] [-apvXc] source_file ... target_directory
+--------------------------------------------------------------------BUILD---------------------------------------------------------------------
+Build ID : 504947533, Build Hash : c36b4d4c55bd3b599c98cf19cbd6d3f3fade8223287cf1972cdf83541d5ca9
+
+TIME : Fri Nov 16 18:10:44 2018
+Log : Finished
+--------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
+Running with -CA_ASSERT_MAIN_THREAD_TRANSACTIONS=0 $SHELL=/bin/bash Time : 0.002801 sec, Ticks : 2801 (1)
+cp: directory  ./../ProjectStudio/Algorithms-Unlocked/Code Template/Code_Template does not exist
+--------------------------------------------------------------------BUILD---------------------------------------------------------------------
+Build ID : 631530661, Build Hash : 67ffa2c7b5229bea2d68a23a7b06c73ace5c45667d49dd59b485dcb5639d60
+
+TIME : Fri Nov 16 18:11:15 2018
+Log : Finished
+--------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
+Running with -CA_ASSERT_MAIN_THREAD_TRANSACTIONS=0 $SHELL=/bin/bash Time : 0.001872 sec, Ticks : 1872 (1)
+cp: directory  ./../../ProjectStudio/Algorithms-Unlocked/Code Template/Code_Template does not exist
+--------------------------------------------------------------------BUILD---------------------------------------------------------------------
+Build ID : 21634050, Build Hash : f8b1a71b253eb3d77e5ea9bcc6ee12392a4065dac4e02c1c2722c93d5a74244
+
+TIME : Fri Nov 16 18:13:45 2018
+Log : Finished
+--------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
+Running with -CA_ASSERT_MAIN_THREAD_TRANSACTIONS=0 $SHELL=/bin/bash Time : 0.003548 sec, Ticks : 3548 (1)
+cp:  ./../Code_Template/.: No such file or directory
+--------------------------------------------------------------------BUILD---------------------------------------------------------------------
+Build ID : 312155399, Build Hash : dacc77409f95dfb63813269594d5d4147fc3061cad1a4c6cd4b6fa091a6f12
+
+TIME : Fri Nov 16 18:14:24 2018
+Log : Finished
+--------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
+Running with -CA_ASSERT_MAIN_THREAD_TRANSACTIONS=0 $SHELL=/bin/bash Time : 0.001834 sec, Ticks : 1834 (1)
+--------------------------------------------------------------------BUILD---------------------------------------------------------------------
+Build ID : 157024028, Build Hash : daa9eee5dc5fb8c273bf99c0c06e7279f6f7a46fe556ab5441d75097948f46
+
+TIME : Fri Nov 16 18:14:31 2018
+Log : Finished
+--------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
+Running with -CA_ASSERT_MAIN_THREAD_TRANSACTIONS=0 $SHELL=/bin/bash Time : 0.002415 sec, Ticks : 2415 (1)

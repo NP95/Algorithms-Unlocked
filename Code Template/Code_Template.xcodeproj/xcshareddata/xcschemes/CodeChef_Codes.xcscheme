@@ -1,32 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "1010"
-   version = "1.7">
+   version = "2.0">
    <BuildAction
-      parallelizeBuildables = "YES"
-      buildImplicitDependencies = "YES">
+      parallelizeBuildables = "NO"
+      buildImplicitDependencies = "NO">
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "NO"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
+            buildForProfiling = "NO"
             buildForArchiving = "NO"
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B1FFC60F219A194100DC89A2"
-               BuildableName = "CodeChef_Codes"
-               BlueprintName = "CodeChef_Codes"
-               ReferencedContainer = "container:CodeChef_Codes.xcodeproj">
+               BuildableName = "Code_Template"
+               BlueprintName = "Code_Template"
+               ReferencedContainer = "container:Code_Template.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Release"
-      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      selectedDebuggerIdentifier = ""
+      selectedLauncherIdentifier = "Xcode.IDEFoundation.Launcher.PosixSpawn"
       disableMainThreadChecker = "YES"
+      systemAttachmentLifetime = "keepNever"
+      userAttachmentLifetime = "keepAlways"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -34,9 +36,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B1FFC60F219A194100DC89A2"
-            BuildableName = "CodeChef_Codes"
-            BlueprintName = "CodeChef_Codes"
-            ReferencedContainer = "container:CodeChef_Codes.xcodeproj">
+            BuildableName = "Code_Template"
+            BlueprintName = "Code_Template"
+            ReferencedContainer = "container:Code_Template.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -44,25 +46,26 @@
    </TestAction>
    <LaunchAction
       buildConfiguration = "Release"
-      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      selectedDebuggerIdentifier = ""
+      selectedLauncherIdentifier = "Xcode.IDEFoundation.Launcher.PosixSpawn"
       disableMainThreadChecker = "YES"
       launchStyle = "0"
       useCustomWorkingDirectory = "YES"
-      customWorkingDirectory = "/Users/sumitlahiri/Documents/CodeChef/CodeChef_Codes/CodeChef_Codes"
+      customWorkingDirectory = "/Users/sumitlahiri/Documents/Coding/Code_Template"
       ignoresPersistentStateOnLaunch = "NO"
-      debugDocumentVersioning = "YES"
+      debugDocumentVersioning = "NO"
+      debugXPCServices = "NO"
       debugServiceExtension = "internal"
-      allowLocationSimulation = "YES"
-      showNonLocalizedStrings = "YES">
+      allowLocationSimulation = "NO"
+      queueDebuggingEnabled = "No">
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B1FFC60F219A194100DC89A2"
-            BuildableName = "CodeChef_Codes"
-            BlueprintName = "CodeChef_Codes"
-            ReferencedContainer = "container:CodeChef_Codes.xcodeproj">
+            BuildableName = "Code_Template"
+            BlueprintName = "Code_Template"
+            ReferencedContainer = "container:Code_Template.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -78,18 +81,8 @@
       savedToolIdentifier = "/Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/Resources/templates/Time Profiler.tracetemplate"
       useCustomWorkingDirectory = "YES"
       customWorkingDirectory = "/Users/sumitlahiri/Documents/CodeChef/CodeChef_Codes/CodeChef_Codes"
-      ignoresPersistentStateOnLaunch = "YES"
-      debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B1FFC60F219A194100DC89A2"
-            BuildableName = "CodeChef_Codes"
-            BlueprintName = "CodeChef_Codes"
-            ReferencedContainer = "container:CodeChef_Codes.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
+      debugDocumentVersioning = "NO"
+      enableTestabilityWhenProfilingTests = "No">
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Release">

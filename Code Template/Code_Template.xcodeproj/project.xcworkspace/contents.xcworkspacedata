@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:CodeChef_Codes.xcodeproj">
+      location = "self:/Users/sumitlahiri/Documents/Coding/Code_Template.xcodeproj">
    </FileRef>
 </Workspace>

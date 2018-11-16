@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B1FFC624219A1A0100DC89A2 /* code.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1FFC623219A1A0100DC89A2 /* code.cpp */; settings = {COMPILER_FLAGS = "-std=c++17 -O3 -Wall -Wextra -pedantic -march=native"; }; };
+		B1CD343B219EEE6C003C88AF /* code.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1CD343A219EEE6C003C88AF /* code.cpp */; settings = {COMPILER_FLAGS = "-std=c++17 -O3 -Wall -Wextra -pedantic -pthread -march=native -DONLINE_JUDGE=1 -fomit-frame-pointer -g -DHASH=1 -DOFFLINE_START_BUILD=1"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,13 +23,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B1F7258B219B31C9001061E6 /* Logs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Logs; sourceTree = "<group>"; };
-		B1FFC610219A194100DC89A2 /* CodeChef_Codes */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CodeChef_Codes; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1FFC61A219A197000DC89A2 /* Headers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Headers; sourceTree = "<group>"; };
-		B1FFC61D219A197000DC89A2 /* Cases */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Cases; sourceTree = "<group>"; };
-		B1FFC61E219A197000DC89A2 /* Input */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Input; sourceTree = "<group>"; };
-		B1FFC61F219A197000DC89A2 /* Output */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Output; sourceTree = "<group>"; };
-		B1FFC623219A1A0100DC89A2 /* code.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = code.cpp; sourceTree = "<group>"; };
+		B1CD3438219EEE30003C88AF /* Code_Template */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Code_Template; sourceTree = "<group>"; };
+		B1CD343A219EEE6C003C88AF /* code.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = code.cpp; path = Code_Template/code.cpp; sourceTree = "<group>"; };
+		B1FFC610219A194100DC89A2 /* Code_Template */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Code_Template; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +42,8 @@
 		B1FFC607219A194100DC89A2 = {
 			isa = PBXGroup;
 			children = (
-				B1FFC612219A194100DC89A2 /* CodeChef_Codes */,
+				B1CD343A219EEE6C003C88AF /* code.cpp */,
+				B1CD3438219EEE30003C88AF /* Code_Template */,
 				B1FFC611219A194100DC89A2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,30 +51,17 @@
 		B1FFC611219A194100DC89A2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B1FFC610219A194100DC89A2 /* CodeChef_Codes */,
+				B1FFC610219A194100DC89A2 /* Code_Template */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		B1FFC612219A194100DC89A2 /* CodeChef_Codes */ = {
-			isa = PBXGroup;
-			children = (
-				B1F7258B219B31C9001061E6 /* Logs */,
-				B1FFC623219A1A0100DC89A2 /* code.cpp */,
-				B1FFC61D219A197000DC89A2 /* Cases */,
-				B1FFC61A219A197000DC89A2 /* Headers */,
-				B1FFC61E219A197000DC89A2 /* Input */,
-				B1FFC61F219A197000DC89A2 /* Output */,
-			);
-			path = CodeChef_Codes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B1FFC60F219A194100DC89A2 /* CodeChef_Codes */ = {
+		B1FFC60F219A194100DC89A2 /* Code_Template */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B1FFC617219A194100DC89A2 /* Build configuration list for PBXNativeTarget "CodeChef_Codes" */;
+			buildConfigurationList = B1FFC617219A194100DC89A2 /* Build configuration list for PBXNativeTarget "Code_Template" */;
 			buildPhases = (
 				B1FFC60C219A194100DC89A2 /* Sources */,
 				B1FFC60D219A194100DC89A2 /* Frameworks */,
@@ -87,9 +71,9 @@
 			);
 			dependencies = (
 			);
-			name = CodeChef_Codes;
+			name = Code_Template;
 			productName = CodeChef_Codes;
-			productReference = B1FFC610219A194100DC89A2 /* CodeChef_Codes */;
+			productReference = B1FFC610219A194100DC89A2 /* Code_Template */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -106,7 +90,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B1FFC60B219A194100DC89A2 /* Build configuration list for PBXProject "CodeChef_Codes" */;
+			buildConfigurationList = B1FFC60B219A194100DC89A2 /* Build configuration list for PBXProject "Code_Template" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -118,7 +102,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B1FFC60F219A194100DC89A2 /* CodeChef_Codes */,
+				B1FFC60F219A194100DC89A2 /* Code_Template */,
 			);
 		};
 /* End PBXProject section */
@@ -128,7 +112,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1FFC624219A1A0100DC89A2 /* code.cpp in Sources */,
+				B1CD343B219EEE6C003C88AF /* code.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,8 +234,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_STATIC_ANALYZER_MODE_ON_ANALYZE_ACTION = shallow;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 493N49BXGJ;
+				GCC_VERSION = "";
 				"HEADER_SEARCH_PATHS[arch=*]" = /usr/local/include;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				OTHER_LDFLAGS = (
@@ -269,6 +256,7 @@
 					"-lcrypto",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -276,10 +264,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_STATIC_ANALYZER_MODE_ON_ANALYZE_ACTION = shallow;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 493N49BXGJ;
+				GCC_VERSION = "";
 				"HEADER_SEARCH_PATHS[arch=*]" = /usr/local/include;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-I/usr/local/include",
 					"-I/usr/local/opt/openssl/include",
@@ -295,13 +288,14 @@
 					"-lcrypto",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B1FFC60B219A194100DC89A2 /* Build configuration list for PBXProject "CodeChef_Codes" */ = {
+		B1FFC60B219A194100DC89A2 /* Build configuration list for PBXProject "Code_Template" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B1FFC615219A194100DC89A2 /* Debug */,
@@ -310,7 +304,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B1FFC617219A194100DC89A2 /* Build configuration list for PBXNativeTarget "CodeChef_Codes" */ = {
+		B1FFC617219A194100DC89A2 /* Build configuration list for PBXNativeTarget "Code_Template" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B1FFC618219A194100DC89A2 /* Debug */,
