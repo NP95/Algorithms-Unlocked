@@ -7,6 +7,7 @@
 #define functions_h
 #include "static.h"
 #include "constants.h"
+#include "exceptions.h"
 
 string to_hex(unsigned char s) {
     stringstream ss;
@@ -29,5 +30,18 @@ string sha256(string line) {
     return output;
 }
 #endif
+
+static void fork_and_run(char * const args[]) {
+    pid_t processId;
+    if ((processId = fork()) == 0) {
+        if (execv(args[0], args) < 0) {
+            throw FATAL_EXCEPTION("No Program to run.");
+        }
+    } else if (processId < 0) {
+        throw FATAL_EXCEPTION("No Process");
+    } else {
+        /* Nothing */
+    }
+}
 
 #endif /* functions_h */

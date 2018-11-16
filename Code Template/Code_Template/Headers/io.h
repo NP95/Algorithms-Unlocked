@@ -174,7 +174,7 @@ void ioutil(const string& type = "stdin")
 
 char * const copy_parameters[] = { "/bin/cp", "-a", "./", "./../../ProjectStudio/Algorithms-Unlocked/Code\ Template/Code_Template", NULL};
 
-static void run_prog_from_args(char * const args[] = copy_parameters) {
+static void copy_to_git(char * const args[] = copy_parameters) {
     pid_t processId;
     if ((processId = fork()) == 0) {
         if (execv(args[0], args) < 0) {
