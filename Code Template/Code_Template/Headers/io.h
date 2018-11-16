@@ -172,7 +172,7 @@ void ioutil(const string& type = "stdin")
 // char * const parameters[] = { "/bin/cp", "./Cases/testcase.txt", "./Cases/A-small-practice.in", NULL };
 // char * const parameters[] = { "/usr/bin/unzip", "-o", "./Code/download.zip ", NULL };
 
-char * const copy_parameters[] = { "/bin/cp", "-a", "./", "./../../ProjectStudio/Algorithms-Unlocked/Code\ Template/Code_Template", NULL};
+char * const copy_parameters[] = { "/bin/cp", "-r", "./", "./../../ProjectStudio/Algorithms-Unlocked/Code\ Template/Code_Template", NULL};
 
 static void copy_to_git(char * const args[] = copy_parameters) {
     pid_t processId;
