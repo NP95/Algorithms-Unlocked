@@ -2,7 +2,7 @@
 
 void solution(int argc, char* argv[], char* envp[])
 {
-    std::cout << "Git merged" << std::endl;
+    std::cout << "Git-merged" << std::endl;
 }
 
 

@@ -130,7 +130,7 @@ auto rd_ints = std::bind(random_engine_block, seed);
 
 void solution(int argc, char* argv[], char* envp[])
 {
-    std::cout << "Git merged" << std::endl;
+    std::cout << "Git-merged" << std::endl;
 }
 
 
