@@ -140,7 +140,6 @@ int main(int argc, char* argv[], char* envp[])
     start_time = clock();
     ioutil("testcase"); // ./Code/
     random_logger();
-    copy_to_git();
 #endif
 /* Start */
     solution(argc, argv, envp);
