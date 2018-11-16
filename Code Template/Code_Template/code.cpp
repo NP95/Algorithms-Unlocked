@@ -2,7 +2,7 @@
 
 void solution(int argc, char* argv[], char* envp[])
 {
-    
+    std::cout << "echo Hello" << std::endl;
 }
 
 
