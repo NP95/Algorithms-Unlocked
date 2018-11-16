@@ -1,8 +1,11 @@
 #include "Headers/headers.h"
 
+#define DFLAGS "flgs"
+
 void solution(int argc, char* argv[], char* envp[])
 {
     /* Write Code here */
+    std::cout << DFLAGS << std::endl;
 }
 
 
