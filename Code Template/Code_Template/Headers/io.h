@@ -70,7 +70,7 @@ static std::vector<string> SplitWordsTokenizerFileRead (string input_string, cha
     string::iterator str_end_iter = unique(input_string.begin(), input_string.end(), [](const char& x, const char& y){
         return x == y && x == ' ';
     });
-
+    
     input_string.erase(str_end_iter, input_string.end());
     while(input_string[input_string.length() - 1] == ' '){
         input_string.pop_back();
@@ -178,11 +178,11 @@ static void ioutil(const string& type = "stdin")
 #endif
     
     if(type == "stdin")
-        freopen(STDIN_FILE_REDIRECT, "r+", stdin);
+    freopen(STDIN_FILE_REDIRECT, "r+", stdin);
     else if (type == "testcase")
-        freopen(STDIN_TEST_REDIRECT, "r+", stdin);
+    freopen(STDIN_TEST_REDIRECT, "r+", stdin);
     else
-        freopen(type.c_str(), "r+", stdin);
+    freopen(type.c_str(), "r+", stdin);
     
     freopen(STDOUT_FILE_REDIRECT, "w+", stdout);
     freopen(STDOUT_LOGGER_ERROR_REDIRECT, "a+", stderr);
@@ -220,3 +220,4 @@ static void HackerRank(char * const args[] = unzip_parameters) {
 }
 
 #endif /* reader_h */
+
