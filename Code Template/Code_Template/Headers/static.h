@@ -28,6 +28,9 @@
     #include <curlpp/Easy.hpp>
     #include <curlpp/Options.hpp>
     #include <curlpp/cURLpp.hpp>
+    #include <sys/types.h>
+    #include <sys/socket.h>
+    #include <sys/mman.h>
     #include "constants.h"
 #if TARGET_IPHONE_SIMULATOR
 // iOS Simulator
@@ -42,6 +45,9 @@
     #include <unistd.h>
     #include <sys/resource.h>
     #include <openssl/sha.h>
+    #include <sys/types.h>
+    #include <sys/socket.h>
+    #include <sys/mman.h>
 #elif __unix__ // all unices not caught above
 // Unix
 #elif defined(_POSIX_VERSION)
