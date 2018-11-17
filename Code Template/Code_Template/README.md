@@ -24,3 +24,18 @@ cd Users/sumitlahiri/
 echo 'pwd' | sudo -S /bin/cp -r ./Documents/Coding/Code_Template/./ ./Documents/ProjectStudio/Algorithms-Unlocked/Code\ Template/Code_Template
 echo 'pwd' | sudo -S ./git-merge-pull-diff-rebase.sh
 ```
+
+### Script
+
+```bash
+
+sudo git pull origin master
+sudo git rebase
+sudo git add .
+output=$(date | openssl sha256 | openssl sha256 )
+commit=$(date | openssl md5 )
+sudo git commit -a -m "X-Code Mac $commit " -m "$output"
+echo "$commit : $output"
+sudo git push origin master
+
+```
