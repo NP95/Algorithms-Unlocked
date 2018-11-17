@@ -9,8 +9,6 @@
 #include "constants.h"
 #include "exceptions.h"
 
-#endif /* reader_h */
-
 long long int reader;
 
 static void single_write_cout()
@@ -172,3 +170,5 @@ static void HackerRank(char * const args[] = unzip_parameters) {
         /* Nothing */
     }
 }
+
+#endif /* reader_h */

@@ -9,14 +9,14 @@
 #include "constants.h"
 #include "exceptions.h"
 
-string to_hex(unsigned char s) {
+static string to_hex(unsigned char s) {
     stringstream ss;
     ss << hex << (int) s;
     return ss.str();
 }
 
 #ifdef HASH
-string sha256(string line) {
+static string sha256(string line) {
     unsigned char hash[SHA256_DIGEST_LENGTH];
     SHA256_CTX sha256;
     SHA256_Init(&sha256);
