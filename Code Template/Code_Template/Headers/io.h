@@ -109,8 +109,6 @@ std::vector<std::vector<string> > read_csv_to_string (const string& filename = S
 
 void copy_code()
 {
-    fclose(stdin);
-    fclose(stdout);
     std::string str;
     freopen(MAIN, "r+", stdin);
     freopen(STDOUT_CODECHEF_REDIRECT, "w+", stdout);
@@ -143,4 +141,17 @@ void ioutil(const string& type = "stdin")
     
     freopen(STDOUT_FILE_REDIRECT, "w+", stdout);
     freopen(STDOUT_LOGGER_ERROR_REDIRECT, "a+", stderr);
+}
+
+static void codejam(char * const args[]) {
+    pid_t processId;
+    if ((processId = fork()) == 0) {
+        if (execv(args[0], args) < 0) {
+            throw FATAL_EXCEPTION("No Program to run.");
+        }
+    } else if (processId < 0) {
+        throw FATAL_EXCEPTION("No Process");
+    } else {
+        /* Nothing */
+    }
 }
