@@ -31,7 +31,10 @@
     #include <sys/types.h>
     #include <sys/socket.h>
     #include <sys/mman.h>
-    #include "constants.h"
+    #include <netinet/in.h>
+    #include <arpa/inet.h>
+    #include <sys/ipc.h>
+    #include <sys/shm.h>
 #if TARGET_IPHONE_SIMULATOR
 // iOS Simulator
 #elif TARGET_OS_IPHONE
@@ -48,6 +51,10 @@
     #include <sys/types.h>
     #include <sys/socket.h>
     #include <sys/mman.h>
+    #include <netinet/in.h>
+    #include <arpa/inet.h>
+    #include <sys/ipc.h>
+    #include <sys/shm.h>
 #elif __unix__ // all unices not caught above
 // Unix
 #elif defined(_POSIX_VERSION)
