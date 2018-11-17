@@ -11,15 +11,34 @@
 
 long long int reader;
 
-static void single_write_cout()
+static void write_random_ints(const string &file_name = STDOUT_FILE_REDIRECT, bool small = false)
 {
-    std::cerr << "Write Test : cout used" << std::endl;
+    std::fstream file(file_name.c_str(), std::fstream::out);
+    std::cerr << "Writing ints." << std::endl;
     for(auto i = 0; i < 10000; i++){
         for(auto j = 0; j < 10000; j++){
-            std::cout << rd_ints() << ", ";
+            if(!small)
+                file << rd_ints() << " ";
+            else
+                file << (rd_ints())%10000 << " ";
         }
-        std::cout << "/n";
+        file << "/n";
     }
+    file.close();
+}
+
+static void write_random_strings(const string &file_name = STDOUT_FILE_REDIRECT, bool small = false)
+{
+    std::string generator = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890~!@#$%^&*()_+{}|:";
+    std::fstream file(file_name.c_str(), std::fstream::out);
+    std::cerr << "Writing strings." << std::endl;
+    for(auto i = 0; i < 10000; i++){
+        for(auto j = 0; j < 10000; j++){
+            file << generator.substr((rd_ints())%80, (rd_ints())%80) << " ";
+        }
+        file << "/n";
+    }
+    file.close();
 }
 
 static void single_write_printf()
