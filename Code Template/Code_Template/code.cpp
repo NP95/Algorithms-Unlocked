@@ -2,8 +2,7 @@
 
 void solution(int argc, char* argv[], char* envp[])
 {
-    /* Write Code here */
-    std::cout << "--no-output" << std::endl;
+
 }
 
 
