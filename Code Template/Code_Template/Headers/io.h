@@ -11,7 +11,7 @@
 
 long long int reader;
 
-static void write_random_ints(const string &file_name = STDOUT_FILE_REDIRECT, bool small = false)
+static void write_random_ints(const string &file_name = STDIN_TEST_REDIRECT, bool small = false)
 {
     std::fstream file(file_name.c_str(), std::fstream::out);
     std::cerr << "Writing ints." << std::endl;
@@ -27,12 +27,12 @@ static void write_random_ints(const string &file_name = STDOUT_FILE_REDIRECT, bo
     file.close();
 }
 
-static void write_random_strings(const string &file_name = STDOUT_FILE_REDIRECT, bool small = false)
+static void write_random_strings(const string &file_name = STDIN_TEST_REDIRECT)
 {
     std::string generator = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890~!@#$%^&*()_+{}|:";
     std::fstream file(file_name.c_str(), std::fstream::out);
     std::cerr << "Writing strings." << std::endl;
-    for(auto i = 0; i < 10000; i++){
+    for(auto i = 0; i < 1000; i++){
         for(auto j = 0; j < 10000; j++){
             file << generator.substr((rd_ints())%80, (rd_ints())%80) << " ";
         }
