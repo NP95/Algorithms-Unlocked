@@ -1,71 +1,11 @@
 /**
  * CodeObsess (SpawnTree)
  * Copyright © 2018 CodeObsess All rights reserved
- * Feel free to use this code as you like. --attribute please.
  */
 
-#ifdef __clang__
-#    pragma clang system_header
-#elif defined __GNUC__
-#    pragma GCC system_header
-#endif
-
-#ifndef MIN_RANGE
-#define MIN_RANGE 0
-#endif
-
-#ifndef MAX_RANGE
-#define MAX_RANGE 972150001
-#endif
-
-#include <iostream>
-#include <stdio.h>
-#include <cstdio>
-#include <cstring>
-#include <cstdlib>
-#include <cassert>
-#include <stdlib.h>
-#include <unistd.h>
-#include <vector>
-#include <algorithm>
-#include <map>
-#include <set>
-#include <unordered_map>
-#include <unordered_set>
-#include <queue>
-#include <deque>
-#include <array>
-#include <bitset>
-#include <functional>
-#include <stack>
-#include <string>
-#include <fstream>
-#include <sstream>
-#include <memory>
-#include <math.h>
-#include <thread>
-#include <forward_list>
-#include <list>
-#include <ios>
-#include <streambuf>
-#include <atomic>
-#include <future>
-#include <mutex>
-#include <thread>
-#include <numeric>
-#include <random>
-#include <regex>
-#include <utility>
-#include <typeinfo>
-#include <exception>
-#include <ctime>
-#include <time.h>
-#include <chrono>
-#include <system_error>
-#include <initializer_list>
-#include <tuple>
-#include <stdexcept>
-#include <iomanip>
+#ifndef methods_h
+#define methods_h
+#include "static.h"
 
 /* #define */
 #define bit(x, i) ( x & (1<<i) )
@@ -86,7 +26,7 @@
 #define bits(T) std::bitset<T>
 #define SIZE 655360
 #define itn int
-#define mp make_pair
+#define mpir make_pair
 #define mt make_tuple
 #define pb push_back
 #define pf push_front
@@ -119,36 +59,5 @@ template <typename T> T InverseEuler(T a, T m){return (a==1? 1 : power(a, m-2, m
 template <typename T> T gcd(T a, T b){return (!b)? a:gcd(b,a%b); }
 template <typename T> T lcm(T a, T b){return (a*(b/gcd(a,b))); }
 
-/* Random bits */
-std::random_device rd;
-std::default_random_engine seed(rd());
-std::uniform_int_distribution<int> random_engine_block(MIN_RANGE, MAX_RANGE);
-auto rd_ints = std::bind(random_engine_block, seed);
-
-/* Appended working code here using freopen() */
-
-
-void solution(int argc, char* argv[], char* envp[])
-{
-
-}
-
-
-int main(int argc, char* argv[], char* envp[])
-{
-#ifdef OFFLINE_START_BUILD
-    start_time = clock();
-    ioutil("testcase"); // ./Code/
-    random_logger();
-#endif
-/* Start */
-    solution(argc, argv, envp);
-/* End */
-#ifdef OFFLINE_START_BUILD
-    copy_code();
-    log("Finished");
-    log_time(start_time, argc, argv, envp);
-#endif
-    return 0;
-}
+#endif /* methods_h */
 

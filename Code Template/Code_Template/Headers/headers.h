@@ -13,6 +13,6 @@
 #include "exceptions.h"
 #include "logger.h"
 #include "static.h"
-#include "methods.h"
+#include "competitive.h"
 
 #endif /* allheaders_h */
