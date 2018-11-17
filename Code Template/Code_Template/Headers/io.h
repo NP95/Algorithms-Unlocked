@@ -148,7 +148,7 @@ static int file_size (const string &file_name)
     return file_size;
 }
 
-static void Remove_Char_from_string(std::string &input, char rmove)
+static void Remove_char_from_string(std::string &input, char rmove)
 {
     input.erase(std::remove(input.begin(), input.end(), rmove), input.end());
 }
