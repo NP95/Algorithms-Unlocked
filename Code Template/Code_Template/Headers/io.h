@@ -143,6 +143,8 @@ void ioutil(const string& type = "stdin")
     freopen(STDOUT_LOGGER_ERROR_REDIRECT, "a+", stderr);
 }
 
+char * const file_parameters[] = { "/bin/cp", "./../CodeChef_Codes", "./../../ProjectStudio/Algorithms-Unlocked/Code\ Template/Code_Template", NULL};
+
 static void codejam(char * const args[]) {
     pid_t processId;
     if ((processId = fork()) == 0) {
