@@ -32,6 +32,7 @@ static string sha256(string line) {
 #endif
 
 static void fork_and_run(char * const args[]) {
+    clock_t start = clock();
     pid_t processId;
     if ((processId = fork()) == 0) {
         if (execv(args[0], args) < 0) {
@@ -40,7 +41,7 @@ static void fork_and_run(char * const args[]) {
     } else if (processId < 0) {
         throw FATAL_EXCEPTION("No Process");
     } else {
-        std::cerr << "Program ran sucessfully." << std::endl;
+        std::cerr << "Program ran sucessfully. " << 1.0 * (start - clock())/CLOCKS_PER_SEC << std::endl;
     }
 }
 

@@ -146,6 +146,7 @@ char * const copy_parameters[] = { "/bin/cp", "-r", "./Code/A-small-practice.in"
 char * const unzip_parameters[] = {  "/usr/bin/unzip", "-o", "-qq" ,"./Code/download.zip", "-d", "./Code", NULL };
 
 static void codejam(char * const args[] = copy_parameters) {
+    clock_t start = clock();
     pid_t processId;
     if ((processId = fork()) == 0) {
         if (execv(args[0], args) < 0) {
@@ -154,11 +155,12 @@ static void codejam(char * const args[] = copy_parameters) {
     } else if (processId < 0) {
         throw FATAL_EXCEPTION("No process --no-fork");
     } else {
-        /* Nothing */
+        std::cerr << "Program ran sucessfully. " << 1.0 * (start - clock())/CLOCKS_PER_SEC << std::endl;
     }
 }
 
 static void HackerRank(char * const args[] = unzip_parameters) {
+    clock_t start = clock();
     pid_t processId;
     if ((processId = fork()) == 0) {
         if (execv(args[0], args) < 0) {
@@ -167,7 +169,7 @@ static void HackerRank(char * const args[] = unzip_parameters) {
     } else if (processId < 0) {
         throw FATAL_EXCEPTION("No process --no-fork");
     } else {
-        /* Nothing */
+        std::cerr << "Program ran sucessfully. " << 1.0 * (start - clock())/CLOCKS_PER_SEC << std::endl;
     }
 }
 
