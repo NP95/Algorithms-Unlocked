@@ -13,7 +13,7 @@
 
 long long int reader;
 
-void single_write_cout()
+static void single_write_cout()
 {
     std::cerr << "Write Test : cout used" << std::endl;
     for(auto i = 0; i < 10000; i++){
@@ -24,7 +24,7 @@ void single_write_cout()
     }
 }
 
-void single_write_printf()
+static void single_write_printf()
 {
     std::cerr << "Write Test :  printf used" << std::endl;
     for(auto i = 0; i < 10000; i++){
@@ -34,7 +34,8 @@ void single_write_printf()
         printf("\n");
     }
 }
-void single_write_cin()
+
+static void single_write_cin()
 {
     std::cerr << "Read Test : Read using custom function" << std::endl;
     for(auto i = 0; i < 1000; i++){
@@ -44,7 +45,7 @@ void single_write_cin()
     }
 }
 
-void single_write_scanf()
+static void single_write_scanf()
 {
     std::cerr << "Read Test : Read using scanf" << std::endl;
     for(auto i = 0; i < 1000; i++){
@@ -54,7 +55,7 @@ void single_write_scanf()
     }
 }
 
-void read_data_write()
+static void read_data_write()
 {
     std::cerr << "Read and write data using cin, printf" << std::endl;
     for(auto i = 0; i < 1000; i++){
@@ -67,7 +68,7 @@ void read_data_write()
 }
 
 /* Read, Tokenize, Write CSV, text */
-std::vector<string> SplitWordsTokenizerCSVRead (string input_string, char delimiter)
+static std::vector<string> SplitWordsTokenizerCSVRead (string input_string, char delimiter)
 {
     string::iterator str_end_iter = unique(input_string.begin(), input_string.end(), [](const char& x, const char& y){
         return x == y && x == ' ';
@@ -93,7 +94,7 @@ std::vector<string> SplitWordsTokenizerCSVRead (string input_string, char delimi
     return split_tokens;
 }
 
-std::vector<std::vector<string> > read_csv_to_string (const string& filename = STDIN_CSV_REDIRECT, char delimiter = ',') /* Right first */
+static std::vector<std::vector<string> > read_csv_to_string (const string& filename = STDIN_CSV_REDIRECT, char delimiter = ',') /* Right first */
 {
     std::string input = "";
     std::vector<std::vector<std::string> > CSVTokens;
@@ -107,7 +108,7 @@ std::vector<std::vector<string> > read_csv_to_string (const string& filename = S
     return CSVTokens;
 }
 
-void copy_code()
+static void copy_code()
 {
     std::string str;
     freopen(MAIN, "r+", stdin);
@@ -124,7 +125,7 @@ void copy_code()
     }
 }
 
-void ioutil(const string& type = "stdin")
+static void ioutil(const string& type = "stdin")
 {
 #ifdef ONLINE_JUDGE
     ios_base::sync_with_stdio(false);
@@ -144,15 +145,29 @@ void ioutil(const string& type = "stdin")
 }
 
 char * const copy_parameters[] = { "/bin/cp", "-r", "./Code/A-small-practice.in", "./Code/testcase.txt", NULL};
+char * const unzip_parameters[] = {  "/usr/bin/unzip", "-o", "-qq" ,"./Code/download.zip", "-d", "./Code", NULL };
 
-static void codejam(char * const args[]) {
+static void codejam(char * const args[] = copy_parameters) {
     pid_t processId;
     if ((processId = fork()) == 0) {
         if (execv(args[0], args) < 0) {
-            throw FATAL_EXCEPTION("No Program to run.");
+            throw FATAL_EXCEPTION("cp --error-ocurred.");
         }
     } else if (processId < 0) {
-        throw FATAL_EXCEPTION("No Process");
+        throw FATAL_EXCEPTION("No process --no-fork");
+    } else {
+        /* Nothing */
+    }
+}
+
+static void HackerRank(char * const args[] = unzip_parameters) {
+    pid_t processId;
+    if ((processId = fork()) == 0) {
+        if (execv(args[0], args) < 0) {
+            throw FATAL_EXCEPTION("unzip --error ocurred.");
+        }
+    } else if (processId < 0) {
+        throw FATAL_EXCEPTION("No process --no-fork");
     } else {
         /* Nothing */
     }
