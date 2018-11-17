@@ -133,6 +133,8 @@ auto rd_ints = std::bind(random_engine_block, seed);
 void solution(int argc, char* argv[], char* envp[])
 {
     /* __call ZSolution+%$8764$ */
+    
+    
 }
 
 
