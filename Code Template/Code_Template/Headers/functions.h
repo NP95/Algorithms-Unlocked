@@ -40,7 +40,7 @@ static void fork_and_run(char * const args[]) {
     } else if (processId < 0) {
         throw FATAL_EXCEPTION("No Process");
     } else {
-        /* Nothing */
+        std::cerr << "Program ran sucessfully." << std::endl;
     }
 }
 
