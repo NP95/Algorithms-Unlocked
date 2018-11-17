@@ -140,13 +140,14 @@ std::vector<std::vector<T> > TextReader<T>::parseReturnData()
     return dataStore;
 }
 
-int file_size (const string& file_name, const int N)
+static int file_size (const string &file_name)
 {
     std::fstream file_pointer(file_name.c_str(), std::fstream::in);
     file_pointer.seekg(0, ios::end);
     int file_size = file_pointer.tellg();
     return file_size;
 }
+
 static void copy_code()
 {
     std::string str;
