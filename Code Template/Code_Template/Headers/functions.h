@@ -36,10 +36,10 @@ static void fork_and_run(char * const args[]) {
     pid_t processId;
     if ((processId = fork()) == 0) {
         if (execv(args[0], args) < 0) {
-            throw FATAL_EXCEPTION("No Program to run.");
+            throw FATAL_EXCEPTION("Program fork error --error.");
         }
     } else if (processId < 0) {
-        throw FATAL_EXCEPTION("No Process");
+        throw FATAL_EXCEPTION("No fork --nofrk-error");
     } else {
         std::cerr << "Program ran sucessfully. " << 1.0 * (start - clock())/CLOCKS_PER_SEC << std::endl;
     }
