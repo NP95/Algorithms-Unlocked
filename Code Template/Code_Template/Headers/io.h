@@ -94,7 +94,7 @@ static std::vector<string> SplitWordsTokenizerCSVRead (string input_string, char
     return split_tokens;
 }
 
-static std::vector<std::vector<string> > read_csv_to_string (const string& filename = STDIN_CSV_REDIRECT, char delimiter = ',') /* Right first */
+static std::vector<std::vector<string> > read_csv_to_string (const string& filename = STDIN_CSV_REDIRECT, char delimiter = ',')
 {
     std::string input = "";
     std::vector<std::vector<std::string> > CSVTokens;
