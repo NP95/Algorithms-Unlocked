@@ -138,12 +138,10 @@ int main(int argc, char* argv[], char* envp[])
 {
 #ifdef OFFLINE_START_BUILD
     start_time = clock();
-    ioutil("testcase"); // ./Code/
+    ioutil("testcase");
     random_logger();
 #endif
-/* Start */
     solution(argc, argv, envp);
-/* End */
 #ifdef OFFLINE_START_BUILD
     copy_code();
     log("Finished");

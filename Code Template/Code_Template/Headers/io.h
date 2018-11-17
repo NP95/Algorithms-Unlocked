@@ -13,28 +13,6 @@
 
 long long int reader;
 
-int readInt() {
-    bool minus = false;
-    int result = 0;
-    char ch;
-    ch = getchar();
-    while (true) {
-        if (ch == '-') break;
-        if (ch >= '0' && ch <= '9') break;
-        ch = getchar();
-    }
-    if (ch == '-') minus = true; else result = ch-'0';
-    while (true) {
-        ch = getchar();
-        if (ch < '0' || ch > '9') break;
-        result = result*10 + (ch - '0');
-    }
-    if (minus)
-        return -result;
-    else
-        return result;
-}
-
 void single_write_cout()
 {
     std::cerr << "Write Test : cout used" << std::endl;
@@ -61,7 +39,7 @@ void single_write_cin()
     std::cerr << "Read Test : Read using custom function" << std::endl;
     for(auto i = 0; i < 1000; i++){
         for(auto j = 0; j < 10000; j++){
-            readInt();
+            std::cin >> reader;
         }
     }
 }
@@ -101,7 +79,6 @@ std::vector<string> SplitWordsTokenizerCSVRead (string input_string, char delimi
     }
     std::vector<string> split_tokens;
     size_t pos, i = 0;
-    /* Find white spaces and tokenized the string by slicing into substrings at comma. Push back the substrings. */
     pos = input_string.find(delimiter);
     while(pos != string::npos){
         auto temp = input_string.substr(i, pos - i);
@@ -110,7 +87,6 @@ std::vector<string> SplitWordsTokenizerCSVRead (string input_string, char delimi
         i = pos + 1;
         pos = input_string.find(delimiter, i);
     }
-    /* Last part of the string is still left out. */
     auto temp = input_string.substr(i, std::min(pos, input_string.length()));
     temp.erase(0, 1);
     split_tokens.push_back(temp);
