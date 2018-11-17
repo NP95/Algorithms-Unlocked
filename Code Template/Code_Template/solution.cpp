@@ -127,7 +127,7 @@ auto rd_ints = std::bind(random_engine_block, seed);
 
 /* Appended working code here using freopen() */
 
-/* Headers */
+
 
 
 void solution(int argc, char* argv[], char* envp[])
