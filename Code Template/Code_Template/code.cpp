@@ -1,8 +1,10 @@
 #include "Headers/headers.h"
+/* Headers */
+
 
 void solution(int argc, char* argv[], char* envp[])
 {
-    
+    /* __call ZSolution+%$8764$ */
 }
 
 
