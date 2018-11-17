@@ -65,7 +65,7 @@ static void read_data_write()
     }
 }
 
-static std::vector<string> SplitWordsTokenizerCSVRead (string input_string, char delimiter)
+static std::vector<string> SplitWordsTokenizerFileRead (string input_string, char delimiter)
 {
     string::iterator str_end_iter = unique(input_string.begin(), input_string.end(), [](const char& x, const char& y){
         return x == y && x == ' ';
@@ -91,14 +91,14 @@ static std::vector<string> SplitWordsTokenizerCSVRead (string input_string, char
     return split_tokens;
 }
 
-static std::vector<std::vector<string> > read_csv_to_string (const string& filename = STDIN_CSV_REDIRECT, char delimiter = ',')
+static std::vector<std::vector<string> > read_file_to_string (const string& filename = STDIN_CSV_REDIRECT, char delimiter = ',')
 {
     std::string input = "";
     std::vector<std::vector<std::string> > CSVTokens;
     std::fstream fileCSVReader(filename.c_str(), std::fstream::in);
     while(fileCSVReader.good() && std::getline(fileCSVReader, input))
     {
-        auto dump = SplitWordsTokenizerCSVRead(input, delimiter);
+        auto dump = SplitWordsTokenizerFileRead(input, delimiter);
         CSVTokens.push_back(dump);
     }
     fileCSVReader.close();
