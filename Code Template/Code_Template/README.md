@@ -21,7 +21,7 @@ OTHER_LDFLAGS
 ```
 cd ../../../../../../../../../../../../
 cd Users/sumitlahiri/
-echo 'pwd' | sudo -S /bin/cp -r ./Documents/Coding/Code_Template/./ ./Documents/ProjectStudio/Algorithms-Unlocked/Code\ Template/Code_Template
+echo 'pwd' | sudo -S /usr/bin/rsync -r ./Documents/Coding/Code_Template/./ ./Documents/ProjectStudio/Algorithms-Unlocked/Code\ Template/Code_Template
 echo 'pwd' | sudo -S ./git-merge-pull-diff-rebase.sh
 ```
 
