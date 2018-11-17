@@ -106,6 +106,47 @@ static std::vector<std::vector<string> > read_csv_to_string (const string& filen
     return CSVTokens;
 }
 
+template <typename T>
+class TextReader
+{
+    std::string fileName;
+    public:
+    TextReader(std::string file) : fileName(file){}
+    std::vector<std::vector<T> > parseReturnData();
+};
+
+template <typename T>
+std::vector<std::vector<T> > TextReader<T>::parseReturnData()
+{
+    T nums;
+    std::ifstream file_stream(fileName.c_str(), std::fstream::in);
+    std::vector<std::vector<T> > dataStore;
+    std::vector<T> temp;
+    if(file_stream.fail()){
+        std::cout << "Error Opening/Reading file." << std::endl;
+        exit(EXIT_FAILURE);
+    } else {
+        while(!file_stream.eof()){
+            for(auto cols = 0; cols < 3; cols++){
+                file_stream >> nums;
+                temp.push_back(nums);
+            }
+            if(file_stream.eof()) break;
+            dataStore.push_back(temp);
+            temp.clear();
+        }
+    }
+    file_stream.close();
+    return dataStore;
+}
+
+int file_size (const string& file_name, const int N)
+{
+    std::fstream file_pointer(file_name.c_str(), std::fstream::in);
+    file_pointer.seekg(0, ios::end);
+    int file_size = file_pointer.tellg();
+    return file_size;
+}
 static void copy_code()
 {
     std::string str;
