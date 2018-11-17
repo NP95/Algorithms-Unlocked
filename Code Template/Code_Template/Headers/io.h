@@ -144,7 +144,7 @@ static int file_size (const string &file_name)
 {
     std::fstream file_pointer(file_name.c_str(), std::fstream::in);
     file_pointer.seekg(0, ios::end);
-    int file_size = file_pointer.tellg();
+    long long file_size = file_pointer.tellg();
     return file_size;
 }
 
