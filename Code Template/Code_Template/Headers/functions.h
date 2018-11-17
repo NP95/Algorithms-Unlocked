@@ -58,4 +58,5 @@ static void copy_to_test_case(char * const args[]) {
         std::cerr << "Copied sucessfully. " << 1.0 * (start - clock())/CLOCKS_PER_SEC << std::endl;
     }
 }
+
 #endif /* functions_h */
