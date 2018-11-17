@@ -14,7 +14,7 @@ static void random_logger()
     std::string str = "Build ID : " + build_base;
     std::cerr << "--------------------------------------------------------------------BUILD---------------------------------------------------------------------" << std::endl;
 #ifdef HASH
-    std::cerr << str << ", Build Hash : " << sha256(str) << std::endl;
+    std::cerr << str << ", Build Hash : " << double_sha256(str) << std::endl;
 #elif _WIN64 || _WIN32
     std::cerr << str << std::endl;
 #endif

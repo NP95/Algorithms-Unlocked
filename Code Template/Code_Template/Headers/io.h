@@ -65,7 +65,6 @@ static void read_data_write()
     }
 }
 
-/* Read, Tokenize, Write CSV, text */
 static std::vector<string> SplitWordsTokenizerCSVRead (string input_string, char delimiter)
 {
     string::iterator str_end_iter = unique(input_string.begin(), input_string.end(), [](const char& x, const char& y){
@@ -140,7 +139,7 @@ std::vector<std::vector<T> > TextReader<T>::parseReturnData()
     return dataStore;
 }
 
-static int file_size (const string &file_name)
+static long long file_size (const string &file_name)
 {
     std::fstream file_pointer(file_name.c_str(), std::fstream::in);
     file_pointer.seekg(0, ios::end);

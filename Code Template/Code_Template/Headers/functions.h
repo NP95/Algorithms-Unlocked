@@ -43,8 +43,7 @@ static string double_sha256(string &line) {
     }
     return output;
 }
-
-#endif
+#endif /* Hash */
 
 static void fork_and_run(char * const args[]) {
     clock_t start = clock();
@@ -60,7 +59,9 @@ static void fork_and_run(char * const args[]) {
     }
 }
 
-static void copy_to_test_case(char * const args[]) {
+char * const case_parameters[] = { "/bin/cp", "-r", "./Code/<name-of-file-here>", "./Code/testcase.txt", NULL};
+
+static void copy_to_test_case(char * const args[] = case_parameters) {
     clock_t start = clock();
     pid_t processId;
     if ((processId = fork()) == 0) {
