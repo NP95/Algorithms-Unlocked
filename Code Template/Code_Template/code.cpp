@@ -1,11 +1,9 @@
 #include "Headers/headers.h"
 
 
-
 void solution(int argc, char* argv[], char* envp[])
 {
-    /* __call ZSolution+%$8764$ */
-    std::cout << clock() << std::endl;
+
 }
 
 
