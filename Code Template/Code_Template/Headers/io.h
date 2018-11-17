@@ -148,6 +148,11 @@ static int file_size (const string &file_name)
     return file_size;
 }
 
+static void RemoveChar(std::string &input, char rmove)
+{
+    input.erase(std::remove(input.begin(), input.end(), rmove), input.end());
+}
+
 static void copy_code()
 {
     std::string str;
