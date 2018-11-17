@@ -1,5 +1,5 @@
 #include "Headers/headers.h"
-/* Headers */
+
 
 
 void solution(int argc, char* argv[], char* envp[])
