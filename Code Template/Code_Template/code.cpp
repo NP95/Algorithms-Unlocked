@@ -16,7 +16,6 @@ int main(int argc, char* argv[], char* envp[])
     solution(argc, argv, envp);
 #ifdef OFFLINE_START_BUILD
     copy_code();
-    log("Finished");
     log_time(start_time, argc, argv, envp);
 #endif
     return 0;
