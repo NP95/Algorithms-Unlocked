@@ -8,7 +8,7 @@
 #include "static.h"
 #include "functions.h"
 
-void random_logger()
+static void random_logger()
 {
     std::string build_base = std::to_string(rd_ints());
     std::string str = "Build ID : " + build_base;
@@ -20,14 +20,14 @@ void random_logger()
 #endif
 }
 
-void log_time(clock_t start_time, int &argc, char* *argv, char* *envp)
+static void log_time(clock_t start_time, int &argc, char* *argv, char* *envp)
 {
     clock_t end_time = clock() - start_time;
     std::cerr << "--------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------" << std::endl;
     std::cerr << "Running with -"<< argv[2] << " $" << envp[9] << " Time : " << ((float)end_time)/CLOCKS_PER_SEC << " sec, " << "Ticks : " << end_time << " (" << argc << ")" << std::endl;
 }
 
-void log(const string& log_str)
+static void log(const string& log_str)
 {
     time_t now = time(0);
     char* dt = ctime(&now);
