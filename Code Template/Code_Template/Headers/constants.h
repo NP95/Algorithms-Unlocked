@@ -9,7 +9,7 @@
 #endif /* constants_h */
 
 #ifndef GLOBAL_DIR
-#define GLOBAL_DIR "./../../"
+#define GLOBAL_DIR "../../../../../../../../Documents/Coding/Code_Template/"
 #endif
 
 #ifndef DUMP_HEADERS
