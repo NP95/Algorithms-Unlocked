@@ -31,7 +31,9 @@
     #include <sys/types.h>
     #include <sys/socket.h>
     #include <sys/mman.h>
+    #include <errno.h>
     #include <netinet/in.h>
+    #include <netdb.h>
     #include <arpa/inet.h>
     #include <sys/ipc.h>
     #include <sys/shm.h>
@@ -50,11 +52,13 @@
     #include <openssl/sha.h>
     #include <sys/types.h>
     #include <sys/socket.h>
+    #include <netdb.h>
     #include <sys/mman.h>
     #include <netinet/in.h>
     #include <arpa/inet.h>
     #include <sys/ipc.h>
     #include <sys/shm.h>
+    #include <errno.h>
 #elif __unix__ // all unices not caught above
 // Unix
 #elif defined(_POSIX_VERSION)

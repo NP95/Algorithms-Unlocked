@@ -27,6 +27,27 @@ static void write_random_ints(const string &file_name = STDIN_TEST_REDIRECT, boo
     file.close();
 }
 
+static void write_random_ints_sorted(const string &file_name = STDIN_TEST_REDIRECT, bool small = false)
+{
+    std::fstream file(file_name.c_str(), std::fstream::out);
+    std::cerr << "Writing ints." << std::endl;
+    std::vector<long long int> dump;
+    for(auto i = 0; i < 1000; i++){
+        for(auto j = 0; j < 10000; j++){
+            if(!small){
+                dump.emplace_back(rd_ints());
+            }
+            else
+                dump.emplace_back((rd_ints())%10000);
+        }
+        std::sort(dump.begin(), dump.end());
+        for(const auto &a : dump) file << a << " ";
+        dump.erase(dump.begin(), dump.end());
+        file << "/n";
+    }
+    file.close();
+}
+
 static void write_random_strings(const string &file_name = STDIN_TEST_REDIRECT)
 {
     std::string generator = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890~!@#$%^&*()_+{}|:";
@@ -177,8 +198,12 @@ static void copy_code()
     freopen(MAIN, "r+", stdin);
     freopen(STDOUT_CODECHEF_REDIRECT, "w+", stdout);
     std::fstream file(DUMP_HEADERS, std::fstream::in);
-    while(std::getline(file, str)){
-        printf("%s\n", str.c_str());
+    if(file.fail()){
+        std::cerr << "Error Opening/Reading Header file." << std::endl;
+    } else {
+        while(!file.eof() && std::getline(file, str)){
+            printf("%s\n", str.c_str());
+        }
     }
     file.close();
     freopen(STDOUT_CODECHEF_REDIRECT, "a+", stdout);

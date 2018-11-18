@@ -4,18 +4,68 @@
  * Feel free to use this code as you like. --attribute please.
  */
 
+#ifndef static_h
+#define static_h
+
 #ifdef __clang__
 #    pragma clang system_header
 #elif defined __GNUC__
 #    pragma GCC system_header
 #endif
 
-#ifndef MIN_RANGE
-#define MIN_RANGE 0
+#ifdef _WIN32
+//define something for Windows (32-bit and 64-bit, this part is common)
+#ifdef _WIN64
+//define something for Windows (64-bit only)
+#else
+//define something for Windows (32-bit only)
 #endif
-
-#ifndef MAX_RANGE
-#define MAX_RANGE 972150001
+#elif __APPLE__
+#include "TargetConditionals.h"
+#include <sys/types.h>
+#include <unistd.h>
+#include <sys/resource.h>
+#include <openssl/sha.h>
+#include <curlpp/Easy.hpp>
+#include <curlpp/Options.hpp>
+#include <curlpp/cURLpp.hpp>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <sys/mman.h>
+#include <errno.h>
+#include <netinet/in.h>
+#include <netdb.h>
+#include <arpa/inet.h>
+#include <sys/ipc.h>
+#include <sys/shm.h>
+#if TARGET_IPHONE_SIMULATOR
+// iOS Simulator
+#elif TARGET_OS_IPHONE
+// iOS device
+#elif TARGET_OS_MAC
+// Other kinds of Mac OS
+#else
+#   error "Unknown Apple platform"
+#endif
+#elif __linux__
+#include <unistd.h>
+#include <sys/resource.h>
+#include <openssl/sha.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netdb.h>
+#include <sys/mman.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <sys/ipc.h>
+#include <sys/shm.h>
+#include <errno.h>
+#elif __unix__ // all unices not caught above
+// Unix
+#elif defined(_POSIX_VERSION)
+// POSIX
+#else
+#   error "Unknown compiler"
 #endif
 
 #include <iostream>
@@ -126,7 +176,6 @@ std::uniform_int_distribution<int> random_engine_block(MIN_RANGE, MAX_RANGE);
 auto rd_ints = std::bind(random_engine_block, seed);
 
 /* Appended working code here using freopen() */
-
 
 
 void solution(int argc, char* argv[], char* envp[])
