@@ -162,7 +162,7 @@ std::vector<std::vector<T> > TextReader<T>::parseReturnData()
     std::vector<std::vector<T> > dataStore;
     std::vector<T> temp;
     if(file_stream.fail()){
-        std::cout << "Error Opening/Reading file." << std::endl;
+        std::cerr << "Error Opening/Reading file." << std::endl;
         exit(EXIT_FAILURE);
     } else {
         while(!file_stream.eof()){
@@ -192,7 +192,7 @@ static void Remove_char_from_string(std::string &input, char rmove)
     input.erase(std::remove(input.begin(), input.end(), rmove), input.end());
 }
 
-static void copy_code()
+static void build_solution()
 {
     std::string str;
     freopen(MAIN, "r+", stdin);
@@ -201,7 +201,7 @@ static void copy_code()
     if(file.fail()){
         std::cerr << "Error Opening/Reading Header file." << std::endl;
     } else {
-        while(!file.eof() && std::getline(file, str)){
+        while(std::getline(file, str)){
             printf("%s\n", str.c_str());
         }
     }
@@ -213,7 +213,7 @@ static void copy_code()
     }
 }
 
-static void ioutil(const string& type = "stdin")
+static void intialize_io(const string& type = "stdin")
 {
 #ifdef ONLINE_JUDGE
     ios_base::sync_with_stdio(false);
@@ -268,9 +268,12 @@ static string compute_sha(const string& file_name)
     std::string str, dump;
     std::fstream file(file_name.c_str(), std::fstream::in);
     if(file.fail()) {
-        std::cerr << "File could not be opened." << std::endl;
+        std::cerr << "Error Opening/Reading file." << std::endl;
     } else {
-        while(std::getline(file, str)) dump += double_sha256(str);
+        while(std::getline(file, str)){
+            dump += double_sha256(str);
+            str.clear();
+        }
     }
     file.close();
     return dump;
