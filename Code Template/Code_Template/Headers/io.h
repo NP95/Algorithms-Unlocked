@@ -263,7 +263,7 @@ static void HackerRank(char * const args[] = unzip_parameters) {
     }
 }
 
-static string compute_sha(const string& file_name)
+static string compute_file_sha(const string& file_name)
 {
     std::string str, dump;
     std::fstream file(file_name.c_str(), std::fstream::in);
@@ -281,8 +281,8 @@ static string compute_sha(const string& file_name)
 
 static bool compare_files_sha256(const string& file1, const string& file2)
 {
-    string one = compute_sha(file1);
-    string two = compute_sha(file2);
+    string one = compute_file_sha(file1);
+    string two = compute_file_sha(file2);
     return (double_sha256(one) == double_sha256(two)) ? true : false;
 }
 
