@@ -14,7 +14,7 @@ int main(int argc, char* argv[], char* envp[])
     random_logger();
 #endif
     solution(argc, argv, envp);
-    compare_files_sha256(STDIN_TEST_REDIRECT, STDOUT_CODECHEF_REDIRECT);
+    std::cerr << compare_files_sha256(STDIN_TEST_REDIRECT, STDOUT_CODECHEF_REDIRECT);
 #ifdef OFFLINE_START_BUILD
     copy_code();
     log_time(start_time, argc, argv, envp);
