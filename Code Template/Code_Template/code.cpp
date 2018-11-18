@@ -2,18 +2,14 @@
 
 void solution(int argc, char* argv[], char* envp[])
 {
- 
-}
-
-static void extracted() {
-    intialize_io("testcase");
+    
 }
 
 int main(int argc, char* argv[], char* envp[])
 {
 #ifdef OFFLINE_START_BUILD
     start_time = clock();
-    extracted();
+    intialize_io("testcase");
     build_log();
 #endif
     solution(argc, argv, envp);
