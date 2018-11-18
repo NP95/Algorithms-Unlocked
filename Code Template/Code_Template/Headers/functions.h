@@ -22,7 +22,6 @@ static string sha256(string &line) {
     SHA256_Init(&sha256);
     SHA256_Update(&sha256, line.c_str(), line.length());
     SHA256_Final(hash, &sha256);
-    
     string output = "0x";
     for(int i = 0; i < SHA256_DIGEST_LENGTH; i++) {
         output += to_hex(hash[i]);
