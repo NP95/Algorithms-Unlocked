@@ -270,8 +270,9 @@ static string compute_sha(const string& file_name)
     if(file.fail()) {
         std::cerr << "File could not be opened." << std::endl;
     } else {
-        while(std::getline (std::cin, str)) dump += double_sha256(str);
+        while(std::getline(file, str)) dump += double_sha256(str);
     }
+    file.close();
     return dump;
 }
 
