@@ -215,13 +215,7 @@ static void build_solution()
 
 static void intialize_io(const string& type = "stdin")
 {
-#ifdef ONLINE_JUDGE
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-    cout.tie(nullptr);
-#endif
-    
-    if(type == "stdin")
+        if(type == "stdin")
     freopen(STDIN_FILE_REDIRECT, "r+", stdin);
     else if (type == "testcase")
     freopen(STDIN_TEST_REDIRECT, "r+", stdin);
@@ -230,6 +224,10 @@ static void intialize_io(const string& type = "stdin")
     
     freopen(STDOUT_FILE_REDIRECT, "w+", stdout);
     freopen(STDOUT_LOGGER_ERROR_REDIRECT, "a+", stderr);
+    
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
 }
 
 char * const copy_parameters[] = { "/bin/cp", "-r", "./Code/A-small-practice.in", "./Code/testcase.txt", NULL};
