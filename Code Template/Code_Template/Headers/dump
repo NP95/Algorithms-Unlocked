@@ -7,7 +7,6 @@
 #ifndef static_h
 #define static_h
 
-
 #ifndef MIN_RANGE
 #define MIN_RANGE 0
 #endif
