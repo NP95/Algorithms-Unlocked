@@ -36,7 +36,8 @@ Please check other repositores in my account as well. I have made and online com
 
 #### Note : Please ask all necessary questions to the interviwer, incase it comes up in an interview.
 
-![alt-tag](https://raw.githubusercontent.com/SpawnTree/AlgorithmsUnlocked/master/Images/graph2.jpg)
+![alt-tag](https://raw.githubusercontent.com/SpawnTree/AlgorithmsUnlocked/master/Images/graph2.jpg)[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FSpawnTree%2FAlgorithms-Unlocked.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FSpawnTree%2FAlgorithms-Unlocked?ref=badge_shield)
+
 
 C++ Code to perform the following tasks : 
 
@@ -1810,3 +1811,7 @@ void random_raw_fill()
 ```
 
 
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FSpawnTree%2FAlgorithms-Unlocked.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FSpawnTree%2FAlgorithms-Unlocked?ref=badge_large)
