@@ -7,6 +7,19 @@
 #ifndef static_h
 #define static_h
 
+
+#ifndef MIN_RANGE
+#define MIN_RANGE 0
+#endif
+
+#ifndef MAX_RANGE
+#define MAX_RANGE 655369636
+#endif
+
+#ifndef RANDOM_RANGE
+#define RANDOM_RANGE 854412
+#endif
+
 #ifdef __clang__
 #    pragma clang system_header
 #elif defined __GNUC__
@@ -116,6 +129,8 @@
 #include <tuple>
 #include <stdexcept>
 #include <iomanip>
+
+#endif /* static headers */
 
 /* #define */
 #define bit(x, i) ( x & (1<<i) )
