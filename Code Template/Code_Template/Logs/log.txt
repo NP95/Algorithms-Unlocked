@@ -48,3 +48,10 @@ Program ran sucessfully. 1.84467e+13
 Solution Accepted : 0/1 -> 1
 --------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
 Running with -(en) $SHELL=/bin/bash Time : 0.002592 sec, Ticks : 2592 (7)
+--------------------------------------------------------------------BUILD---------------------------------------------------------------------
+Build ID : 554081140, Build Hash : 0x63556b20fbfc4b53617589e298201dc73de7847782211253eac5e0c1f6cbb8cd
+HRRANK-UNZIP Program ran sucessfully. 1.84467e+13
+HRRANK-CP Program ran sucessfully. 1.84467e+13
+Solution Accepted : 0/1 -> 1
+--------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
+Running with -(en) $SHELL=/bin/bash Time : 0.003131 sec, Ticks : 3131 (7)

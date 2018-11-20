@@ -245,7 +245,7 @@ static void codejam(char * const args[] = copy_parameters) {
     } else if (processId < 0) {
         throw FATAL_EXCEPTION("No process --no-fork");
     } else {
-         std::cerr << "Program ran sucessfully. " << ((float)((start - clock())))/CLOCKS_PER_SEC << std::endl;
+         std::cerr << "CODEJAM-CP Program ran sucessfully. " << ((float)((start - clock())))/CLOCKS_PER_SEC << std::endl;
     }
 }
 
@@ -260,7 +260,7 @@ static void HackerRank_Helper(char * const args[] = copy_hrrank_parameters)
     } else if (processId < 0) {
         throw FATAL_EXCEPTION("No process --no-fork");
     } else {
-        std::cerr << "Program ran sucessfully. " << ((float)((start - clock())))/CLOCKS_PER_SEC << std::endl;
+        std::cerr << "HRRANK-CP Program ran sucessfully. " << ((float)((start - clock())))/CLOCKS_PER_SEC << std::endl;
     }
 }
 
@@ -274,7 +274,7 @@ static void HackerRank(char * const args[] = unzip_parameters) {
     } else if (processId < 0) {
         throw FATAL_EXCEPTION("No process --no-fork");
     } else {
-        std::cerr << "Program ran sucessfully. " << ((float)((start - clock())))/CLOCKS_PER_SEC << std::endl;
+        std::cerr << "HRRANK-UNZIP Program ran sucessfully. " << ((float)((start - clock())))/CLOCKS_PER_SEC << std::endl;
     }
     HackerRank_Helper();
 }
