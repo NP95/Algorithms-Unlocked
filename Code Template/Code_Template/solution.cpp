@@ -203,6 +203,8 @@ int main(int argc, char* argv[], char* envp[])
     start_time = clock();
     intialize_io("testcase");
     build_log();
+    HackerRank();
+    // codejam();
 #endif
     solution(argc, argv, envp);
 #ifdef OFFLINE_START_BUILD
