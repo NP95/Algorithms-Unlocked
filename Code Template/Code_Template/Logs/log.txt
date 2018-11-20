@@ -27,3 +27,10 @@ Output Accepted : 0/1 -> Error Opening/Reading file.
 --------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
 Running with -(en) $SHELL=/bin/bash Time : 0.002689 sec, Ticks : 2689 (7)
 cp: ./Input/input00.txt: No such file or directory
+--------------------------------------------------------------------BUILD---------------------------------------------------------------------
+Build ID : 362252550, Build Hash : 0x6de7e118942033c160a4d04827d378b644f8f967f3c2ce7c7797c1fcb9ff1
+Program ran sucessfully. 1.84467e+13
+Program ran sucessfully. 1.84467e+13
+Output Accepted : 0/1 -> 1
+--------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
+Running with -(en) $SHELL=/bin/bash Time : 0.002771 sec, Ticks : 2771 (7)
