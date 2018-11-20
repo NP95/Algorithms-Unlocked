@@ -1,4 +1,5 @@
 #include "Headers/headers.h"
+using namespace std;
 
 void solution(int argc, char* argv[], char* envp[])
 {

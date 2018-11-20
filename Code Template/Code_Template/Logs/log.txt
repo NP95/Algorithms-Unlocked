@@ -18,3 +18,12 @@ Program ran sucessfully. 1.84467e+13
 Output Accepted : 0/1 -> 0
 --------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
 Running with -(en) $SHELL=/bin/bash Time : 0.00895 sec, Ticks : 8950 (7)
+--------------------------------------------------------------------BUILD---------------------------------------------------------------------
+Build ID : 14504854, Build Hash : 0x3175d17314439ca9c404245514c908bc8cf8b11cf491d8bf311c26be9e5821
+Program ran sucessfully. 1.84467e+13
+Program ran sucessfully. 1.84467e+13
+Output Accepted : 0/1 -> Error Opening/Reading file.
+0
+--------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
+Running with -(en) $SHELL=/bin/bash Time : 0.002689 sec, Ticks : 2689 (7)
+cp: ./Input/input00.txt: No such file or directory
