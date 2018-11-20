@@ -105,6 +105,7 @@
 #include <random>
 #include <regex>
 #include <utility>
+#include <type_traits>
 #include <typeinfo>
 #include <exception>
 #include <ctime>

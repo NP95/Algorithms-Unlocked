@@ -74,4 +74,5 @@ static void copy_to_test_case(char * const args[] = case_parameters) {
     }
 }
 
+
 #endif /* functions_h */
