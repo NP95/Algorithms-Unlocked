@@ -1,16 +1,5 @@
 
 --------------------------------------------------------------------BUILD---------------------------------------------------------------------
-Build ID : 602567301, Build Hash : 0x27e69ed1824df77ad995a14c792a836a5c9efd69e31c7afa8c2073ad51e65431
-Program ran sucessfully. 1.84467e+13
-Program ran sucessfully. 1.84467e+13
-0
+Build ID : 496483502, Build Hash : 0xa2326966cd9567546c1b8a75e2b7fe8a0ac614237caeacbb897fff839a73b6
 --------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
-Running with -(en) $SHELL=/bin/bash Time : 0.002941 sec, Ticks : 2941 (7)
-cp: ./Case/testcase.txt: No such file or directory
---------------------------------------------------------------------BUILD---------------------------------------------------------------------
-Build ID : 79276207, Build Hash : 0x564120cfb1f14962e432604d231d574a5177f369a22b32ec20bb606b8cc4af
-Program ran sucessfully. 1.84467e+13
-Program ran sucessfully. 1.84467e+13
-0
---------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
-Running with -(en) $SHELL=/bin/bash Time : 0.002424 sec, Ticks : 2424 (7)
+Running with -(en) $SHELL=/bin/bash Time : 0.001265 sec, Ticks : 1265 (7)
