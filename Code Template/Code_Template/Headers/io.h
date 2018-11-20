@@ -231,7 +231,7 @@ static void intialize_io(const string& type = "stdin")
 }
 
 char * const copy_parameters[] = { "/bin/cp", "-r", "./Code/A-small-practice.in", "./Code/testcase.txt", NULL};
-char * const unzip_parameters[] = {  "/usr/bin/unzip", "-o", "-qq" ,"./Code/download.zip", "-d", "./Code", NULL };
+char * const unzip_parameters[] = {  "/usr/bin/unzip", "-o", "-qq" ,"./Code/download.zip", "-d", "./", NULL };
 
 static void codejam(char * const args[] = copy_parameters) {
     clock_t start = clock();
