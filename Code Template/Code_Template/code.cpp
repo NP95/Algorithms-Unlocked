@@ -19,6 +19,7 @@ int main(int argc, char* argv[], char* envp[])
     build_solution();
     // std::cerr << "Solution Accepted : 0/1 -> " << HackerRank_Compare() << std::endl; /* Automated comapre of output files */
     end_time_log(start_time, argc, argv, envp);
+    /* Check mailbox for compilation & deployment status. */
 #endif
     return 0;
 }
