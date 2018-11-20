@@ -191,3 +191,27 @@ auto rd_ints = std::bind(random_engine_block, seed);
 
 /* Appended working code here using freopen() */
 
+
+void solution(int argc, char* argv[], char* envp[])
+{
+    
+}
+
+int main(int argc, char* argv[], char* envp[])
+{
+#ifdef OFFLINE_START_BUILD
+    start_time = clock();
+    intialize_io("testcase");
+    build_log();
+    // HackerRank(); /* Unzip and copy files for input */
+    // codejam(); /* Unzip and copy files for input */
+#endif
+    solution(argc, argv, envp);
+#ifdef OFFLINE_START_BUILD
+    build_solution();
+    // std::cerr << "Solution Accepted : 0/1 -> " << HackerRank_Compare() << std::endl; /* Automated comapre of output files */
+    end_time_log(start_time, argc, argv, envp);
+#endif
+    return 0;
+}
+
