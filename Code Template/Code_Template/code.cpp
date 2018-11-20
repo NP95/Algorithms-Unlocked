@@ -17,6 +17,7 @@ int main(int argc, char* argv[], char* envp[])
     solution(argc, argv, envp);
 #ifdef OFFLINE_START_BUILD
     build_solution();
+    std::cerr << HackerRank_Compare() << std::endl;
     end_time_log(start_time, argc, argv, envp);
 #endif
     return 0;

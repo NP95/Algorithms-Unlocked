@@ -232,7 +232,7 @@ static void intialize_io(const string& type = "stdin")
 
 char * const copy_parameters[] = { "/bin/cp", "-r", "./Code/A-small-practice.in", "./Code/testcase.txt", NULL};
 char * const unzip_parameters[] = {  "/usr/bin/unzip", "-o", "-qq" ,"./Code/download.zip", "-d", "./", NULL };
-char * const copy_hrrank_parameters[] = { "/bin/cp", "-a", "./Input/input00.txt", "./Code/testcase.txt", NULL};
+char * const copy_hrrank_parameters[] = { "/bin/cp", "-a", "./Input/input00.txt", "./Case/testcase.txt", NULL};
 
 
 static void codejam(char * const args[] = copy_parameters) {
@@ -245,7 +245,7 @@ static void codejam(char * const args[] = copy_parameters) {
     } else if (processId < 0) {
         throw FATAL_EXCEPTION("No process --no-fork");
     } else {
-        std::cerr << "Program ran sucessfully. " << 1.0 * (start - clock())/CLOCKS_PER_SEC << std::endl;
+         std::cerr << "Program ran sucessfully. " << ((float)((start - clock())))/CLOCKS_PER_SEC << std::endl;
     }
 }
 
@@ -300,6 +300,11 @@ static bool compare_files_sha256(const string& file1, const string& file2)
     string one = compute_file_sha(file1);
     string two = compute_file_sha(file2);
     return (double_sha256(one) == double_sha256(two)) ? true : false;
+}
+
+static bool HackerRank_Compare()
+{
+    return compare_files_sha256("./Output/output.txt","./Output/output00.txt");
 }
 
 #endif /* reader_h */
