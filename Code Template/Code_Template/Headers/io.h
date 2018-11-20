@@ -232,7 +232,7 @@ static void intialize_io(const string& type = "stdin")
 
 char * const copy_parameters[] = { "/bin/cp", "-r", "./Code/A-small-practice.in", "./Code/testcase.txt", NULL};
 char * const unzip_parameters[] = {  "/usr/bin/unzip", "-o", "-qq" ,"./Code/download.zip", "-d", "./", NULL };
-char * const copy_hrrank_parameters[] = { "/bin/cp", "-r", "./Input/input00.txt", "./Code/testcase.txt", NULL};
+char * const copy_hrrank_parameters[] = { "/bin/cp", "-a", "./Input/input00.txt", "./Code/testcase.txt", NULL};
 
 
 static void codejam(char * const args[] = copy_parameters) {
@@ -260,7 +260,7 @@ static void HackerRank_Helper(char * const args[] = copy_hrrank_parameters)
     } else if (processId < 0) {
         throw FATAL_EXCEPTION("No process --no-fork");
     } else {
-        std::cerr << "Program ran sucessfully. " << 1.0 * (start - clock())/CLOCKS_PER_SEC << std::endl;
+        std::cerr << "Program ran sucessfully. " << ((float)(1.0 * (start - clock())))/CLOCKS_PER_SEC << std::endl;
     }
 }
 
@@ -274,7 +274,7 @@ static void HackerRank(char * const args[] = unzip_parameters) {
     } else if (processId < 0) {
         throw FATAL_EXCEPTION("No process --no-fork");
     } else {
-        std::cerr << "Program ran sucessfully. " << 1.0 * (start - clock())/CLOCKS_PER_SEC << std::endl;
+        std::cerr << "Program ran sucessfully. " << ((float)(1.0 * (start - clock())))/CLOCKS_PER_SEC << std::endl;
     }
     HackerRank_Helper();
 }
