@@ -14,7 +14,8 @@ int main(int argc, char* argv[], char* envp[])
     // HackerRank(); /* Unzip and copy files for input */
     // codejam(); /* Unzip and copy files for input */
 #endif
-    solution(argc, argv, envp);
+    std::thread t1 (solution, argc, argv, envp);
+    t1.join();
 #ifdef OFFLINE_START_BUILD
     build_solution();
     // std::cerr << "Solution Accepted : 0/1 -> " << HackerRank_Compare() << std::endl; /* Automated comapre of output files */
