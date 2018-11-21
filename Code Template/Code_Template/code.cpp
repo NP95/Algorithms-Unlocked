@@ -2,7 +2,10 @@
 
 void solution(int argc, char* argv[], char* envp[])
 {
-    
+    for(auto i = 0; i < 1000000; i++)
+    {
+        int a = 90;
+    }
 }
 
 int main(int argc, char* argv[], char* envp[])
