@@ -12,9 +12,9 @@ void solution(int argc, char* argv[], char* envp[])
         cin >> password;
         for(auto& character : password)
         {
-            if(islower(character)) case_map[0].emplace_back(character);
-            if(isupper(character)) case_map[1].emplace_back(character);
-            if(isdigit(character)) case_map[2].emplace_back(character);
+            if(islower (character)) case_map[0].emplace_back(character);
+            if(isupper (character)) case_map[1].emplace_back(character);
+            if(isdigit (character)) case_map[2].emplace_back(character);
         }
         if(case_map.size() == 1) // One of the requirements met.
         {

@@ -119,7 +119,7 @@
 #include <regex>
 #include <utility>
 #include <typeinfo>
-#include <cctype>
+#include <ctype.h>
 #include <exception>
 #include <ctime>
 #include <time.h>
