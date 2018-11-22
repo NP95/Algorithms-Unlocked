@@ -50,7 +50,7 @@ namespace    cm
     private:
         void LogMsg(int depth, int align, const char *fmt, va_list args)
         {
-            FILE    *fp = fopen(trace_file_.c_str(), "w+");
+            FILE    *fp = fopen(trace_file_.c_str(), "a+");
             if (fp == NULL)
             {
                 return;
@@ -97,4 +97,4 @@ namespace    cm
     "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | ";
     time_t      Trace::last_invoke_time_ = 0;
 }    // end namespace cm
-#endif // CM_TRACE_20060209_HPP
+#endif
