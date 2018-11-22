@@ -213,9 +213,9 @@ void solution(int argc, char* argv[], char* envp[])
         if(case_map.size() == 1) // One of the requirements met.
         {
             /* There will be only one entry in the map */
-            if(case_map.begin()->first == 0)  { password[1] = 'X'; password[2] = '9'; std::cout << password << std::endl; }
-            if(case_map.begin()->first == 1)  { password[1] = 'b'; password[2] = '8'; std::cout << password << std::endl; }
-            if(case_map.begin()->first == 2)  { password[1] = 's'; password[2] = 'Y'; std::cout << password << std::endl; }
+            if(case_map.begin()->first == 0)  { password[1] = 'X'; password[2] = '9'; std::cerr << password << std::endl; }
+            if(case_map.begin()->first == 1)  { password[1] = 'b'; password[2] = '8'; std::cerr << password << std::endl; }
+            if(case_map.begin()->first == 2)  { password[1] = 's'; password[2] = 'Y'; std::cerr << password << std::endl; }
         }
         else if (case_map.size() == 2) // Two were met.
         {
@@ -224,8 +224,8 @@ void solution(int argc, char* argv[], char* envp[])
             if(case_map[0].empty()) password[index] = 'v';
             if(case_map[1].empty()) password[index] = 'U';
             if(case_map[2].empty()) password[index] = '3';
-            std::cout << password << std::endl;
         }
+        std::cout << password << std::endl;
     }
 }
 
