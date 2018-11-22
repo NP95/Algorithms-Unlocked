@@ -119,6 +119,7 @@
 #include <regex>
 #include <utility>
 #include <typeinfo>
+#include <cctype>
 #include <exception>
 #include <ctime>
 #include <time.h>
@@ -191,10 +192,19 @@ auto rd_ints = std::bind(random_engine_block, seed);
 
 /* Appended working code here using freopen() */
 
+std::map<int, std::vector<int> > case_map;
+// case[0] -> islower, case[1] -> isupper, case[2] -> isdigit,
 
 void solution(int argc, char* argv[], char* envp[])
 {
-
+    int T;
+    std::string password;
+    std::cin >> T;
+    cin.sync();
+    while(T--)
+    {
+        
+    }
 }
 
 int main(int argc, char* argv[], char* envp[])

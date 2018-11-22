@@ -1,8 +1,17 @@
 #include "Headers/headers.h"
+std::map<int, std::vector<int> > case_map;
+// case[0] -> islower, case[1] -> isupper, case[2] -> isdigit,
 
 void solution(int argc, char* argv[], char* envp[])
 {
-
+    int T;
+    std::string password;
+    std::cin >> T;
+    cin.sync();
+    while(T--)
+    {
+        
+    }
 }
 
 int main(int argc, char* argv[], char* envp[])

@@ -114,6 +114,7 @@
 #include <system_error>
 #include <initializer_list>
 #include <tuple>
+#include <cctype>
 #include <stdexcept>
 #include <iomanip>
 #include "constants.h"
