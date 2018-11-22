@@ -3,10 +3,10 @@
 void solution(int argc, char* argv[], char* envp[])
 {
     int T;
-    std::string password;
     std::cin >> T;
     while(T--)
     {
+        std::string password;
         std::map<int, std::vector<int> > case_map;
         // case[0] -> islower, case[1] -> isupper, case[2] -> isdigit,
         cin >> password;
@@ -33,7 +33,6 @@ void solution(int argc, char* argv[], char* envp[])
             if(case_map[2].empty()) password[index] = '3';
         }
         std::cout << password << std::endl;
-        password.erase(password.begin(), password.end());
     }
 }
 
