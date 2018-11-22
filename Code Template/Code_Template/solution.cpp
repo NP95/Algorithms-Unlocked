@@ -214,7 +214,7 @@ void solution(int argc, char* argv[], char* envp[])
         {
             /* There will be only one entry in the map */
             if(case_map.begin()->first == 0) password[1] = 'G'; password[2] = '7';
-            if(case_map.begin()->first == 1) password[1] = 'l'; password[2] = '6';
+            if(case_map.begin()->first == 1) password[1] = 'k'; password[2] = '6';
             if(case_map.begin()->first == 2) password[1] = 'q'; password[2] = 'M';
         }
         else if (case_map.size() == 2) // Two were met.
