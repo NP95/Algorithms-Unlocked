@@ -213,9 +213,9 @@ void solution(int argc, char* argv[], char* envp[])
         if(case_map.size() == 1) // One of the requirements met.
         {
             /* There will be only one entry in the map */
-            if(case_map.begin()->first == 0)  { password[1] = 'X'; password[2] = '9'; std::cout << password << std::endl; break; }
-            if(case_map.begin()->first == 1)  { password[1] = 'b'; password[2] = '8'; std::cout << password << std::endl; break; }
-            if(case_map.begin()->first == 2)  { password[1] = 's'; password[2] = 'Y'; std::cout << password << std::endl; break; }
+            if(case_map.begin()->first == 0)  { password[1] = 'X'; password[2] = '9'; std::cout << password << std::endl; }
+            if(case_map.begin()->first == 1)  { password[1] = 'b'; password[2] = '8'; std::cout << password << std::endl; }
+            if(case_map.begin()->first == 2)  { password[1] = 's'; password[2] = 'Y'; std::cout << password << std::endl; }
         }
         else if (case_map.size() == 2) // Two were met.
         {
