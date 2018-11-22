@@ -13,8 +13,25 @@ void solution(int argc, char* argv[], char* envp[])
         std::getline(std::cin, password);
         for(const auto& character : password)
         {
-            if(islower(character)) case_map[0].push_back(character);
+            if(islower(character)) case_map[0].emplace_back(character);
+            if(isupper(character)) case_map[1].emplace_back(character);
+            if(isdigit(character)) case_map[2].emplace_back(character);
         }
+        if(case_map.size() == 1) // One of the requirements met.
+        {
+            if(!case_map[0].empty()) password[1] = 'G'; password[2] = '7';
+            if(!case_map[1].empty()) password[1] = 'l'; password[2] = '6';
+            if(!case_map[2].empty()) password[1] = 'q'; password[2] = 'M';
+        }
+        else if (case_map.size() == 2) // Two were met.
+        {
+            auto return_greater_length = [](const auto i, const auto j) { return i.second.size() < j.second.size(); };
+            auto index = max_element(case_map.begin(), case_map.end(), return_greater_length)->second[0];
+            if(case_map[0].empty()) password[index] = 'x';
+            if(case_map[1].empty()) password[index] = 'J';
+            if(case_map[2].empty()) password[index] = '3';
+        }
+        std::cout << password << std::endl;
     }
 }
 
