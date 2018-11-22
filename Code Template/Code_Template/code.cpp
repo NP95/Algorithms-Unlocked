@@ -24,7 +24,7 @@ void solution(int argc, char* argv[], char* envp[])
             if(case_map.begin()->first == 1)  { password[1] = 'b'; password[2] = '8'; }
             if(case_map.begin()->first == 2)  { password[1] = 's'; password[2] = 'Y'; }
         }
-        else if (case_map.size() == 2) // Two were met.
+        else if (case_map.size() == 2) // Two conditions were met.
         {
             auto return_greater_length = [](auto i, auto j) { return i.second.size() < j.second.size(); };
             auto index = max_element(case_map.begin(), case_map.end(), return_greater_length)->second[0];
