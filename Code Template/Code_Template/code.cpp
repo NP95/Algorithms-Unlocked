@@ -13,9 +13,9 @@ void solution(int argc, char* argv[], char* envp[])
         for(auto i = 0; i < password.size(); ++i)
         {
             auto character = password[i];
-            if(islower (character)) { case_map[0].emplace_back(i); std::cerr << "Got case : 0 ->" << character << std::endl; }
-            if(isupper (character)) { case_map[1].emplace_back(i); std::cerr << "Got case : 1 ->" << character << std::endl; }
-            if(isdigit (character)) { case_map[2].emplace_back(i); std::cerr << "Got case : 2 ->" << character << std::endl; }
+            if(islower (character)) case_map[0].emplace_back(i);
+            if(isupper (character)) case_map[1].emplace_back(i);
+            if(isdigit (character)) case_map[2].emplace_back(i);
         }
         if(case_map.size() == 1) // One of the requirements met.
         {
@@ -32,7 +32,6 @@ void solution(int argc, char* argv[], char* envp[])
             if(case_map[1].empty()) password[index] = 'U';
             if(case_map[2].empty()) password[index] = '3';
         }
-        // std::cout << password << std::endl;
     }
 }
 
