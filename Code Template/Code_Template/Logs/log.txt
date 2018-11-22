@@ -151,3 +151,16 @@ Running with -(en) $SHELL=/bin/bash Time : 0.003056 sec, Ticks : 3056 (7)
 Build ID : 521978171, Build Hash : 0x6697fa185629207d9931cb8ebfa4f897d44bbc9c3479c0b7cc371717d763e3c
 --------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
 Running with -(en) $SHELL=/bin/bash Time : 0.001188 sec, Ticks : 1188 (7)
+--------------------------------------------------------------------BUILD---------------------------------------------------------------------
+Build ID : 584979235, Build Hash : 0x4a6733494128eed83641e910f1e66e7c7ff5fd02dd77a7de9aab3dafeab7a
+Got case : a
+Got case : f
+Got case : d
+Got case : 1
+Got case : 4
+Got case : 2
+Got case : T
+Got case : R
+Got case : E
+--------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
+Running with -(en) $SHELL=/bin/bash Time : 0.00137 sec, Ticks : 1370 (7)
