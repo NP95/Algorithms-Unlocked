@@ -33,9 +33,6 @@ void solution(int argc, char* argv[], char* envp[])
             if(case_map[2].empty()) password[index] = '3';
             std::cout << password << std::endl;
         }
-        else {
-            
-        }
     }
 }
 
