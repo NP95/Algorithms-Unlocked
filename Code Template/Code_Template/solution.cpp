@@ -206,9 +206,9 @@ void solution(int argc, char* argv[], char* envp[])
         for(auto i = 0; i < password.size(); i++)
         {
             auto character = password[i];
-            if(islower ((int)character)) case_map[0].emplace_back(character);
-            if(isupper ((int)character)) case_map[1].emplace_back(character);
-            if(isdigit ((int)character)) case_map[2].emplace_back(character);
+            if(islower ((int)character)) case_map[0].emplace_back(i);
+            if(isupper ((int)character)) case_map[1].emplace_back(i);
+            if(isdigit ((int)character)) case_map[2].emplace_back(i);
         }
         if(case_map.size() == 1) // One of the requirements met.
         {
