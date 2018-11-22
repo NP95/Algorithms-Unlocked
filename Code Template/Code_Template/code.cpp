@@ -1,28 +1,28 @@
 #include "Headers/headers.h"
-
+#define LARGE_LIMIT 922365441254784541
 void solution(int argc, char* argv[], char* envp[])
 {
     int T;
+    std::string password;
     std::cin >> T;
+    std::cin.ignore(LARGE_LIMIT, '\n');
     while(T--)
     {
-        std::string password;
         std::map<int, std::vector<int> > case_map;
         // case[0] -> islower, case[1] -> isupper, case[2] -> isdigit,
-        cin >> password;
-        for(auto i = 0; i < password.size(); ++i)
-        {
+        std::getline(std::cin, password);
+        for(auto i = 0; i < password.size(); ++i)        {
             auto character = password[i];
-            if(islower (character)) case_map[0].emplace_back(i);
-            if(isupper (character)) case_map[1].emplace_back(i);
-            if(isdigit (character)) case_map[2].emplace_back(i);
+            if(islower (character))  { case_map[0].emplace_back(i); }
+            if(isupper (character))  { case_map[1].emplace_back(i); }
+            if(isdigit (character))  { case_map[2].emplace_back(i); }
         }
         if(case_map.size() == 1) // One of the requirements met.
         {
             /* There will be only one entry in the map */
-            if(case_map.begin()->first == 0)  { password[1] = 'X'; password[2] = '9'; std::cerr << password << std::endl; }
-            if(case_map.begin()->first == 1)  { password[1] = 'b'; password[2] = '8'; std::cerr << password << std::endl; }
-            if(case_map.begin()->first == 2)  { password[1] = 's'; password[2] = 'Y'; std::cerr << password << std::endl; }
+            if(case_map.begin()->first == 0)  { password[1] = 'X'; password[2] = '9'; }
+            if(case_map.begin()->first == 1)  { password[1] = 'b'; password[2] = '8'; }
+            if(case_map.begin()->first == 2)  { password[1] = 's'; password[2] = 'Y'; }
         }
         else if (case_map.size() == 2) // Two were met.
         {
