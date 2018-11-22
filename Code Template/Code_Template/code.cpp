@@ -10,7 +10,11 @@ void solution(int argc, char* argv[], char* envp[])
     cin.sync();
     while(T--)
     {
-        
+        std::getline(std::cin, password);
+        for(const auto& character : password)
+        {
+            if(islower(character)) case_map[0].push_back(character);
+        }
     }
 }
 
