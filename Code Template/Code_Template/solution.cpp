@@ -203,7 +203,7 @@ void solution(int argc, char* argv[], char* envp[])
         std::map<int, std::vector<int> > case_map;
         // case[0] -> islower, case[1] -> isupper, case[2] -> isdigit,
         cin >> password;
-        for(auto i = 0; i < password.size(); i++)
+        for(auto i = 0; i < password.size(); ++i)
         {
             auto character = password[i];
             if(islower ((int)character)) case_map[0].emplace_back(i);
