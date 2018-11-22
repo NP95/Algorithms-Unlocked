@@ -8,11 +8,13 @@
 #include "static.h"
 #include "constants.h"
 #include "exceptions.h"
+#include "trace.h"
 
 long long int reader;
 
 static void write_random_ints(const string &file_name = STDIN_TEST_REDIRECT, bool small = false)
 {
+    CM_TRACE_FUNC("write_random_ints");
     std::fstream file(file_name.c_str(), std::fstream::out);
     std::cerr << "Writing ints." << std::endl;
     for(auto i = 0; i < 1000; i++){
@@ -29,6 +31,7 @@ static void write_random_ints(const string &file_name = STDIN_TEST_REDIRECT, boo
 
 static void write_random_ints_sorted(const string &file_name = STDIN_TEST_REDIRECT, bool small = false)
 {
+    CM_TRACE_FUNC("write_random_ints_sorted");
     std::fstream file(file_name.c_str(), std::fstream::out);
     std::cerr << "Writing ints." << std::endl;
     std::vector<long long int> dump;
@@ -50,6 +53,7 @@ static void write_random_ints_sorted(const string &file_name = STDIN_TEST_REDIRE
 
 static void write_random_strings(const string &file_name = STDIN_TEST_REDIRECT)
 {
+    CM_TRACE_FUNC("write_random_strings");
     std::string generator = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890~!@#$%^&*()_+{}|:";
     std::fstream file(file_name.c_str(), std::fstream::out);
     std::cerr << "Writing strings." << std::endl;
@@ -64,6 +68,7 @@ static void write_random_strings(const string &file_name = STDIN_TEST_REDIRECT)
 
 static void single_write_printf()
 {
+    CM_TRACE_FUNC("single_write_printf");
     std::cerr << "Write Test :  printf used" << std::endl;
     for(auto i = 0; i < 10000; i++){
         for(auto j = 0; j < 10000; j++){
@@ -75,6 +80,7 @@ static void single_write_printf()
 
 static void single_write_cin()
 {
+    CM_TRACE_FUNC("single_write_cin");
     std::cerr << "Read Test : Read using custom function" << std::endl;
     for(auto i = 0; i < 1000; i++){
         for(auto j = 0; j < 10000; j++){
@@ -85,6 +91,7 @@ static void single_write_cin()
 
 static void single_write_scanf()
 {
+    CM_TRACE_FUNC("single_write_scanf");
     std::cerr << "Read Test : Read using scanf" << std::endl;
     for(auto i = 0; i < 1000; i++){
         for(auto j = 0; j < 10000; j++){
@@ -95,6 +102,7 @@ static void single_write_scanf()
 
 static void read_data_write()
 {
+    CM_TRACE_FUNC("read_data_write");
     std::cerr << "Read and write data using cin, printf" << std::endl;
     for(auto i = 0; i < 1000; i++){
         for(auto j = 0; j < 10000; j++){
@@ -107,6 +115,7 @@ static void read_data_write()
 
 static std::vector<string> SplitWordsTokenizerFileRead (string input_string, char delimiter)
 {
+    CM_TRACE_FUNC("SplitWordsTokenizerFileRead");
     string::iterator str_end_iter = unique(input_string.begin(), input_string.end(), [](const char& x, const char& y){
         return x == y && x == ' ';
     });
@@ -133,6 +142,7 @@ static std::vector<string> SplitWordsTokenizerFileRead (string input_string, cha
 
 static std::vector<std::vector<string> > read_file_to_string (const string& filename = STDIN_CSV_REDIRECT, char delimiter = ',')
 {
+    CM_TRACE_FUNC("read_file_to_string");
     std::string input = "";
     std::vector<std::vector<std::string> > CSVTokens;
     std::fstream fileCSVReader(filename.c_str(), std::fstream::in);
@@ -157,6 +167,7 @@ class TextReader
 template <typename T>
 std::vector<std::vector<T> > TextReader<T>::parseReturnData()
 {
+    CM_TRACE_FUNC("parseReturnData");
     T nums;
     std::ifstream file_stream(fileName.c_str(), std::fstream::in);
     std::vector<std::vector<T> > dataStore;
@@ -181,6 +192,7 @@ std::vector<std::vector<T> > TextReader<T>::parseReturnData()
 
 static long long file_size (const string &file_name)
 {
+    CM_TRACE_FUNC("file_size");
     std::fstream file_pointer(file_name.c_str(), std::fstream::in);
     file_pointer.seekg(0, ios::end);
     long long file_size = file_pointer.tellg();
@@ -189,11 +201,13 @@ static long long file_size (const string &file_name)
 
 static void Remove_char_from_string(std::string &input, char rmove)
 {
+    CM_TRACE_FUNC("Remove_char_from_string");
     input.erase(std::remove(input.begin(), input.end(), rmove), input.end());
 }
 
 static void build_solution()
 {
+    CM_TRACE_FUNC("build_solution");
     std::string str;
     freopen(MAIN, "r+", stdin);
     freopen(STDOUT_CODECHEF_REDIRECT, "w+", stdout);
@@ -215,6 +229,7 @@ static void build_solution()
 
 static void intialize_io(const string& type = "stdin")
 {
+     CM_TRACE_FUNC("intialize_io");
         if(type == "stdin")
     freopen(STDIN_FILE_REDIRECT, "r+", stdin);
     else if (type == "testcase")
@@ -236,6 +251,7 @@ char * const copy_hrrank_parameters[] = { "/bin/cp", "-a", "./Input/input00.txt"
 
 
 static void codejam(char * const args[] = copy_parameters) {
+    CM_TRACE_FUNC("codejam");
     clock_t start = clock();
     pid_t processId;
     if ((processId = fork()) == 0) {
@@ -251,6 +267,7 @@ static void codejam(char * const args[] = copy_parameters) {
 
 static void HackerRank_Helper(char * const args[] = copy_hrrank_parameters)
 {
+    CM_TRACE_FUNC("HackerRank_Helper");
     clock_t start = clock();
     pid_t processId;
     if ((processId = fork()) == 0) {
@@ -265,6 +282,7 @@ static void HackerRank_Helper(char * const args[] = copy_hrrank_parameters)
 }
 
 static void HackerRank(char * const args[] = unzip_parameters) {
+    CM_TRACE_FUNC("HackerRank");
     clock_t start = clock();
     pid_t processId;
     if ((processId = fork()) == 0) {
@@ -281,6 +299,7 @@ static void HackerRank(char * const args[] = unzip_parameters) {
 
 static string compute_file_sha(const string& file_name)
 {
+    CM_TRACE_FUNC("compute_file_sha");
     std::string str, dump;
     std::fstream file(file_name.c_str(), std::fstream::in);
     if(file.fail()) {
@@ -297,13 +316,15 @@ static string compute_file_sha(const string& file_name)
 
 static bool compare_files_sha256(const string& file1, const string& file2)
 {
+    CM_TRACE_FUNC("compare_files_sha256");
     string one = compute_file_sha(file1);
     string two = compute_file_sha(file2);
     return (double_sha256(one) == double_sha256(two)) ? true : false;
 }
 
-static bool HackerRank_Compare()
+static bool Output_Compare()
 {
+    CM_TRACE_FUNC("Output_Compare");
     return compare_files_sha256("./Output/output.txt","./Output/output00.txt");
 }
 
