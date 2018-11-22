@@ -200,7 +200,7 @@ void solution(int argc, char* argv[], char* envp[])
     int T;
     std::string password;
     std::cin >> T;
-    cin.sync();
+    // ®∫®∫cin.sync();
     while(T--)
     {
         std::getline(std::cin, password);
