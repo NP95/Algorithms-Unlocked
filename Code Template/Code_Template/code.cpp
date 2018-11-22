@@ -7,7 +7,7 @@ void solution(int argc, char* argv[], char* envp[])
     int T;
     std::string password;
     std::cin >> T;
-    // ®∫®∫cin.sync();
+    // cin.sync();
     while(T--)
     {
         std::getline(std::cin, password);
@@ -19,9 +19,10 @@ void solution(int argc, char* argv[], char* envp[])
         }
         if(case_map.size() == 1) // One of the requirements met.
         {
-            if(!case_map[0].empty()) password[1] = 'G'; password[2] = '7';
-            if(!case_map[1].empty()) password[1] = 'l'; password[2] = '6';
-            if(!case_map[2].empty()) password[1] = 'q'; password[2] = 'M';
+            /* There will be only one entry in the map */
+            if(case_map.begin()->first == 0) password[1] = 'G'; password[2] = '7';
+            if(case_map.begin()->first == 1) password[1] = 'l'; password[2] = '6';
+            if(case_map.begin()->first == 2) password[1] = 'q'; password[2] = 'M';
         }
         else if (case_map.size() == 2) // Two were met.
         {
