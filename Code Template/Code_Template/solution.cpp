@@ -195,12 +195,14 @@ auto rd_ints = std::bind(random_engine_block, seed);
 
 void solution(int argc, char* argv[], char* envp[])
 {
-
+    CM_TRACE_FUNC("solution");
 }
 
 int main(int argc, char* argv[], char* envp[])
 {
 #ifdef OFFLINE_START_BUILD
+    CM_TRACE_FILE(TRACE);
+    CM_TRACE_FUNC("main");
     start_time = clock();
     intialize_io("testcase");
     build_log();

@@ -14,5 +14,6 @@
 #include "logger.h"
 #include "static.h"
 #include "competitive.h"
+#include "trace.h"
 
 #endif /* allheaders_h */

@@ -16,6 +16,10 @@
 #define DUMP_HEADERS "./Headers/dump"
 #endif
 
+#ifndef TRACE
+#define TRACE "./Logs/tracefile.txt"
+#endif
+
 #ifndef STDIN_CSV_REDIRECT
 #define STDIN_CSV_REDIRECT "./Input/input.csv"
 #endif
