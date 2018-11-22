@@ -20,17 +20,17 @@ void solution(int argc, char* argv[], char* envp[])
         if(case_map.size() == 1) // One of the requirements met.
         {
             /* There will be only one entry in the map */
-            if(case_map.begin()->first == 0) password[1] = 'G'; password[2] = '7';
-            if(case_map.begin()->first == 1) password[1] = 'k'; password[2] = '6';
-            if(case_map.begin()->first == 2) password[1] = 'q'; password[2] = 'M';
+            if(case_map.begin()->first == 0) password[1] = 'A'; password[2] = '1';
+            if(case_map.begin()->first == 1) password[1] = 'a'; password[2] = '1';
+            if(case_map.begin()->first == 2) password[1] = 'a'; password[2] = 'A';
         }
         else if (case_map.size() == 2) // Two were met.
         {
             auto return_greater_length = [](auto i, auto j) { return i.second.size() < j.second.size(); };
             auto index = max_element(case_map.begin(), case_map.end(), return_greater_length)->second[0];
-            if(case_map[0].empty()) password[index] = 'x';
-            if(case_map[1].empty()) password[index] = 'J';
-            if(case_map[2].empty()) password[index] = '3';
+            if(case_map[0].empty()) password[index] = 'a';
+            if(case_map[1].empty()) password[index] = 'A';
+            if(case_map[2].empty()) password[index] = '1';
         }
         std::cout << password << std::endl;
     }
