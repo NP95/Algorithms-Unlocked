@@ -1,6 +1,4 @@
 #include "Headers/headers.h"
-std::map<int, std::vector<int> > case_map;
-// case[0] -> islower, case[1] -> isupper, case[2] -> isdigit,
 
 void solution(int argc, char* argv[], char* envp[])
 {
@@ -10,6 +8,9 @@ void solution(int argc, char* argv[], char* envp[])
     // cin.sync();
     while(T--)
     {
+        std::map<int, std::vector<int> > case_map;
+        // case[0] -> islower, case[1] -> isupper, case[2] -> isdigit,
+
         std::getline(std::cin, password);
         for(const auto& character : password)
         {
@@ -26,13 +27,14 @@ void solution(int argc, char* argv[], char* envp[])
         }
         else if (case_map.size() == 2) // Two were met.
         {
-            auto return_greater_length = [](const auto i, const auto j) { return i.second.size() < j.second.size(); };
+            auto return_greater_length = [](auto i, auto j) { return i.second.size() < j.second.size(); };
             auto index = max_element(case_map.begin(), case_map.end(), return_greater_length)->second[0];
             if(case_map[0].empty()) password[index] = 'x';
             if(case_map[1].empty()) password[index] = 'J';
             if(case_map[2].empty()) password[index] = '3';
         }
         std::cout << password << std::endl;
+        password.erase(password.begin(), password.end());
     }
 }
 
