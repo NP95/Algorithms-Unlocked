@@ -50,7 +50,7 @@ namespace    cm
     private:
         void LogMsg(int depth, int align, const char *fmt, va_list args)
         {
-            FILE    *fp = fopen(trace_file_.c_str(), "a+");
+            FILE    *fp = fopen(trace_file_.c_str(), "w+");
             if (fp == NULL)
             {
                 return;
