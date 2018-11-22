@@ -10,8 +10,8 @@ void solution(int argc, char* argv[], char* envp[])
     {
         std::map<int, std::vector<int> > case_map;
         // case[0] -> islower, case[1] -> isupper, case[2] -> isdigit,
-        cin >> password;
-        // std::getline(std::cin, password);
+        // cin >> password;
+        std::getline(std::cin, password);
         for(auto& character : password)
         {
             if(islower(character)) case_map[0].emplace_back(character);
