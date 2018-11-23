@@ -1,9 +1,5 @@
 
 --------------------------------------------------------------------BUILD---------------------------------------------------------------------
-Build ID : 72911272, Build Hash : 0xe5feea6ca8e0108b64f7db3837b17dbcab5f79ddf35dab7b0803ffd21aa6419
+Build ID : 346892524, Build Hash : 0x40648b629c781fe7f54ee4a32460daa836836bb15a25af859351687ce9b1ce78
 --------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
-Running with -SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.qwLrul0vkM/Listeners $TERM=unknown Time : 0.001265 sec, Ticks : 1265 (1)
---------------------------------------------------------------------BUILD---------------------------------------------------------------------
-Build ID : 454118846, Build Hash : 0x9286e237859ac8ee972c1707dff37c360808dce4d28ac9504df46ac62c8710
---------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
-Running with -TERM=xterm-256color $SHELL=/bin/sh Time : 0.004554 sec, Ticks : 4554 (1)
+Running with -SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.qwLrul0vkM/Listeners $TERM=unknown Time : 0.001053 sec, Ticks : 1053 (1)
