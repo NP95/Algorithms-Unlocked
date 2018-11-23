@@ -31,3 +31,35 @@ Running with -(en) $SHELL=/bin/bash Time : 0.002676 sec, Ticks : 2676 (7)
 Build ID : 537201685, Build Hash : 0xca49f5473ba5e2aba76afced05fe6ee88e9f722bbadd8326db9ad75148e543
 --------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
 Running with -(en) $SHELL=/bin/bash Time : 0.001957 sec, Ticks : 1957 (7)
+--------------------------------------------------------------------BUILD---------------------------------------------------------------------
+Build ID : 293507952, Build Hash : 0xe094ff14ad6879fe397161787de749644581da797556c8687ad49acb9260c818
+--------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
+Running with -TERM_PROGRAM=Apple_Terminal $PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Wireshark.app/Contents/MacOS:/Applications/Xamarin Workbooks.app/Contents/SharedSupport/path-bin Time : 0.003827 sec, Ticks : 3827 (1)
+--------------------------------------------------------------------BUILD---------------------------------------------------------------------
+Build ID : 302629565, Build Hash : 0xf34b9599dfe9b01eb65223d7c9e257b2f9a0edf1a7adbe5d5491cc53c9cbd6ef
+--------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
+Running with -TERM_PROGRAM=Apple_Terminal $PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Wireshark.app/Contents/MacOS:/Applications/Xamarin Workbooks.app/Contents/SharedSupport/path-bin Time : 0.001646 sec, Ticks : 1646 (1)
+--------------------------------------------------------------------BUILD---------------------------------------------------------------------
+Build ID : 144158672, Build Hash : 0xc89ac52e91a79cd11114454b4f36de3bd01c49d944cecc1d9d6e719ca4a8
+--------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
+Running with -TERM_PROGRAM=Apple_Terminal $PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Wireshark.app/Contents/MacOS:/Applications/Xamarin Workbooks.app/Contents/SharedSupport/path-bin Time : 0.001639 sec, Ticks : 1639 (1)
+--------------------------------------------------------------------BUILD---------------------------------------------------------------------
+Build ID : 353658180, Build Hash : 0x40b31d9d1f1dd4373ae469d9cf571f38837bf135df89960d41ba7389a4a519d
+--------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
+Running with -TERM_PROGRAM=Apple_Terminal $PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Wireshark.app/Contents/MacOS:/Applications/Xamarin Workbooks.app/Contents/SharedSupport/path-bin Time : 0.00112 sec, Ticks : 1120 (1)
+--------------------------------------------------------------------BUILD---------------------------------------------------------------------
+Build ID : 130873860, Build Hash : 0x39f61808375c8c4138d872cacc3f496b4e66c020bdd1e0c58ce2a28e42a83
+--------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
+Running with -TERM_PROGRAM=Apple_Terminal $PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Wireshark.app/Contents/MacOS:/Applications/Xamarin Workbooks.app/Contents/SharedSupport/path-bin Time : 0.001151 sec, Ticks : 1151 (1)
+--------------------------------------------------------------------BUILD---------------------------------------------------------------------
+Build ID : 188769166, Build Hash : 0x2bb553fac17bd6217d246d7e7978f6e43acaf0955032b02032a1f2f0f54f1e3f
+--------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
+Running with -TERM_PROGRAM=Apple_Terminal $PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Wireshark.app/Contents/MacOS:/Applications/Xamarin Workbooks.app/Contents/SharedSupport/path-bin Time : 0.001455 sec, Ticks : 1455 (1)
+--------------------------------------------------------------------BUILD---------------------------------------------------------------------
+Build ID : 642927328, Build Hash : 0xac6d59f6bdea9c0bd46fec677a08366cc4ace1b92d547d1ba438964e713
+--------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
+Running with -TERM_PROGRAM=Apple_Terminal $PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Wireshark.app/Contents/MacOS:/Applications/Xamarin Workbooks.app/Contents/SharedSupport/path-bin Time : 0.002941 sec, Ticks : 2941 (1)
+--------------------------------------------------------------------BUILD---------------------------------------------------------------------
+Build ID : 602592885, Build Hash : 0x9d6dedc40ce3d31b9e2a1468bef27451a4b245485dc91f4faa1b55515826673
+--------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
+Running with -TERM=xterm-256color $SHELL=/bin/sh Time : 0.002451 sec, Ticks : 2451 (1)
