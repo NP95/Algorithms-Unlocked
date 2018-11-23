@@ -119,6 +119,7 @@
 #include <ext/pb_ds/tree_policy.hpp>
 #include <ext/pb_ds/hash_policy.hpp>
 #include <ext/pb_ds/trie_policy.hpp>
+#include <ext/pb_ds/tag_and_trait.hpp>
 using namespace std;
 using namespace __gnu_pbds;
 
