@@ -131,5 +131,5 @@ auto rd_ints = std::bind(random_engine_block, seed);
 clock_t start_time, end_time;
 
 #endif /* static_h */
-typedef trie<string, mapped_type, cmp_fn, tag_type,
-trie_prefix_search_node_update> trie_type;
+typedef trie <std::string, mapped_type, cmp_fn, tag_type, trie_prefix_search_node_update> trie_type;
+typedef tree <int, null_mapped_type, std::less<int>, rb_tree_tag, tree_order_statistics_node_update> set_t;
