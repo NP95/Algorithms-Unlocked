@@ -128,7 +128,11 @@
 #include <tuple>
 #include <stdexcept>
 #include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp> 
+#include <ext/pb_ds/tree_policy.hpp>
+#include <ext/pb_ds/hash_policy.hpp>
+#include <ext/pb_ds/trie_policy.hpp>
+#include <ext/pb_ds/tag_and_trait.hpp>
+#include <ext/pb_ds/detail/standard_policies.hpp>
 #include <iomanip>
 
 #endif /* static headers */
@@ -174,6 +178,7 @@
 #define pdqueue priority_queue< int,vi ,greater< int > >
 #define flush fflush(stdout)
 #define LL long long int
+
 using namespace std;
 using namespace __gnu_pbds;
 
@@ -194,6 +199,9 @@ std::random_device rd;
 std::default_random_engine seed(rd());
 std::uniform_int_distribution<int> random_engine_block(MIN_RANGE, MAX_RANGE);
 auto rd_ints = std::bind(random_engine_block, seed);
+
+typedef tree <int, null_type, std::less<int>, rb_tree_tag, tree_order_statistics_node_update > red_black_tree;
+typedef trie <string, null_type, trie_string_access_traits<>, pat_trie_tag, trie_prefix_search_node_update> patricia_trie;
 
 /* Appended working code here using freopen() */
 
