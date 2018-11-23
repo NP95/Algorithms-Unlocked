@@ -133,3 +133,4 @@ clock_t start_time, end_time;
 #endif /* static_h */
 
 typedef tree <int, null_type, std::less<int>, rb_tree_tag, tree_order_statistics_node_update > ordered_set;
+/* insert(), ptr->find_by_order() */
