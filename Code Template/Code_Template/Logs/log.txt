@@ -31,3 +31,7 @@ Running with -SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.qwLrul0vkM/Listeners 
 Build ID : 130028712, Build Hash : 0x289b24ac6f8aaa3fc3a76b87adc1d1dc83ff8103ebbeb7cf517212f8d6c5dc
 --------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
 Running with -SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.qwLrul0vkM/Listeners $TERM=unknown Time : 0.001195 sec, Ticks : 1195 (1)
+--------------------------------------------------------------------BUILD---------------------------------------------------------------------
+Build ID : 132757856, Build Hash : 0x92c620d58d52262c934a2519703b67801e6f831b436d5840af49f3441414b3
+--------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
+Running with -TERM=xterm-256color $SHELL=/bin/sh Time : 0.001304 sec, Ticks : 1304 (1)
