@@ -15,3 +15,7 @@ Running with -TERM=xterm-256color $SHELL=/bin/sh Time : 0.001183 sec, Ticks : 11
 Build ID : 404842654, Build Hash : 0x2f1b24516b42d29b43dd66fe2ddaaad7ce4853ff48b5ee55fa1775393cf3185a
 --------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
 Running with -TERM=xterm-256color $SHELL=/bin/sh Time : 0.0011 sec, Ticks : 1100 (1)
+--------------------------------------------------------------------BUILD---------------------------------------------------------------------
+Build ID : 285862746, Build Hash : 0xf720d2cabfba31928cf7202720fae9edfcd35452fc11bc1568f1c449d9ff44d2
+--------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
+Running with -SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.qwLrul0vkM/Listeners $TERM=unknown Time : 0.001061 sec, Ticks : 1061 (1)
