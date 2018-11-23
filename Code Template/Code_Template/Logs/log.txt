@@ -47,3 +47,7 @@ Running with -./code.out $SUDO_USER=sumitlahiri Time : 0.001102 sec, Ticks : 110
 Build ID : 289691739, Build Hash : 0x8cdf31dd7925e17ead4f7379ea6d6513f2cc9e3e04c3c1bb6bebda6e2b2cac
 --------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
 Running with -./code.out $SUDO_USER=sumitlahiri Time : 0.001061 sec, Ticks : 1061 (1)
+--------------------------------------------------------------------BUILD---------------------------------------------------------------------
+Build ID : 600081940, Build Hash : 0xae2bac8337df3e9f3aa0aa1d92cc5df876e65f9991523e8d73d48d91b1aaf97
+--------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
+Running with -./code.out $SUDO_USER=root Time : 0.001062 sec, Ticks : 1062 (1)
