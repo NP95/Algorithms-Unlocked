@@ -106,7 +106,7 @@
 #include <typeinfo>
 #include <exception>
 #include <ctime>
-#include <time.h> 
+#include <time.h>
 #include <chrono>
 #include <system_error>
 #include <initializer_list>
@@ -115,7 +115,10 @@
 #include <stdexcept>
 #include <iomanip>
 #include "constants.h"
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
 using namespace std;
+using namespace __gnu_pbds;
 
 /* Random Global */
 std::random_device rd;
