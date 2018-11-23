@@ -1,8 +1,5 @@
 #include "Headers/headers.h"
 
-typedef tree <int, null_type, std::less<int>, rb_tree_tag, tree_order_statistics_node_update > ordered_set;
-typedef trie <string, null_type, trie_string_access_traits<>, pat_trie_tag, trie_prefix_search_node_update> pref_trie;
-
 void solution(int argc, char* argv[], char* envp[])
 {
     
