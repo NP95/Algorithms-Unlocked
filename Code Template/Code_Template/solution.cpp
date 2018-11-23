@@ -128,6 +128,8 @@
 #include <initializer_list>
 #include <tuple>
 #include <stdexcept>
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp> 
 #include <iomanip>
 
 #endif /* static headers */
@@ -169,8 +171,12 @@
 #define forvec(container, it) for(decltype(container.begin()) it = container.begin(); it != container.end(); it++)
 #define Assert(x) {if(!(x)){cerr<<"Assertion failed at line "<<__LINE__<<": "<<#x<<" = "<<(x)<<"\n";exit(1);}}
 #define abs(x) ( x < 0 ? (-x) : x)
+#define pqueue priority_queue< int >
+#define pdqueue priority_queue< int,vi ,greater< int > >
+#define flush fflush(stdout)
 #define LL long long int
 using namespace std;
+using namespace __gnu_pbds;
 
 /* Templates */
 template <typename T> T min(T &a, T &b) {return (a < b ? a : b);}
@@ -192,6 +198,8 @@ auto rd_ints = std::bind(random_engine_block, seed);
 
 /* Appended working code here using freopen() */
 
+
+using namespace std;
 
 void solution(int argc, char* argv[], char* envp[])
 {

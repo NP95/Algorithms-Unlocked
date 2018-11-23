@@ -25,9 +25,6 @@
     #include <unistd.h>
     #include <sys/resource.h>
     #include <openssl/sha.h>
-    #include <curlpp/Easy.hpp>
-    #include <curlpp/Options.hpp>
-    #include <curlpp/cURLpp.hpp>
     #include <sys/types.h>
     #include <sys/socket.h>
     #include <sys/mman.h>

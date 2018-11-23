@@ -44,6 +44,9 @@
 #define forvec(container, it) for(decltype(container.begin()) it = container.begin(); it != container.end(); it++)
 #define Assert(x) {if(!(x)){cerr<<"Assertion failed at line "<<__LINE__<<": "<<#x<<" = "<<(x)<<"\n";exit(1);}}
 #define abs(x) ( x < 0 ? (-x) : x)
+#define pqueue priority_queue< int >
+#define pdqueue priority_queue< int,vi ,greater< int > >
+#define flush fflush(stdout)
 #define LL long long int
 using namespace std;
 
