@@ -202,7 +202,7 @@ typedef tree <int, null_type, std::less<int>, rb_tree_tag, tree_order_statistics
 
 void solution(int argc, char* argv[], char* envp[])
 {
-
+    
 }
 
 int main(int argc, char* argv[], char* envp[])
