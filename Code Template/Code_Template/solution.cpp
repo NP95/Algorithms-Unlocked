@@ -200,7 +200,29 @@ auto rd_ints = std::bind(random_engine_block, seed);
 
 void solution(int argc, char* argv[], char* envp[])
 {
+    // Test a red-black tree.
+    some_op_sequence(tree<
+                     interval,
+                     null_mapped_type,
+                     less<interval>,
+                     rb_tree_tag,
+                     intervals_node_update>());
     
+    // Test an ordered-vector tree.
+    some_op_sequence(tree<
+                     interval,
+                     null_mapped_type,
+                     less<interval>,
+                     ov_tree_tag,
+                     intervals_node_update>());
+    
+    // Test a splay tree.
+    some_op_sequence(tree<
+                     interval,
+                     null_mapped_type,
+                     less<interval>,
+                     splay_tree_tag,
+                     intervals_node_update>());
 }
 
 int main(int argc, char* argv[], char* envp[])
