@@ -74,7 +74,7 @@ static void copy_to_test_case(char * const args[] = case_parameters) {
     }
 }
 
-const uint64_t lr_mod  = 1000000003;
+const uint64_t lr_mod  = (1ULL << 63);
 
 void huge_mod_power(uint64_t base, uint64_t power)
 {
