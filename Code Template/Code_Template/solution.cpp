@@ -220,7 +220,8 @@ void solution(int argc, char* argv[], char* envp[])
             --power;
         }
     }
-    std::cout << to_string(expo) << std::endl;
+    if(expo < 0) std::cout << "Overflow." << std::endl;
+    else std::cout << to_string(expo) << std::endl;
 }
 
 int main(int argc, char* argv[], char* envp[])
