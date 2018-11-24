@@ -2,8 +2,7 @@
 
 void solution(int argc, char* argv[], char* envp[])
 {
-    int base = 4, power = 3;
-    int expo = 1;
+    int base = 4, power = 3, expo = 1;
     while(power)
     {
         if (!power&1){
