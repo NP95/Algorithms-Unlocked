@@ -96,11 +96,11 @@ static void huge_mod_power(uint64_t base, uint64_t power)
     std::cerr << ((float)end_time)/CLOCKS_PER_SEC << std::endl;
 }
 
-static std::vector<std::vector<uint64_t> > matrix (int row, int col)
+static std::vector<std::vector<uint64_t> > matrix (int row, int col, uint64_t value)
 {
     clock_t start_time;
     std::vector<std::vector<uint64_t> > mat;
-    std::vector<uint64_t> dump(col, 0);
+    std::vector<uint64_t> dump(col, value);
     for(auto i = 0; i < row; i++){
         mat.emplace_back(dump);
     }
@@ -109,10 +109,13 @@ static std::vector<std::vector<uint64_t> > matrix (int row, int col)
     return mat;
 }
 
-void fast_matrix_multiplication(std::vector<std::vector<uint64_t> > &A, std::vector<std::vector<uint64_t> > &B, std::vector<std::vector<uint64_t> > &C)
+
+/* Blocked Cache Obvious matrix multiplication */
+std::vector<std::vector<uint64_t> > fast_matrix_multiplication(std::vector<std::vector<uint64_t> > &A, std::vector<std::vector<uint64_t> > &B)
 {
+    std::vector<std::vector<uint64_t> > C = matrix(A.size(), B[0].size(), 0);
     clock_t start_time;
-    int h = 8;
+    int h = 1 << 3;
     for(auto i = 0; i < 1000; i += h){
         for(auto j = 0; j < 1000; j += h){
             for (auto k = 0; k < 1000; k += h) {
@@ -126,13 +129,14 @@ void fast_matrix_multiplication(std::vector<std::vector<uint64_t> > &A, std::vec
             }
         }
     }
-    std::cout << C[456][744] << std::endl;
     clock_t end_time = clock() - start_time;
-    std::cerr << ((float)end_time)/CLOCKS_PER_SEC << std::endl;
+    std::cerr << "Fast : " <<  ((float)end_time)/CLOCKS_PER_SEC << std::endl;
+    return C;
 }
 
-void slow_matrix_multiplication(std::vector<std::vector<uint64_t> > &A, std::vector<std::vector<uint64_t> > &B, std::vector<std::vector<uint64_t> > &C)
+std::vector<std::vector<uint64_t> > slow_matrix_multiplication(std::vector<std::vector<uint64_t> > &A, std::vector<std::vector<uint64_t> > &B)
 {
+    std::vector<std::vector<uint64_t> > C = matrix(A.size(), B[0].size(), 0);
     clock_t start_time;
     for(auto i = 0; i < 1000; i++){
         for(auto j = 0; j < 1000; j++){
@@ -143,7 +147,8 @@ void slow_matrix_multiplication(std::vector<std::vector<uint64_t> > &A, std::vec
     }
     std::cout << C[456][744] << std::endl;
     clock_t end_time = clock() - start_time;
-    std::cerr << ((float)end_time)/CLOCKS_PER_SEC << std::endl;
+    std::cerr << "Slow : " << ((float)end_time)/CLOCKS_PER_SEC << std::endl;
+    return C;
 }
 
 #endif /* functions_h */
