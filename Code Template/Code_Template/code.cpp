@@ -3,7 +3,7 @@ const LL lr_mod  = 1000000007;
 void solution(int argc, char* argv[], char* envp[])
 {
     static LL base = 2, expo = base % lr_mod;
-    static LL power = 1 << 60, counter = 0;
+    static LL power = 64, counter = 0;
     while(power)
     {
         expo %= lr_mod;
