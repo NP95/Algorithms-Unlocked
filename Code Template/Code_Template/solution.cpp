@@ -204,6 +204,9 @@ typedef tree <int, null_type, std::less<int>, rb_tree_tag, tree_order_statistics
 typedef trie <string, null_type, trie_string_access_traits<>, pat_trie_tag, trie_prefix_search_node_update> patricia_trie;
 
 /* Appended working code here using freopen() */
+void slow_matrix_multiplication(std::vector<std::vector<uint64_t> > A, )
+
+
 
 void solution(int argc, char* argv[], char* envp[])
 {
