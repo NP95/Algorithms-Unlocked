@@ -11,7 +11,7 @@
 #define bit(x, i) ( x & (1<<i) )
 #define lowbit(x) ( (x)&((x)^((x)-1)) )
 #define hBit(msb, n) asm("bsrl %1,%0" : "=r"(msb) : "r"(n))
-#define MOD 10000000003
+#define MOD 1000000007
 #define print(vec) for (const auto& i : vec) cout << i << endl;
 #define fori(vec) for (const auto& i : vec)
 #define fill(vec,size) for (auto i = 0; i < size; i++) { vec.pb(i); }
