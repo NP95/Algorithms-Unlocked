@@ -214,9 +214,11 @@ void solution(int argc, char* argv[], char* envp[])
     {
         if (!power&1){
             expo *= (expo % MOD);
+            expo %= MOD;
             power >>= 1;
         } else {
             expo *= (base % MOD);
+            expo %= MOD;
             --power;
         }
     }
