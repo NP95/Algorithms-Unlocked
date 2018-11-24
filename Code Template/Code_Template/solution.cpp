@@ -230,9 +230,9 @@ void fast_matrix_multiplication(std::vector<std::vector<uint64_t> > A, std::vect
 void slow_matrix_multiplication(std::vector<std::vector<uint64_t> > A, std::vector<std::vector<uint64_t> > B, std::vector<std::vector<uint64_t> > C)
 {
     clock_t start_time;
-    for(auto i = 0; i < 1000; i += h){
-        for(auto j = 0; j < 1000; j += h){
-            for (auto k = 0; k < 1000; k += h) {
+    for(auto i = 0; i < 1000; i++){
+        for(auto j = 0; j < 1000; j++){
+            for (auto k = 0; k < 1000; k++) {
                 C[i][j] += A[i][k] * B[k][j];
             }
         }
@@ -253,7 +253,7 @@ void solution(int argc, char* argv[], char* envp[])
         }
     }
     
-    // fast_matrix_multiplication(A, B, C);
+    fast_matrix_multiplication(A, B, C);
     slow_matrix_multiplication(A, B, C);
 }
 
