@@ -177,7 +177,7 @@
 #define pqueue priority_queue< int >
 #define pdqueue priority_queue< int,vi ,greater< int > >
 #define flush fflush(stdout)
-#define LL long long int
+#define LL long long
 
 using namespace std;
 using namespace __gnu_pbds;
@@ -208,7 +208,7 @@ typedef trie <string, null_type, trie_string_access_traits<>, pat_trie_tag, trie
 
 void solution(int argc, char* argv[], char* envp[])
 {
-    huge_mod_power(2, 1 << 33);
+    huge_mod_power(2, 1 << 30);
 }
 
 int main(int argc, char* argv[], char* envp[])

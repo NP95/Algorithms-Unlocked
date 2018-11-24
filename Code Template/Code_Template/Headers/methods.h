@@ -47,7 +47,7 @@
 #define pqueue priority_queue< int >
 #define pdqueue priority_queue< int,vi ,greater< int > >
 #define flush fflush(stdout)
-#define LL long long int
+#define LL long long
 using namespace std;
 
 /* Templates */
