@@ -79,7 +79,7 @@ const uint64_t lr_mod  = 1000000003;
 void huge_mod_power(uint64_t base, uint64_t power)
 {
     clock_t start_time;
-    static uint64_t expo = base % lr_mod;
+    static uint64_t expo = base;
     while(power)
     {
         std::cerr << "Power : " << power << ", " << to_string(expo) << std::endl;
