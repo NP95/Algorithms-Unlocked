@@ -208,8 +208,8 @@ typedef trie <string, null_type, trie_string_access_traits<>, pat_trie_tag, trie
 
 void solution(int argc, char* argv[], char* envp[])
 {
-    LL base = 2658, expo = 1;
-    int power = 21;
+    LL base = 7, expo = 1;
+    int power = 3;
     while(power)
     {
         if (!power&1){
