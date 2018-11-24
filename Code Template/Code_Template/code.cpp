@@ -1,5 +1,5 @@
 #include "Headers/headers.h"
-const LL lr_mod  = 10000007;
+const LL lr_mod  = 1000000007;
 void solution(int argc, char* argv[], char* envp[])
 {
     static LL base = 2, expo = base % lr_mod;
