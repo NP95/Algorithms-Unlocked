@@ -104,6 +104,7 @@ static std::vector<std::vector<uint64_t> > matrix (int row, int col)
     for(auto i = 0; i < row; i++){
         mat.emplace_back(dump);
     }
+    clock_t end_time = clock() - start_time;
     std::cerr << "Matrix : " << ((float)end_time)/CLOCKS_PER_SEC << std::endl;
     return mat;
 }
