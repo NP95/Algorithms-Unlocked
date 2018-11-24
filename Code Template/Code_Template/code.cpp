@@ -5,7 +5,9 @@ void solution(int argc, char* argv[], char* envp[])
     int base, power;
     while(power)
     {
-        
+        if (!power&1){
+            
+        }
     }
 }
 
