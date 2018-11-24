@@ -9,8 +9,9 @@ void solution(int argc, char* argv[], char* envp[])
         counter++;
         std::cout << power << ", " << counter << ", " << to_string(expo) << std::endl;
         if (!(power&1)){
-            expo *= (expo % MOD);
             expo %= MOD;
+            expo *= (expo % MOD);
+            // expo %= MOD;
             power >>= 1;
         } else {
             expo *= (base % MOD);
