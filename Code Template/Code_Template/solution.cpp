@@ -208,7 +208,7 @@ typedef trie <string, null_type, trie_string_access_traits<>, pat_trie_tag, trie
 
 void solution(int argc, char* argv[], char* envp[])
 {
-    huge_mod_power(1 << 5, (1ULL << 63));
+    huge_mod_power((1ULL << 63), (1ULL << 63));
 }
 
 int main(int argc, char* argv[], char* envp[])
