@@ -212,16 +212,13 @@ void solution(int argc, char* argv[], char* envp[])
     static int power = 4096, counter = 0;
     while(power)
     {
-        counter++;
-        std::cout << power << ", " << counter << ", " << to_string(expo) << std::endl;
+        expo %= lr_mod;
+        counter++; std::cout << power << ", " << counter << ", " << to_string(expo) << std::endl;
         if (!(power&1)){
-            expo %= lr_mod;
             expo *= (expo % lr_mod);
-            // expo %= lr_mod;
             power >>= 1;
         } else {
             expo *= (base % lr_mod);
-            expo %= lr_mod;
             --power;
         }
     }
