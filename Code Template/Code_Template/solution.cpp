@@ -207,7 +207,10 @@ typedef trie <string, null_type, trie_string_access_traits<>, pat_trie_tag, trie
 
 void solution(int argc, char* argv[], char* envp[])
 {
-    
+    auto A = matrix(1000, 1000, 1 << 37);
+    auto B = matrix(1000, 1000, 1 << 16);
+    auto C = fast_matrix_multiplication(std::ref(A), std::ref(B));
+    std::cout << C[154][743] << std::endl;
 }
 
 int main(int argc, char* argv[], char* envp[])
