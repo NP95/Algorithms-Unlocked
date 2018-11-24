@@ -107,3 +107,7 @@ Running with -./code.out $SUDO_COMMAND=./code.out Time : 0.001152 sec, Ticks : 1
 Build ID : 304628963, Build Hash : 0x601ad852048b6ab7d632f232e7dbcf3966be6c50a4518f889ad159b23f5ae2
 --------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
 Running with -./code.out $SUDO_COMMAND=./code.out Time : 0.00205 sec, Ticks : 2050 (1)
+--------------------------------------------------------------------BUILD---------------------------------------------------------------------
+Build ID : 616569698, Build Hash : 0x9aae6b92afd34dab2dc6ff557c839c57d912d6c526f59be12beba7ebb14da4d2
+--------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
+Running with -./code.out $SUDO_COMMAND=./code.out Time : 0.00105 sec, Ticks : 1050 (1)
