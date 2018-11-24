@@ -204,20 +204,10 @@ typedef tree <int, null_type, std::less<int>, rb_tree_tag, tree_order_statistics
 typedef trie <string, null_type, trie_string_access_traits<>, pat_trie_tag, trie_prefix_search_node_update> patricia_trie;
 
 /* Appended working code here using freopen() */
-void slow_matrix_multiplication(std::vector<std::vector<uint64_t> > A, )
 
-
-
-void solution(int argc, char* argv[], char* envp[])
+void fast_matrix_multiplication(std::vector<std::vector<uint64_t> > A, std::vector<std::vector<uint64_t> > B, std::vector<std::vector<uint64_t> > C)
 {
-    auto A = matrix (1000, 1000);
-    auto B = A, C = B;
-    for(auto i = 0; i < 1000; i++){
-        for(auto j = 0; j < 1000; j++){
-            A[i][j] = i + j;
-            B[i][j] = i * j;
-        }
-    }
+    clock_t start_time;
     int h = 8;
     for(auto i = 0; i < 1000; i += h){
         for(auto j = 0; j < 1000; j += h){
@@ -233,6 +223,40 @@ void solution(int argc, char* argv[], char* envp[])
         }
     }
     std::cout << C[456][744] << std::endl;
+    clock_t end_time = clock() - start_time;
+    std::cerr << ((float)end_time)/CLOCKS_PER_SEC << std::endl;
+}
+
+void slow_matrix_multiplication(std::vector<std::vector<uint64_t> > A, std::vector<std::vector<uint64_t> > B, std::vector<std::vector<uint64_t> > C)
+{
+    clock_t start_time;
+    for(auto i = 0; i < 1000; i += h){
+        for(auto j = 0; j < 1000; j += h){
+            for (auto k = 0; k < 1000; k += h) {
+                C[i][j] += A[i][k] * B[k][j];
+            }
+        }
+    }
+    std::cout << C[456][744] << std::endl;
+    clock_t end_time = clock() - start_time;
+    std::cerr << ((float)end_time)/CLOCKS_PER_SEC << std::endl;
+}
+
+void solution(int argc, char* argv[], char* envp[])
+{
+    auto A = matrix (1000, 1000);
+    auto B = A, C = B;
+    for(auto i = 0; i < 1000; i++){
+        for(auto j = 0; j < 1000; j++){
+            A[i][j] = i + j;
+            B[i][j] = i * j;
+        }
+    }
+    
+    std::thread t1(fast_matrix_multiplication, A, B, C);
+    std::thread t2(slow_matrix_multiplication, A, B, C);
+    t1.join();
+    t2.join();
 }
 
 int main(int argc, char* argv[], char* envp[])
