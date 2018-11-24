@@ -83,7 +83,7 @@ void huge_mod_power(LL base, LL power)
     {
         power %= lr_mod;
         expo %= lr_mod;
-        if (!(power&1)){
+        if (!(power & 1)){
             expo *= (expo % lr_mod);
             power >>= 1;
         } else {
