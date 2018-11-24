@@ -74,11 +74,11 @@ static void copy_to_test_case(char * const args[] = case_parameters) {
     }
 }
 
-const LL lr_mod  = 1000000003;
+const int64_t lr_mod  = 1000000003;
 
-void huge_mod_power(LL base, LL power)
+void huge_mod_power(int64_t base, int64_t power)
 {
-    static LL expo = base % lr_mod;
+    static int64_t expo = base % lr_mod;
     while(power)
     {
         power %= lr_mod;
