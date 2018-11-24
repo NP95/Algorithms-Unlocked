@@ -2,7 +2,22 @@
 
 void solution(int argc, char* argv[], char* envp[])
 {
-
+    auto A = matrix (1000, 1000);
+    auto B = A, C = B;
+    for(auto i = 0; i < 1000; i++){
+        for(auto j = 0; j < 1000; j++){
+            A[i][j] = i + j;
+            B[i][j] = i * j;
+        }
+    }
+    for(auto i = 0; i < 1000; i++){
+        for(auto j = 0; j < 1000; j++){
+            for (auto k = 0; k < 1000; k++) {
+                C[i][j] += A[i][k] * B[k][j];
+            }
+        }
+    }
+    std::cout << C[456][744] << std::endl;
 }
 
 int main(int argc, char* argv[], char* envp[])
