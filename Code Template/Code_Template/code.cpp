@@ -11,13 +11,12 @@ void solution(int argc, char* argv[], char* envp[])
             expo *= (expo % MOD);
             expo %= MOD;
             power >>= 1;
-            std::cout << counter << to_string(expo) << std::endl;
         } else {
             expo *= (base % MOD);
             expo %= MOD;
             --power;
-            std::cout << counter << to_string(expo) << std::endl;
         }
+        std::cout << counter << ", " << to_string(expo) << std::endl;
     }
     if(expo < 0) std::cout << "Overflow." << std::endl;
     else std::cout << to_string(expo) << std::endl;
