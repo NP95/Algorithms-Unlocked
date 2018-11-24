@@ -135,6 +135,5 @@ clock_t start_time, end_time;
 
 #endif /* static_h */
 
-typedef unsigned __int128 uint128_t;
 typedef tree <int, null_type, std::less<int>, rb_tree_tag, tree_order_statistics_node_update > red_black_tree;
 typedef trie <string, null_type, trie_string_access_traits<>, pat_trie_tag, trie_prefix_search_node_update> patricia_trie;

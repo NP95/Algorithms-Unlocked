@@ -74,11 +74,11 @@ static void copy_to_test_case(char * const args[] = case_parameters) {
     }
 }
 
-const uint128_t lr_mod  = 1000000003;
+const uint64_t lr_mod  = 1000000003;
 
-void huge_mod_power(uint128_t base, uint128_t power)
+void huge_mod_power(uint64_t base, uint64_t power)
 {
-    static uint128_t expo = base % lr_mod;
+    static uint64_t expo = base % lr_mod;
     while(power)
     {
         std::cout << "Power : " << power << ", " << to_string(expo) << std::endl;
