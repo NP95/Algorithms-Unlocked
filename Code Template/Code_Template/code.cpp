@@ -1,5 +1,5 @@
 #include "Headers/headers.h"
-#if ((CHAR_BIT * sizeof (long long) ) != 64)
+#if ((CHAR_BIT * sizeof(long long)) != 64)
     #pragma error "long long is not 64 bits"
 #endif
 void solution(int argc, char* argv[], char* envp[])
