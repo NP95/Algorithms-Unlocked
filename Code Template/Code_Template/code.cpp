@@ -7,7 +7,7 @@ void solution(int argc, char* argv[], char* envp[])
     while(power)
     {
         counter++;
-        if (!power&1){
+        if (!(power&1)){
             expo *= (expo % MOD);
             expo %= MOD;
             power >>= 1;
