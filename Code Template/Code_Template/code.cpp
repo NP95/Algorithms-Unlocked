@@ -2,13 +2,13 @@
 
 void solution(int argc, char* argv[], char* envp[])
 {
-    auto array_mat = matrix(1000, 1000);
-    for(auto i = 0; i < 1000; i++){
-        for(auto j = 0; j < 1000; j++){
-            array_mat[i][j] = (1ULL << 37);
+    auto array_mat = matrix(10000, 10000);
+    for(auto i = 0; i < 10000; i++){
+        for(auto j = 0; j < 10000; j++){
+            array_mat[i][j] = (1ULL << 39);
         }
     }
-    std::cout << array_mat[500][752] << std::endl;
+    std::cout << array_mat[5000][7520] << std::endl;
 }
 
 int main(int argc, char* argv[], char* envp[])
