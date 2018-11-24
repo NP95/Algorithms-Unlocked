@@ -2,14 +2,19 @@
 
 void solution(int argc, char* argv[], char* envp[])
 {
-    int base, power;
+    int base = 10, power = 7;
+    int expo = base;
     while(power)
     {
         if (!power&1){
-            base *= base;
+            expo *= expo;
             power >> 1;
-        } else 
+        } else {
+            expo *= base;
+            --power;
+        }
     }
+    std::cout << expo << std::endl;
 }
 
 int main(int argc, char* argv[], char* envp[])
