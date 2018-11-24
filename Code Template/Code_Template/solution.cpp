@@ -205,7 +205,6 @@ typedef trie <string, null_type, trie_string_access_traits<>, pat_trie_tag, trie
 
 /* Appended working code here using freopen() */
 
-
 void solution(int argc, char* argv[], char* envp[])
 {
     huge_mod_power((1ULL << 13), (1ULL << 63));
