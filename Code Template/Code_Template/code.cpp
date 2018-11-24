@@ -49,7 +49,7 @@ void solution(int argc, char* argv[], char* envp[])
     }
     
     fast_matrix_multiplication(A, B, C);
-    slow_matrix_multiplication(A, B, C);
+    // slow_matrix_multiplication(A, B, C);
 }
 
 int main(int argc, char* argv[], char* envp[])
