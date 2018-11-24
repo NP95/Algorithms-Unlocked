@@ -94,7 +94,7 @@ void huge_mod_power(uint64_t base, uint64_t power)
     }
     std::cout << to_string(expo) << std::endl;
     clock_t end_time = clock() - start_time;
-    std::cerr << 
+    std::cerr << ((float)end_time)/CLOCKS_PER_SEC << std::endl;
 }
 
 #endif /* functions_h */
