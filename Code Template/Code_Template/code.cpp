@@ -2,7 +2,11 @@
 
 void solution(int argc, char* argv[], char* envp[])
 {
-    
+    int base, power;
+    while(power)
+    {
+        
+    }
 }
 
 int main(int argc, char* argv[], char* envp[])
