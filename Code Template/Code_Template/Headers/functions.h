@@ -109,4 +109,41 @@ static std::vector<std::vector<uint64_t> > matrix (int row, int col)
     return mat;
 }
 
+void fast_matrix_multiplication(std::vector<std::vector<uint64_t> > &A, std::vector<std::vector<uint64_t> > &B, std::vector<std::vector<uint64_t> > &C)
+{
+    clock_t start_time;
+    int h = 8;
+    for(auto i = 0; i < 1000; i += h){
+        for(auto j = 0; j < 1000; j += h){
+            for (auto k = 0; k < 1000; k += h) {
+                for(auto il = i; il < (i + h); il++){
+                    for(auto jl = j; jl < (j + h); jl++){
+                        for (auto kl = k; kl < (k + h); kl++) {
+                            C[il][jl] += A[il][kl] * B[kl][jl];
+                        }
+                    }
+                }
+            }
+        }
+    }
+    std::cout << C[456][744] << std::endl;
+    clock_t end_time = clock() - start_time;
+    std::cerr << ((float)end_time)/CLOCKS_PER_SEC << std::endl;
+}
+
+void slow_matrix_multiplication(std::vector<std::vector<uint64_t> > &A, std::vector<std::vector<uint64_t> > &B, std::vector<std::vector<uint64_t> > &C)
+{
+    clock_t start_time;
+    for(auto i = 0; i < 1000; i++){
+        for(auto j = 0; j < 1000; j++){
+            for (auto k = 0; k < 1000; k++) {
+                C[i][j] += A[i][k] * B[k][j];
+            }
+        }
+    }
+    std::cout << C[456][744] << std::endl;
+    clock_t end_time = clock() - start_time;
+    std::cerr << ((float)end_time)/CLOCKS_PER_SEC << std::endl;
+}
+
 #endif /* functions_h */
