@@ -98,10 +98,14 @@ static void huge_mod_power(uint64_t base, uint64_t power)
 
 static std::vector<std::vector<uint64_t> > matrix (int row, int col)
 {
+    clock_t start_time;
+    std::vector<std::vector<uint64_t> > mat;
     std::vector<uint64_t> dump(col, 0);
     for(auto i = 0; i < row; i++){
-        
+        mat.emplace_back(dump);
     }
+    return mat;
+    std::cerr << "Matrix : " << ((float)end_time)/CLOCKS_PER_SEC << std::endl;
 }
 
 #endif /* functions_h */
