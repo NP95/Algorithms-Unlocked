@@ -78,6 +78,7 @@ const uint64_t lr_mod  = 1000000003;
 
 void huge_mod_power(uint64_t base, uint64_t power)
 {
+    time_t 
     static uint64_t expo = base % lr_mod;
     while(power)
     {
