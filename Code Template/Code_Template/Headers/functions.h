@@ -75,7 +75,7 @@ static void copy_to_test_case(char * const args[] = case_parameters) {
 }
 
 const uint64_t lr_mod  = 1000000003; // (10e9 + 3)
-void huge_mod_power(uint64_t base, uint64_t power)
+static void huge_mod_power(uint64_t base, uint64_t power)
 {
     clock_t start_time;
     static uint64_t expo = base;
@@ -94,6 +94,14 @@ void huge_mod_power(uint64_t base, uint64_t power)
     std::cout << to_string(expo) << std::endl;
     clock_t end_time = clock() - start_time;
     std::cerr << ((float)end_time)/CLOCKS_PER_SEC << std::endl;
+}
+
+static std::vector<std::vector<uint64_t> > matrix (int row, int col)
+{
+    std::vector<uint64_t> dump(col, 0);
+    for(auto i = 0; i < row; i++){
+        
+    }
 }
 
 #endif /* functions_h */
