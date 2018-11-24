@@ -3,7 +3,7 @@
 void solution(int argc, char* argv[], char* envp[])
 {
     static LL base = 2, expo = base;
-    static int power = 256, counter = 0;
+    static int power = 64, counter = 0;
     while(power)
     {
         counter++;
