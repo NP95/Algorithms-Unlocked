@@ -10,11 +10,17 @@ void solution(int argc, char* argv[], char* envp[])
             B[i][j] = i * j;
         }
     }
-    int h = 7;
+    int h = 8;
     for(auto i = 0; i < 1000; i += h){
         for(auto j = 0; j < 1000; j += h){
             for (auto k = 0; k < 1000; k += h) {
-                C[i][j] += A[i][k] * B[k][j];
+                for(auto il = i; il < (i + h); il++){
+                    for(auto jl = j; jl < (j + h); jl++){
+                        for (auto kl = k; kl < (k + h); kl++) {
+                            C[il][jl] += A[il][kl] * B[kl][jl];
+                        }
+                    }
+                }
             }
         }
     }
