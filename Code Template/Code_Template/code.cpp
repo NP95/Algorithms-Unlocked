@@ -17,8 +17,7 @@ void solution(int argc, char* argv[], char* envp[])
             expo %= MOD;
             --power;
         }
-        std::cout << power << ", " << counter << ", " << to_string(expo) << std::endl;
-    }
+      }
     if(expo < 0) std::cout << "Overflow." << std::endl;
     else std::cout << to_string(expo) << std::endl;
 }
