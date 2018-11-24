@@ -209,7 +209,7 @@ typedef trie <string, null_type, trie_string_access_traits<>, pat_trie_tag, trie
 void solution(int argc, char* argv[], char* envp[])
 {
     static LL base = 2, expo = base % MOD;
-    static int power = 33, counter = 0;
+    static int power = 32, counter = 0;
     while(power)
     {
         counter++;
