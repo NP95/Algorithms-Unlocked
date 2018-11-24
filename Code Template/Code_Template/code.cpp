@@ -2,7 +2,7 @@
 
 void solution(int argc, char* argv[], char* envp[])
 {
-    LL base = 26589874, expo = 1;
+    LL base = 2658, expo = 1;
     int power = 21;
     while(power)
     {
