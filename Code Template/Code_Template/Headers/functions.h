@@ -111,7 +111,7 @@ static std::vector<std::vector<uint64_t> > matrix (int row, int col, uint64_t va
 
 
 /* Blocked Cache Obvious matrix multiplication */
-std::vector<std::vector<uint64_t> > fast_matrix_multiplication(std::vector<std::vector<uint64_t> > &A, std::vector<std::vector<uint64_t> > &B)
+std::vector<std::vector<uint64_t> > fast_matrix_modulo_multiplication(std::vector<std::vector<uint64_t> > &A, std::vector<std::vector<uint64_t> > &B)
 {
     std::vector<std::vector<uint64_t> > C = matrix(A.size(), B[0].size(), 0);
     clock_t start_time;
@@ -122,7 +122,7 @@ std::vector<std::vector<uint64_t> > fast_matrix_multiplication(std::vector<std::
                 for(auto il = i; il < (i + h); il++){
                     for(auto jl = j; jl < (j + h); jl++){
                         for (auto kl = k; kl < (k + h); kl++) {
-                            C[il][jl] += A[il][kl] * B[kl][jl];
+                            C[il][jl] += ((A[il][kl])%lr_mod * (B[kl][jl])%lr_mod)%lr_mod;
                         }
                     }
                 }
@@ -134,14 +134,14 @@ std::vector<std::vector<uint64_t> > fast_matrix_multiplication(std::vector<std::
     return C;
 }
 
-std::vector<std::vector<uint64_t> > slow_matrix_multiplication(std::vector<std::vector<uint64_t> > &A, std::vector<std::vector<uint64_t> > &B)
+std::vector<std::vector<uint64_t> > slow_matrix_modulo_multiplication(std::vector<std::vector<uint64_t> > &A, std::vector<std::vector<uint64_t> > &B)
 {
     std::vector<std::vector<uint64_t> > C = matrix(A.size(), B[0].size(), 0);
     clock_t start_time;
     for(auto i = 0; i < 1000; i++){
         for(auto j = 0; j < 1000; j++){
             for (auto k = 0; k < 1000; k++) {
-                C[i][j] += A[i][k] * B[k][j];
+                C[i][j] += ((A[i][k])%lr_mod * (B[k][j])%lr_mod)%lr_mod;
             }
         }
     }

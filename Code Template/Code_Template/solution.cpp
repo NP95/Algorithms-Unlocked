@@ -209,7 +209,7 @@ void solution(int argc, char* argv[], char* envp[])
 {
     auto A = matrix(1000, 1000, 1ULL << 37);
     auto B = matrix(1000, 1000, 1ULL << 16);
-    auto C = fast_matrix_multiplication(std::ref(A), std::ref(B));
+    auto C = fast_matrix_modulo_multiplication(std::ref(A), std::ref(B));
     std::cout << C[154][743] << std::endl;
 }
 
