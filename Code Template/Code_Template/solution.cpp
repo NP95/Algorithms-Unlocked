@@ -213,10 +213,10 @@ void solution(int argc, char* argv[], char* envp[])
     while(power)
     {
         if (!power&1){
-            expo *= expo % MOD;
+            expo *= (expo % MOD);
             power >>= 1;
         } else {
-            expo *= base % MOD;
+            expo *= (base % MOD);
             --power;
         }
     }
