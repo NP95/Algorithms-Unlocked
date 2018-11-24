@@ -208,7 +208,19 @@ typedef trie <string, null_type, trie_string_access_traits<>, pat_trie_tag, trie
 
 void solution(int argc, char* argv[], char* envp[])
 {
-    
+    int base = 10, power = 7;
+    int expo = base;
+    while(power)
+    {
+        if (!power&1){
+            expo *= expo;
+            power >> 1;
+        } else {
+            expo *= base;
+            --power;
+        }
+    }
+    std::cout << expo << std::endl;
 }
 
 int main(int argc, char* argv[], char* envp[])
