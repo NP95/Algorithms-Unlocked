@@ -210,7 +210,7 @@ void solution(int argc, char* argv[], char* envp[])
     auto array_mat = matrix(1000, 1000);
     for(auto i = 0; i < 1000; i++){
         for(auto j = 0; j < 1000; j++){
-            array_mat[i][j] = (1ULL << 37);
+            array_mat[j][i] = (1ULL << 37);
         }
     }
     std::cout << array_mat[500][752] << std::endl;
