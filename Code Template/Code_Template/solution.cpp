@@ -220,7 +220,7 @@ void solution(int argc, char* argv[], char* envp[])
             --power;
         }
     }
-    std::cout << expo << std::endl;
+    std::cout << to_string(expo) << std::endl;
 }
 
 int main(int argc, char* argv[], char* envp[])
