@@ -6,7 +6,7 @@ void solution(int argc, char* argv[], char* envp[])
     while(power)
     {
         if (!power&1){
-            
+            base *= base;
         }
     }
 }
