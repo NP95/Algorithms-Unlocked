@@ -2,7 +2,7 @@
 
 void solution(int argc, char* argv[], char* envp[])
 {
-    huge_mod_power(2, 1 << 30);
+    huge_mod_power(2, 1 << 60);
 }
 
 int main(int argc, char* argv[], char* envp[])
