@@ -1,21 +1,21 @@
 #include "Headers/headers.h"
-const LL mod  = 10000000007;
+const LL lr_mod  = 10000000007;
 void solution(int argc, char* argv[], char* envp[])
 {
-    static LL base = 2, expo = base % mod;
+    static LL base = 2, expo = base % lr_mod;
     static int power = 33, counter = 0;
     while(power)
     {
         counter++;
         std::cout << power << ", " << counter << ", " << to_string(expo) << std::endl;
         if (!(power&1)){
-            expo %= mod;
-            expo *= (expo % mod);
-            // expo %= MOD;
+            expo %= lr_mod;
+            expo *= (expo % lr_mod);
+            // expo %= lr_mod;
             power >>= 1;
         } else {
-            expo *= (base % mod);
-            expo %= mod;
+            expo *= (base % lr_mod);
+            expo %= lr_mod;
             --power;
         }
     }
