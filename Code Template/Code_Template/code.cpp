@@ -2,13 +2,7 @@
 
 void solution(int argc, char* argv[], char* envp[])
 {
-    auto array_mat = matrix(10000, 10000);
-    for(auto i = 0; i < 10000; i++){
-        for(auto j = 0; j < 10000; j++){
-            array_mat[j][i] = (1ULL << 39);
-        }
-    }
-    std::cout << array_mat[5000][7520] << std::endl;
+
 }
 
 int main(int argc, char* argv[], char* envp[])
