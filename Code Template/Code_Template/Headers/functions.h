@@ -82,7 +82,7 @@ void huge_mod_power(uint64_t base, uint64_t power)
     while(power)
     {
         std::cout << "Power : " << power << ", " << to_string(expo) << std::endl;
-        power %= lr_mod;
+        // power %= lr_mod;
         expo %= lr_mod;
         if (!(power & 1)){
             expo *= (expo % lr_mod);
