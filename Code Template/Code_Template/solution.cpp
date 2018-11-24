@@ -213,6 +213,7 @@ void solution(int argc, char* argv[], char* envp[])
     while(power)
     {
         counter++;
+        std::cout << power << ", " << counter << ", " << to_string(expo) << std::endl;
         if (!(power&1)){
             expo *= (expo % MOD);
             expo %= MOD;
