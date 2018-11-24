@@ -74,5 +74,24 @@ static void copy_to_test_case(char * const args[] = case_parameters) {
     }
 }
 
+const LL lr_mod  = 1000000003;
+
+void huge_mod_power(LL base, LL power, LL lr_mod, )
+{
+    static LL base = 2, expo = base % lr_mod;
+    static LL power = 1 << 30, counter = 0;
+    while(power)
+    {
+        expo %= lr_mod;
+        if (!(power&1)){
+            expo *= (expo % lr_mod);
+            power >>= 1;
+        } else {
+            expo *= (base % lr_mod);
+            --power;
+        }
+    }
+    std::cout << to_string(expo) << std::endl;
+}
 
 #endif /* functions_h */
