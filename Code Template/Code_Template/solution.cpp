@@ -209,17 +209,20 @@ typedef trie <string, null_type, trie_string_access_traits<>, pat_trie_tag, trie
 void solution(int argc, char* argv[], char* envp[])
 {
     static LL base = 1500, expo = 1;
-    static int power = 256;
+    static int power = 256, counter = 0;
     while(power)
     {
+        counter++;
         if (!power&1){
             expo *= (expo % MOD);
             expo %= MOD;
             power >>= 1;
+            std::cout << counter << to_string(expo) << std::endl;
         } else {
             expo *= (base % MOD);
             expo %= MOD;
             --power;
+            std::cout << counter << to_string(expo) << std::endl;
         }
     }
     if(expo < 0) std::cout << "Overflow." << std::endl;
