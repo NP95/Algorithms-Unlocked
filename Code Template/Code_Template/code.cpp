@@ -2,7 +2,7 @@
 
 void solution(int argc, char* argv[], char* envp[])
 {
-    static LL base = 15, expo = 1;
+    static LL base = 23, expo = 1;
     static int power = 15;
     while(power)
     {
