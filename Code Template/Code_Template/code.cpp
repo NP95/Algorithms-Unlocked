@@ -8,7 +8,7 @@ void solution(int argc, char* argv[], char* envp[])
     {
         if (!power&1){
             expo *= expo;
-            power >> 1;
+            power = power >> 1;
         } else {
             expo *= base;
             --power;
