@@ -8,6 +8,7 @@ void solution(int argc, char* argv[], char* envp[])
             array_mat[i][j] = (1ULL << 37);
         }
     }
+    std::cout << array_mat[500][752] << std::endl;
 }
 
 int main(int argc, char* argv[], char* envp[])
