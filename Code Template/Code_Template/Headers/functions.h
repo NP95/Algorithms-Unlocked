@@ -149,9 +149,20 @@ static std::vector<std::vector<uint64_t> > slow_matrix_modulo_multiplication(std
     return C;
 }
 
-uint64_t ripple_carry_adder()
+static void sizes()
 {
-    
+    std::cout << "int : " <<  sizeof(int) << "B" <<  std::endl;
+    std::cout << "char : " << sizeof(char) << "B" << std::endl;
+    std::cout << "long : " <<  sizeof(long) << "B" <<  std::endl;
+    std::cout << "short : " <<  sizeof(short) << "B" <<  std::endl;
+    std::cout << "float : " <<  sizeof(float) << "B" <<  std::endl;
+    std::cout << "double : " <<  sizeof(double) << "B" <<  std::endl;
+    std::cout << "long long : " <<  sizeof(long long) << "B" <<  std::endl;
+    std::cout << "long double : " <<  sizeof(long double) << "B" <<  std::endl;
+    std::cout << "unsigned int : " <<  sizeof(unsigned int) << "B" <<  std::endl;
+    std::cout << "unsigned long : " <<  sizeof(unsigned long) << "B" <<  std::endl;
+    std::cout << "unsigned int 64 : " <<  sizeof(uint64_t) << "B" <<  std::endl;
+    std::cout << "long long int : " <<  sizeof(long long int) << "B" <<  std::endl;
 }
 
 
