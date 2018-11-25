@@ -27,3 +27,6 @@ Running with -./code.out $TERM=unknown Time : 0.001537 sec, Ticks : 1537 (1)
 Build ID : 527757183, Build Hash : 0xe088fccf39f8d159fa24fdbee780d35ad8686a54284fbf7f24f0aaf9996db4
 --------------------------------------------------------------------FINAL::TIME---------------------------------------------------------------
 Running with -./code.out $TERM=unknown Time : 0.001211 sec, Ticks : 1211 (1)
+--------------------------------------------------------------------BUILD---------------------------------------------------------------------
+Build ID : 440692154, Build Hash : 0xdbefe9fb8182c5ee3e2ee62560f5c8fee2ad4b7f311725d26152dad0b5332b
+Assertion failed: (ripple_multiply(14541, 895414) == (14541 * 895414)), function solution, file code.cpp, line 5.
