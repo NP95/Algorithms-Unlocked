@@ -76,7 +76,7 @@ static void copy_to_test_case(char * const args[] = case_parameters) {
 
 const uint64_t lr_mod  = 1000000003; // (10e9 + 3)
 
-static uint64_t huge_mod_power(uint64_t base, uint64_t power)
+static uint64_t huge_mod_power(uint64_t base = 13, uint64_t power = 15)
 {
     clock_t start_time;
     static uint64_t expo = base;
@@ -96,7 +96,7 @@ static uint64_t huge_mod_power(uint64_t base, uint64_t power)
     return expo;
 }
 
-static std::vector<std::vector<uint64_t> > matrix (size_t row, size_t col, uint64_t value)
+static std::vector<std::vector<uint64_t> > matrix (size_t row = 10000, size_t col = 10000, uint64_t value = 54774541)
 {
     clock_t start_time;
     std::vector<std::vector<uint64_t> > mat;
@@ -167,7 +167,7 @@ static void sizes()
     std::cout << "unsigned int 64 : " <<  8 * sizeof(uint64_t) << " bits" <<  std::endl;
 }
 
-static uint64_t unsigned_ripple_carry_adder(uint64_t a, uint64_t b)
+static uint64_t unsigned_ripple_carry_adder(uint64_t a = 589, uint64_t b = 7454)
 {
     uint64_t carryin = 0, sum = 0, mask = 1, temp_a = a, temp_b = b;
     while(temp_a || temp_b)
@@ -181,7 +181,7 @@ static uint64_t unsigned_ripple_carry_adder(uint64_t a, uint64_t b)
     return sum | carryin;
 }
 
-static uint64_t ripple_multiply(uint64_t x, uint64_t y)
+static uint64_t ripple_multiply(uint64_t x = 2, uint64_t y = 33)
 {
     uint64_t sum = 0;
     while(x)
