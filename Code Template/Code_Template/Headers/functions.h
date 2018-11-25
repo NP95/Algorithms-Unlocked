@@ -113,7 +113,7 @@ static std::vector<std::vector<uint64_t> > matrix (size_t row, size_t col, uint6
 static std::vector<std::vector<uint64_t> > fast_matrix_modulo_multiplication(std::vector<std::vector<uint64_t> > &A, std::vector<std::vector<uint64_t> > &B)
 {
     clock_t start_time;
-    size_t row = A.size(), column = B[0].size();
+    auto row = A.size(), column = B[0].size();
     std::vector<std::vector<uint64_t> > C = matrix(row, column, 0);
     int cache_line = 1 << 3;
     for(auto i = 0; i < row; i += cache_line){
@@ -137,7 +137,7 @@ static std::vector<std::vector<uint64_t> > fast_matrix_modulo_multiplication(std
 static std::vector<std::vector<uint64_t> > slow_matrix_modulo_multiplication(std::vector<std::vector<uint64_t> > &A, std::vector<std::vector<uint64_t> > &B)
 {
     clock_t start_time;
-    size_t row = A.size(), column = B[0].size;
+    auto row = A.size(), column = B[0].size;
     std::vector<std::vector<uint64_t> > C = matrix(row, column, 0);
     for(auto i = 0; i < row; i++){
         for(auto j = 0; j < column; j++){
