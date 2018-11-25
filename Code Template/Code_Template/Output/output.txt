@@ -1,11 +1,11 @@
-char : 1
-int : 4
-double : 8
-float : 4
-long : 8
-long long : 8
-long long int : 8
-unsigned int : 4
-unsigned long : 8
-unsigned int 64 : 8
-long double : 16
+char : 1B
+int : 4B
+double : 8B
+float : 4B
+long : 8B
+long long : 8B
+long long int : 8B
+unsigned int : 4B
+unsigned long : 8B
+unsigned int 64 : 8B
+long double : 16B
