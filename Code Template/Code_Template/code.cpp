@@ -2,19 +2,7 @@
 
 void solution(int argc, char* argv[], char* envp[])
 {
-    std::cout << "char : " << sizeof(char) << "B" << std::endl;
-    std::cout << "int : " <<  sizeof(int) << "B" <<  std::endl;
-    std::cout << "double : " <<  sizeof(double) << "B" <<  std::endl;
-    std::cout << "float : " <<  sizeof(float) << "B" <<  std::endl;
-    std::cout << "long : " <<  sizeof(long) << "B" <<  std::endl;
-    std::cout << "long long : " <<  sizeof(long long) << "B" <<  std::endl;
-    std::cout << "long long int : " <<  sizeof(long long int) << "B" <<  std::endl;
-    std::cout << "unsigned int : " <<  sizeof(unsigned int) << "B" <<  std::endl;
-    std::cout << "unsigned long : " <<  sizeof(unsigned long) << "B" <<  std::endl;
-    std::cout << "unsigned int 64 : " <<  sizeof(uint64_t) << "B" <<  std::endl;
-    std::cout << "long double : " <<  sizeof(long double) << "B" <<  std::endl;
-    long double huge_integer = ((1 << 20) * (1ULL << 62)) - 1;
-    std::cout << "long double : " << huge_integer << std::endl;
+    
 }
 
 int main(int argc, char* argv[], char* envp[])
