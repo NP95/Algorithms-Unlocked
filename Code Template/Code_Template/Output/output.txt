@@ -1,0 +1,12 @@
+int : 4B
+char : 1B
+long : 8B
+short : 2B
+float : 4B
+double : 8B
+long long : 8B
+long double : 16B
+unsigned int : 4B
+unsigned long : 8B
+unsigned int 64 : 8B
+long long int : 8B
