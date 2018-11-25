@@ -167,7 +167,7 @@ static void sizes()
     std::cout << "unsigned int 64 : " <<  8 * sizeof(uint64_t) << " bits" <<  std::endl;
 }
 
-uint64_t unsigned_ripple_carry_adder(uint64_t a, uint64_t b)
+static uint64_t unsigned_ripple_carry_adder(uint64_t a, uint64_t b)
 {
     uint64_t carryin = 0, sum = 0, mask = 1, temp_a = a, temp_b = b;
     while(temp_a || temp_b)
@@ -181,7 +181,7 @@ uint64_t unsigned_ripple_carry_adder(uint64_t a, uint64_t b)
     return sum | carryin;
 }
 
-uint64_t ripple_multiply(uint64_t x, uint64_t y)
+static uint64_t ripple_multiply(uint64_t x, uint64_t y)
 {
     uint64_t sum = 0;
     while(x)
