@@ -4,6 +4,7 @@ void solution(int argc, char* argv[], char* envp[])
 {
     auto sum = ripple_multiply(154487, 569985445);
     std::cout << sum << std::endl;
+    assert(ripple_multiply(1547, 4471) == (1547 * 4471));
 }
 
 int main(int argc, char* argv[], char* envp[])
