@@ -207,7 +207,7 @@ typedef trie <string, null_type, trie_string_access_traits<>, pat_trie_tag, trie
 811759117425463136
 void solution(int argc, char* argv[], char* envp[])
 {
-    cout << to_string(ripple_multiply(15477454, 52447845584));
+    std::cout << ripple_multiply(15477454, 52447845584);
 }
 
 int main(int argc, char* argv[], char* envp[])
