@@ -2,7 +2,7 @@
 
 void solution(int argc, char* argv[], char* envp[])
 {
-    sizes();
+    
 }
 
 int main(int argc, char* argv[], char* envp[])
