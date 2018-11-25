@@ -204,10 +204,10 @@ typedef tree <int, null_type, std::less<int>, rb_tree_tag, tree_order_statistics
 typedef trie <string, null_type, trie_string_access_traits<>, pat_trie_tag, trie_prefix_search_node_update> patricia_trie;
 
 /* Appended working code here using freopen() */
-
+811759117425463136.000000
 void solution(int argc, char* argv[], char* envp[])
 {
-    std::cout << 14541 * 895414 << std::endl;
+    cout << to_string(ripple_multiply(15477454, 52447845584));
 }
 
 int main(int argc, char* argv[], char* envp[])
