@@ -138,8 +138,8 @@ static std::vector<std::vector<uint64_t> > slow_matrix_modulo_multiplication(std
     clock_t start_time;
     std::vector<std::vector<uint64_t> > C = matrix(A.size(), B[0].size(), 0);
     for(auto i = 0; i < A.size(); i++){
-        for(auto j = 0; j < B[0].size; j++){
-            for (auto k = 0; k < B[0].size; k++){
+        for(auto j = 0; j < B[0].size(); j++){
+            for (auto k = 0; k < B[0].size(); k++){
                 C[i][j] += ((A[i][k])%lr_mod * (B[k][j])%lr_mod)%lr_mod;
             }
         }
