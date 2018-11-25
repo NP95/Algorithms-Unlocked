@@ -75,13 +75,13 @@ static void copy_to_test_case(char * const args[] = case_parameters) {
 }
 
 const uint64_t lr_mod  = 1000000003; // (10e9 + 3)
-static void huge_mod_power(uint64_t base, uint64_t power)
+
+static uint64_t huge_mod_power(uint64_t base, uint64_t power)
 {
     clock_t start_time;
     static uint64_t expo = base;
     while(power)
     {
-        std::cerr << "Power : " << power << ", " << to_string(expo) << std::endl;
         expo %= lr_mod;
         if (!(power & 1)){
             expo *= (expo % lr_mod);
@@ -91,9 +91,9 @@ static void huge_mod_power(uint64_t base, uint64_t power)
             --power;
         }
     }
-    std::cout << to_string(expo) << std::endl;
     clock_t end_time = clock() - start_time;
     std::cerr << ((float)end_time)/CLOCKS_PER_SEC << std::endl;
+    return expo;
 }
 
 static std::vector<std::vector<uint64_t> > matrix (int row, int col, uint64_t value)
@@ -109,19 +109,19 @@ static std::vector<std::vector<uint64_t> > matrix (int row, int col, uint64_t va
     return mat;
 }
 
-
 /* Blocked Cache Obvious matrix multiplication */
-std::vector<std::vector<uint64_t> > fast_matrix_modulo_multiplication(std::vector<std::vector<uint64_t> > &A, std::vector<std::vector<uint64_t> > &B)
+static std::vector<std::vector<uint64_t> > fast_matrix_modulo_multiplication(std::vector<std::vector<uint64_t> > &A, std::vector<std::vector<uint64_t> > &B)
 {
-    std::vector<std::vector<uint64_t> > C = matrix(A.size(), B[0].size(), 0);
     clock_t start_time;
-    int h = 1 << 3;
-    for(auto i = 0; i < 1000; i += h){
-        for(auto j = 0; j < 1000; j += h){
-            for (auto k = 0; k < 1000; k += h) {
-                for(auto il = i; il < (i + h); il++){
-                    for(auto jl = j; jl < (j + h); jl++){
-                        for (auto kl = k; kl < (k + h); kl++) {
+    int row = A.size(), column = B[0].size();
+    std::vector<std::vector<uint64_t> > C = matrix(row, column, 0);
+    int cache_line = 1 << 3;
+    for(auto i = 0; i < row; i += cache_line){
+        for(auto j = 0; j < column; j += cache_line){
+            for (auto k = 0; k < column; k += cache_line){
+                for(auto il = i; il < (i + cache_line); il++){
+                    for(auto jl = j; jl < (j + cache_line); jl++){
+                        for (auto kl = k; kl < (k + cache_line); kl++){
                             C[il][jl] += ((A[il][kl])%lr_mod * (B[kl][jl])%lr_mod)%lr_mod;
                         }
                     }
@@ -134,21 +134,28 @@ std::vector<std::vector<uint64_t> > fast_matrix_modulo_multiplication(std::vecto
     return C;
 }
 
-std::vector<std::vector<uint64_t> > slow_matrix_modulo_multiplication(std::vector<std::vector<uint64_t> > &A, std::vector<std::vector<uint64_t> > &B)
+static std::vector<std::vector<uint64_t> > slow_matrix_modulo_multiplication(std::vector<std::vector<uint64_t> > &A, std::vector<std::vector<uint64_t> > &B)
 {
-    std::vector<std::vector<uint64_t> > C = matrix(A.size(), B[0].size(), 0);
     clock_t start_time;
-    for(auto i = 0; i < 1000; i++){
-        for(auto j = 0; j < 1000; j++){
-            for (auto k = 0; k < 1000; k++) {
+    int row = A.size(), column = B[0].size;
+    std::vector<std::vector<uint64_t> > C = matrix(row, column, 0);
+    for(auto i = 0; i < row; i++){
+        for(auto j = 0; j < column; j++){
+            for (auto k = 0; k < column; k++){
                 C[i][j] += ((A[i][k])%lr_mod * (B[k][j])%lr_mod)%lr_mod;
             }
         }
     }
-    std::cout << C[456][744] << std::endl;
     clock_t end_time = clock() - start_time;
     std::cerr << "Slow : " << ((float)end_time)/CLOCKS_PER_SEC << std::endl;
     return C;
 }
+
+uint64_t ripple_carry_adder()
+{
+    
+}
+
+
 
 #endif /* functions_h */
