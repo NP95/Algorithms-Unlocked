@@ -207,10 +207,15 @@ typedef trie <string, null_type, trie_string_access_traits<>, pat_trie_tag, trie
 
 void solution(int argc, char* argv[], char* envp[])
 {
-    auto A = matrix(1000, 1000, 1ULL << 13);
-    auto B = matrix(1000, 1000, 1ULL << 16);
-    auto C = fast_matrix_modulo_multiplication(std::ref(A), std::ref(B));
-    std::cout << C[154][743] << std::endl;
+    std::cout << "char : " << sizeof(char) << std::endl;
+    std::cout << "int :" <<  sizeof(int) << std::endl;
+    std::cout << "double : " <<  sizeof(double) << std::endl;
+    std::cout << "float : " <<  sizeof(float) << std::endl;
+    std::cout << "long : " <<  sizeof(long) << std::endl;
+    std::cout << "long long :" <<  sizeof(long long) << std::endl;
+    std::cout << "long long int : " <<  sizeof(long long int) << std::endl;
+    std::cout << "unsigned long : " <<  sizeof(unsigned long) << std::endl;
+    std::cout << "unsigned int 64 : " <<  sizeof(uint64_t) << std::endl;
 }
 
 int main(int argc, char* argv[], char* envp[])

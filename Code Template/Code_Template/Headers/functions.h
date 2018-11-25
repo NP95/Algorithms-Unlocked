@@ -101,7 +101,7 @@ static std::vector<std::vector<uint64_t> > matrix (size_t row, size_t col, uint6
     clock_t start_time;
     std::vector<std::vector<uint64_t> > mat;
     std::vector<uint64_t> dump(col, value);
-    for(auto i = 0; i < row; i++){
+    for(unsigned i = 0; i < row; i++){
         mat.emplace_back(dump);
     }
     clock_t end_time = clock() - start_time;

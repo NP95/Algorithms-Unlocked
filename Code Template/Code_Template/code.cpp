@@ -9,7 +9,7 @@ void solution(int argc, char* argv[], char* envp[])
     std::cout << "long : " <<  sizeof(long) << std::endl;
     std::cout << "long long :" <<  sizeof(long long) << std::endl;
     std::cout << "long long int : " <<  sizeof(long long int) << std::endl;
-    std::cout << "long long double : " <<  sizeof(long long double) << std::endl;
+    std::cout << "unsigned long : " <<  sizeof(unsigned long) << std::endl;
     std::cout << "unsigned int 64 : " <<  sizeof(uint64_t) << std::endl;
 }
 

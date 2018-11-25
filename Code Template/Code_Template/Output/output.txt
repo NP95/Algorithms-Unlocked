@@ -1,1 +1,9 @@
-536870912000
+char : 1
+int :4
+double : 8
+float : 4
+long : 8
+long long :8
+long long int : 8
+unsigned long : 8
+unsigned int 64 : 8
