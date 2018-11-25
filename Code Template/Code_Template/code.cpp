@@ -2,7 +2,7 @@
 
 void solution(int argc, char* argv[], char* envp[])
 {
-    std::cout << ((1ULL << 13) * (1ULL << 17)) << std::endl;
+    std::cout << ripple_multiply(14541, 895414) << std::endl;
 }
 
 int main(int argc, char* argv[], char* envp[])
