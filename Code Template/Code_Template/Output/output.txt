@@ -1,12 +1,12 @@
-int : 4B
-char : 1B
-long : 8B
-short : 2B
-float : 4B
-double : 8B
-long long : 8B
-long double : 16B
-unsigned int : 4B
-unsigned long : 8B
-unsigned int 64 : 8B
-long long int : 8B
+int : 32 bits
+char : 8 bits
+long : 64 bits
+short : 16 bits
+float : 32 bits
+double : 64 bits
+long long : 64 bits
+long double : 128 bits
+unsigned int : 32 bits
+unsigned long : 64 bits
+unsigned int 64 : 64 bits
+long long int : 64 bits

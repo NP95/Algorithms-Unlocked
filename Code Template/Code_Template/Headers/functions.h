@@ -151,18 +151,18 @@ static std::vector<std::vector<uint64_t> > slow_matrix_modulo_multiplication(std
 
 static void sizes()
 {
-    std::cout << "int : " <<  sizeof(int) << "B" <<  std::endl;
-    std::cout << "char : " << sizeof(char) << "B" << std::endl;
-    std::cout << "long : " <<  sizeof(long) << "B" <<  std::endl;
-    std::cout << "short : " <<  sizeof(short) << "B" <<  std::endl;
-    std::cout << "float : " <<  sizeof(float) << "B" <<  std::endl;
-    std::cout << "double : " <<  sizeof(double) << "B" <<  std::endl;
-    std::cout << "long long : " <<  sizeof(long long) << "B" <<  std::endl;
-    std::cout << "long double : " <<  sizeof(long double) << "B" <<  std::endl;
-    std::cout << "unsigned int : " <<  sizeof(unsigned int) << "B" <<  std::endl;
-    std::cout << "unsigned long : " <<  sizeof(unsigned long) << "B" <<  std::endl;
-    std::cout << "unsigned int 64 : " <<  sizeof(uint64_t) << "B" <<  std::endl;
-    std::cout << "long long int : " <<  sizeof(long long int) << "B" <<  std::endl;
+    std::cout << "int : " <<  8 * sizeof(int) << " bits" <<  std::endl;
+    std::cout << "char : " << 8 * sizeof(char) << " bits" <<  std::endl;
+    std::cout << "long : " <<  8 * sizeof(long) << " bits" <<  std::endl;
+    std::cout << "short : " <<  8 * sizeof(short) << " bits" <<  std::endl;
+    std::cout << "float : " <<  8 * sizeof(float) << " bits" <<  std::endl;
+    std::cout << "double : " <<  8 * sizeof(double) << " bits" <<  std::endl;
+    std::cout << "long long : " <<  8 * sizeof(long long) << " bits" <<  std::endl;
+    std::cout << "long double : " << 8 * sizeof(long double) << " bits" <<  std::endl;
+    std::cout << "unsigned int : " <<  8 * sizeof(unsigned int) << " bits" <<  std::endl;
+    std::cout << "unsigned long : " <<  8 * sizeof(unsigned long) << " bits" <<  std::endl;
+    std::cout << "unsigned int 64 : " <<  8 * sizeof(uint64_t) << " bits" <<  std::endl;
+    std::cout << "long long int : " <<  8 * sizeof(long long int) << " bits" <<  std::endl;
 }
 
 
