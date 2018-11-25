@@ -322,7 +322,6 @@ x >>= 1; y <<= 1;
 }
 return sum;
 }
-
 /* Appended working code here using freopen() */
 
 void solution(int argc, char* argv[], char* envp[])
