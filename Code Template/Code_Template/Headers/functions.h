@@ -114,13 +114,13 @@ static std::vector<std::vector<uint64_t> > fast_matrix_modulo_multiplication(std
 {
     clock_t start_time;
     std::vector<std::vector<uint64_t> > C = matrix(A.size(), B[0].size(), 0);
-    int cache_line = 1 << 3;
-    for(auto i = 0; i < A.size(); i += cache_line){
-        for(auto j = 0; j < B[0].size(); j += cache_line){
-            for (auto k = 0; k < B[0].size(); k += cache_line){
-                for(auto il = i; il < (i + cache_line); il++){
-                    for(auto jl = j; jl < (j + cache_line); jl++){
-                        for (auto kl = k; kl < (k + cache_line); kl++){
+    int cache_line = 1 << 3; /* 64B */
+    for(unsigned i = 0; i < A.size(); i += cache_line){
+        for(unsigned j = 0; j < B[0].size(); j += cache_line){
+            for (unsigned k = 0; k < B[0].size(); k += cache_line){
+                for(unsigned il = i; il < (i + cache_line); il++){
+                    for(unsigned jl = j; jl < (j + cache_line); jl++){
+                        for (unsigned kl = k; kl < (k + cache_line); kl++){
                             C[il][jl] += ((A[il][kl])%lr_mod * (B[kl][jl])%lr_mod)%lr_mod;
                         }
                     }
@@ -137,9 +137,9 @@ static std::vector<std::vector<uint64_t> > slow_matrix_modulo_multiplication(std
 {
     clock_t start_time;
     std::vector<std::vector<uint64_t> > C = matrix(A.size(), B[0].size(), 0);
-    for(auto i = 0; i < A.size(); i++){
-        for(auto j = 0; j < B[0].size(); j++){
-            for (auto k = 0; k < B[0].size(); k++){
+    for(unsigned i = 0; i < A.size(); i++){
+        for(unsigned j = 0; j < B[0].size(); j++){
+            for (unsigned k = 0; k < B[0].size(); k++){
                 C[i][j] += ((A[i][k])%lr_mod * (B[k][j])%lr_mod)%lr_mod;
             }
         }
