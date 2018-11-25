@@ -181,4 +181,17 @@ uint64_t unsigned_ripple_carry_adder(uint64_t a, uint64_t b)
     return sum | carryin;
 }
 
+long double ripple_multiply(uint64_t x, uint64_t y)
+{
+    uint64_t sum = 0;
+    while(x)
+    {
+        if(x & 1){
+            sum = unsigned_ripple_carry_adder(sum, y);
+        }
+        x >>= 1; y <<= 1;
+    }
+    return sum;
+}
+
 #endif /* functions_h */
