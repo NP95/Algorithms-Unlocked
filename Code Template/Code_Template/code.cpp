@@ -2,7 +2,7 @@
 
 void solution(int argc, char* argv[], char* envp[])
 {
-    auto sum = ripple_multiply(11, 148);
+    auto sum = ripple_multiply(154487, 569985445);
     std::cout << sum << std::endl;
 }
 
