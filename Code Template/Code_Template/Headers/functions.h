@@ -163,8 +163,8 @@ static void sizes()
     std::cout << "long double : " << 8 * sizeof(long double) << " bits" <<  std::endl;
     std::cout << "unsigned int : " <<  8 * sizeof(unsigned int) << " bits" <<  std::endl;
     std::cout << "unsigned long : " <<  8 * sizeof(unsigned long) << " bits" <<  std::endl;
-    std::cout << "unsigned int 64 : " <<  8 * sizeof(uint64_t) << " bits" <<  std::endl;
     std::cout << "long long int : " <<  8 * sizeof(long long int) << " bits" <<  std::endl;
+    std::cout << "unsigned int 64 : " <<  8 * sizeof(uint64_t) << " bits" <<  std::endl;
 }
 
 uint64_t unsigned_ripple_carry_adder(uint64_t a, uint64_t b)
