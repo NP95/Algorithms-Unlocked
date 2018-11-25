@@ -203,7 +203,125 @@ auto rd_ints = std::bind(random_engine_block, seed);
 typedef tree <int, null_type, std::less<int>, rb_tree_tag, tree_order_statistics_node_update > red_black_tree;
 typedef trie <string, null_type, trie_string_access_traits<>, pat_trie_tag, trie_prefix_search_node_update> patricia_trie;
 
+const uint64_t lr_mod  = 1000000003; // (10e9 + 3)
 
+static uint64_t huge_mod_power(uint64_t base, uint64_t power)
+{
+clock_t start_time;
+static uint64_t expo = base;
+while(power)
+{
+expo %= lr_mod;
+if (!(power & 1)){
+expo *= (expo % lr_mod);
+power >>= 1;
+} else {
+expo *= (base % lr_mod);
+--power;
+}
+}
+clock_t end_time = clock() - start_time;
+std::cerr << ((float)end_time)/CLOCKS_PER_SEC << std::endl;
+return expo;
+}
+
+static std::vector<std::vector<uint64_t> > matrix (size_t row, size_t col, uint64_t value)
+{
+clock_t start_time;
+std::vector<std::vector<uint64_t> > mat;
+std::vector<uint64_t> dump(col, value);
+for(unsigned i = 0; i < row; i++){
+mat.emplace_back(dump);
+}
+clock_t end_time = clock() - start_time;
+std::cerr << "Matrix : " << ((float)end_time)/CLOCKS_PER_SEC << std::endl;
+return mat;
+}
+
+/* Blocked Cache Obvious matrix multiplication */
+static std::vector<std::vector<uint64_t> > fast_matrix_modulo_multiplication(std::vector<std::vector<uint64_t> > &A, std::vector<std::vector<uint64_t> > &B)
+{
+clock_t start_time;
+std::vector<std::vector<uint64_t> > C = matrix(A.size(), B[0].size(), 0);
+int cache_line = 1 << 3; /* 64B */
+#pragma omp simd
+for(unsigned i = 0; i < A.size(); i += cache_line){
+for(unsigned j = 0; j < B[0].size(); j += cache_line){
+for (unsigned k = 0; k < B[0].size(); k += cache_line){
+for(unsigned il = i; il < (i + cache_line); il++){
+for(unsigned jl = j; jl < (j + cache_line); jl++){
+for (unsigned kl = k; kl < (k + cache_line); kl++){
+C[il][jl] += ((A[il][kl])%lr_mod * (B[kl][jl])%lr_mod)%lr_mod;
+}
+}
+}
+}
+}
+}
+clock_t end_time = clock() - start_time;
+std::cerr << "Fast : " <<  ((float)end_time)/CLOCKS_PER_SEC << std::endl;
+return C;
+}
+
+static std::vector<std::vector<uint64_t> > slow_matrix_modulo_multiplication(std::vector<std::vector<uint64_t> > &A, std::vector<std::vector<uint64_t> > &B)
+{
+clock_t start_time;
+std::vector<std::vector<uint64_t> > C = matrix(A.size(), B[0].size(), 0);
+#pragma omp simd
+for(unsigned i = 0; i < A.size(); i++){
+for(unsigned j = 0; j < B[0].size(); j++){
+for (unsigned k = 0; k < B[0].size(); k++){
+C[i][j] += ((A[i][k])%lr_mod * (B[k][j])%lr_mod)%lr_mod;
+}
+}
+}
+clock_t end_time = clock() - start_time;
+std::cerr << "Slow : " << ((float)end_time)/CLOCKS_PER_SEC << std::endl;
+return C;
+}
+
+static void sizes()
+{
+std::cout << "int : " <<  8 * sizeof(int) << " bits" <<  std::endl;
+std::cout << "char : " << 8 * sizeof(char) << " bits" <<  std::endl;
+std::cout << "long : " <<  8 * sizeof(long) << " bits" <<  std::endl;
+std::cout << "short : " <<  8 * sizeof(short) << " bits" <<  std::endl;
+std::cout << "float : " <<  8 * sizeof(float) << " bits" <<  std::endl;
+std::cout << "double : " <<  8 * sizeof(double) << " bits" <<  std::endl;
+std::cout << "long long : " <<  8 * sizeof(long long) << " bits" <<  std::endl;
+std::cout << "long double : " << 8 * sizeof(long double) << " bits" <<  std::endl;
+std::cout << "unsigned int : " <<  8 * sizeof(unsigned int) << " bits" <<  std::endl;
+std::cout << "unsigned long : " <<  8 * sizeof(unsigned long) << " bits" <<  std::endl;
+std::cout << "long long int : " <<  8 * sizeof(long long int) << " bits" <<  std::endl;
+std::cout << "unsigned int 64 : " <<  8 * sizeof(uint64_t) << " bits" <<  std::endl;
+}
+
+static uint64_t unsigned_ripple_carry_adder(uint64_t a, uint64_t b)
+{
+uint64_t carryin = 0, sum = 0, mask = 1, temp_a = a, temp_b = b;
+while(temp_a || temp_b)
+{
+uint64_t a_last = a & mask;
+uint64_t b_last = b & mask;
+uint64_t carryout = (a_last & carryin) | (b_last & carryin) | (a_last & b_last);
+sum |= a_last ^ b_last ^ carryin;
+carryin = carryout << 1; mask <<= 1; temp_a >>= 1; temp_b >>= 1;
+}
+return sum | carryin;
+}
+
+static uint64_t ripple_multiply(uint64_t x, uint64_t y)
+{
+uint64_t sum = 0;
+while(x)
+{
+if(x & 1){
+sum = unsigned_ripple_carry_adder(sum, y);
+}
+x >>= 1; y <<= 1;
+}
+return sum;
+}
 
 /* Appended working code here using freopen() */
 
