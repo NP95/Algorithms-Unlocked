@@ -9,4 +9,4 @@ unsigned int : 4B
 unsigned long : 8B
 unsigned int 64 : 8B
 long double : 16B
-long double : 9.22337e+18
+long double : 0
