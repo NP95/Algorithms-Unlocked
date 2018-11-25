@@ -207,7 +207,7 @@ typedef trie <string, null_type, trie_string_access_traits<>, pat_trie_tag, trie
 
 void solution(int argc, char* argv[], char* envp[])
 {
-    std::cout << unsigned_ripple_carry_adder(154874, 5589474) << std::endl;
+    
 }
 
 int main(int argc, char* argv[], char* envp[])
