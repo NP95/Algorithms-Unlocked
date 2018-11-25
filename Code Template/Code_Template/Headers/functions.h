@@ -96,7 +96,7 @@ static uint64_t huge_mod_power(uint64_t base, uint64_t power)
     return expo;
 }
 
-static std::vector<std::vector<uint64_t> > matrix (int row, int col, uint64_t value)
+static std::vector<std::vector<uint64_t> > matrix (size_t row, size_t col, uint64_t value)
 {
     clock_t start_time;
     std::vector<std::vector<uint64_t> > mat;
@@ -113,7 +113,7 @@ static std::vector<std::vector<uint64_t> > matrix (int row, int col, uint64_t va
 static std::vector<std::vector<uint64_t> > fast_matrix_modulo_multiplication(std::vector<std::vector<uint64_t> > &A, std::vector<std::vector<uint64_t> > &B)
 {
     clock_t start_time;
-    int row = A.size(), column = B[0].size();
+    size_t row = A.size(), column = B[0].size();
     std::vector<std::vector<uint64_t> > C = matrix(row, column, 0);
     int cache_line = 1 << 3;
     for(auto i = 0; i < row; i += cache_line){
@@ -137,7 +137,7 @@ static std::vector<std::vector<uint64_t> > fast_matrix_modulo_multiplication(std
 static std::vector<std::vector<uint64_t> > slow_matrix_modulo_multiplication(std::vector<std::vector<uint64_t> > &A, std::vector<std::vector<uint64_t> > &B)
 {
     clock_t start_time;
-    int row = A.size(), column = B[0].size;
+    size_t row = A.size(), column = B[0].size;
     std::vector<std::vector<uint64_t> > C = matrix(row, column, 0);
     for(auto i = 0; i < row; i++){
         for(auto j = 0; j < column; j++){
