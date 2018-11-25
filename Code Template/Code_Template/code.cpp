@@ -2,7 +2,7 @@
 
 void solution(int argc, char* argv[], char* envp[])
 {
-    std::cout << ripple_multiply(1547, 414);
+    assert(ripple_multiply(14541, 895414) == (14541 * 895414));
 }
 
 int main(int argc, char* argv[], char* envp[])
