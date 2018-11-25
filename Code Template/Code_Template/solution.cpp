@@ -208,14 +208,16 @@ typedef trie <string, null_type, trie_string_access_traits<>, pat_trie_tag, trie
 void solution(int argc, char* argv[], char* envp[])
 {
     std::cout << "char : " << sizeof(char) << std::endl;
-    std::cout << "int :" <<  sizeof(int) << std::endl;
+    std::cout << "int : " <<  sizeof(int) << std::endl;
     std::cout << "double : " <<  sizeof(double) << std::endl;
     std::cout << "float : " <<  sizeof(float) << std::endl;
     std::cout << "long : " <<  sizeof(long) << std::endl;
-    std::cout << "long long :" <<  sizeof(long long) << std::endl;
+    std::cout << "long long : " <<  sizeof(long long) << std::endl;
     std::cout << "long long int : " <<  sizeof(long long int) << std::endl;
+    std::cout << "unsigned int : " <<  sizeof(unsigned int) << std::endl;
     std::cout << "unsigned long : " <<  sizeof(unsigned long) << std::endl;
     std::cout << "unsigned int 64 : " <<  sizeof(uint64_t) << std::endl;
+    std::cout << "long double : " <<  sizeof(long double) << std::endl;
 }
 
 int main(int argc, char* argv[], char* envp[])
