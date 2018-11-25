@@ -13,8 +13,8 @@ void solution(int argc, char* argv[], char* envp[])
     std::cout << "unsigned long : " <<  sizeof(unsigned long) << "B" <<  std::endl;
     std::cout << "unsigned int 64 : " <<  sizeof(uint64_t) << "B" <<  std::endl;
     std::cout << "long double : " <<  sizeof(long double) << "B" <<  std::endl;
-    long double huge_integer = 1 << 127;
-    std::cout << "long double : " <<  huge_integer << std::endl;
+    long double huge_integer = 1ULL << 127;
+    std::cout << "long double : " << huge_integer << std::endl;
 }
 
 int main(int argc, char* argv[], char* envp[])
