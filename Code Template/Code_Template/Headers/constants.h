@@ -13,7 +13,7 @@
 #endif
 
 #ifndef DUMP_HEADERS
-#define DUMP_HEADERS "./Headers/dump"
+#define DUMP_HEADERS "./Headers/dump.cpp"
 #endif
 
 #ifndef TRACE
