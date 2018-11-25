@@ -167,15 +167,18 @@ static void sizes()
     std::cout << "long long int : " <<  8 * sizeof(long long int) << " bits" <<  std::endl;
 }
 
-long double ripple_carry_adder(uint64_t a, uint64_t b)
+long double unsigned_ripple_carry_adder(uint64_t a, uint64_t b)
 {
     uint64_t carryin = 0, sum = 0, mask = 1, temp_a = a, temp_b = b;
     while(temp_a || temp_b)
     {
         uint64_t a_last = a & mask;
         uint64_t b_last = b & mask;
-        uint64_t carryout = (a_last & carryin) | (b_last & carryin) | 
+        uint64_t carryout = (a_last & carryin) | (b_last & carryin) | (a_last & b_last);
+        sum |= a_last ^ b_last ^ carryin;
+        carryin = carryout << 1; mask <<= 1; temp_a >>= 1; temp_b >>= 1;
     }
+    return sum | carryin;
 }
 
 #endif /* functions_h */
