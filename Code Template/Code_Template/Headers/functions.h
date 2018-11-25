@@ -115,6 +115,7 @@ static std::vector<std::vector<uint64_t> > fast_matrix_modulo_multiplication(std
     clock_t start_time;
     std::vector<std::vector<uint64_t> > C = matrix(A.size(), B[0].size(), 0);
     int cache_line = 1 << 3; /* 64B */
+#prgama omp simd
     for(unsigned i = 0; i < A.size(); i += cache_line){
         for(unsigned j = 0; j < B[0].size(); j += cache_line){
             for (unsigned k = 0; k < B[0].size(); k += cache_line){
@@ -137,6 +138,7 @@ static std::vector<std::vector<uint64_t> > slow_matrix_modulo_multiplication(std
 {
     clock_t start_time;
     std::vector<std::vector<uint64_t> > C = matrix(A.size(), B[0].size(), 0);
+#prgama omp simd
     for(unsigned i = 0; i < A.size(); i++){
         for(unsigned j = 0; j < B[0].size(); j++){
             for (unsigned k = 0; k < B[0].size(); k++){
