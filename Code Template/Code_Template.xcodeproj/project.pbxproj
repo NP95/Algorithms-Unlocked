@@ -6,25 +6,31 @@
 	objectVersion = 50;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		B1CD343B219EEE6C003C88AF /* code.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1CD343A219EEE6C003C88AF /* code.cpp */; settings = {COMPILER_FLAGS = "-std=c++17 -O3 -Wall -Wextra -pedantic -pthread -march=native -DONLINE_JUDGE=1 -fomit-frame-pointer -g -DHASH=1 -DOFFLINE_START_BUILD=1"; }; };
-/* End PBXBuildFile section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		B1FFC60E219A194100DC89A2 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
+			buildActionMask = 12;
+			dstPath = /Users/sumitlahiri/Documents/Coding/Code_Template;
 			dstSubfolderSpec = 0;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B1CD3438219EEE30003C88AF /* Code_Template */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Code_Template; sourceTree = "<group>"; };
+		B135AF1221A153F70057C3A3 /* Headers */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Headers; path = Code_Template/Headers; sourceTree = "<group>"; };
+		B135AF1321A154530057C3A3 /* solution.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = solution.cpp; path = Code_Template/solution.cpp; sourceTree = "<group>"; };
+		B15C422E21A4705600A16B43 /* Cases */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Cases; path = Code_Template/Cases; sourceTree = "<group>"; };
+		B15C422F21A4705600A16B43 /* Output */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Output; path = Code_Template/Output; sourceTree = "<group>"; };
+		B15C423021A4705600A16B43 /* Code */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Code; path = Code_Template/Code; sourceTree = "<group>"; };
+		B15C423121A4705600A16B43 /* Input */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Input; path = Code_Template/Input; sourceTree = "<group>"; };
 		B1CD343A219EEE6C003C88AF /* code.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = code.cpp; path = Code_Template/code.cpp; sourceTree = "<group>"; };
+		B1CD3440219EF010003C88AF /* log.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = log.txt; path = Code_Template/Logs/log.txt; sourceTree = "<group>"; };
+		B1CD3443219EF024003C88AF /* SCRATCH.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = SCRATCH.md; path = Code_Template/SCRATCH.md; sourceTree = "<group>"; };
+		B1CD3444219EF032003C88AF /* testcase.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = testcase.txt; path = Code_Template/Cases/testcase.txt; sourceTree = "<group>"; };
+		B1CD3445219EF03F003C88AF /* output.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = output.txt; path = Code_Template/Output/output.txt; sourceTree = "<group>"; };
+		B1D70F7D21A6D6FF00D5E1D4 /* tracefile.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = tracefile.txt; path = Code_Template/Logs/tracefile.txt; sourceTree = "<group>"; };
 		B1FFC610219A194100DC89A2 /* Code_Template */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Code_Template; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -42,8 +48,18 @@
 		B1FFC607219A194100DC89A2 = {
 			isa = PBXGroup;
 			children = (
+				B15C422E21A4705600A16B43 /* Cases */,
+				B15C423021A4705600A16B43 /* Code */,
+				B15C423121A4705600A16B43 /* Input */,
+				B15C422F21A4705600A16B43 /* Output */,
+				B135AF1221A153F70057C3A3 /* Headers */,
+				B1D70F7D21A6D6FF00D5E1D4 /* tracefile.txt */,
+				B1CD3440219EF010003C88AF /* log.txt */,
+				B1CD3443219EF024003C88AF /* SCRATCH.md */,
+				B1CD3445219EF03F003C88AF /* output.txt */,
+				B1CD3444219EF032003C88AF /* testcase.txt */,
+				B135AF1321A154530057C3A3 /* solution.cpp */,
 				B1CD343A219EEE6C003C88AF /* code.cpp */,
-				B1CD3438219EEE30003C88AF /* Code_Template */,
 				B1FFC611219A194100DC89A2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,6 +79,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1FFC617219A194100DC89A2 /* Build configuration list for PBXNativeTarget "Code_Template" */;
 			buildPhases = (
+				B177B9B3219F1CBA0002BD50 /* Run Script */,
 				B1FFC60C219A194100DC89A2 /* Sources */,
 				B1FFC60D219A194100DC89A2 /* Frameworks */,
 				B1FFC60E219A194100DC89A2 /* CopyFiles */,
@@ -107,12 +124,31 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B177B9B3219F1CBA0002BD50 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellScript = "cd ../../../../../../../../../../../../\ncd /Users/sumitlahiri/Documents/Coding/Code_Template/\necho 'sumit#8636' | sudo -S git add .\noutput=$(date | openssl sha256 | openssl sha256 )\ncommit=$(date | openssl md5 )\nsudo git commit -a -m \"CodeBase MacX $commit \" -m \"$output\"\necho \"$commit : $output\"\nsudo /usr/local/bin/g++-8  -std=c++17 -m64 -O3 -Wall -Wextra -pedantic -pthread -march=x86-64 -DONLINE_JUDGE=1 -fomit-frame-pointer -g -DHASH=1 -DOFFLINE_START_BUILD=1 -I/usr/local/include -I/usr/local/opt/openssl/include code.cpp -L/usr/local/opt/openssl/lib -L/usr/local/bin -L/usr/local/lib -L/usr/bin -L/usr/lib -lcurl -lcurlpp -lpthread -lssl -lcrypto -o code.out\nsudo ./code.out\nsudo rm -rf code.out.dSYM\nsudo rm -rf code.out\ncd /Users/sumitlahiri/\nsudo /usr/bin/rsync -r ./Documents/Coding/Code_Template/./ ./Documents/ProjectStudio/Algorithms-Unlocked/Code\\ Template/Code_Template\nsudo ./git-merge-pull-diff-rebase.sh\necho \"$commit : $output\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B1FFC60C219A194100DC89A2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1CD343B219EEE6C003C88AF /* code.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,7 +161,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -153,7 +189,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -164,6 +200,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_VERSION = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -184,7 +221,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -217,6 +254,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_VERSION = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -235,11 +273,16 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_STATIC_ANALYZER_MODE_ON_ANALYZE_ACTION = shallow;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 493N49BXGJ;
-				GCC_VERSION = "";
-				"HEADER_SEARCH_PATHS[arch=*]" = /usr/local/include;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_TESTABILITY = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				GCC_VERSION = "/usr/local/bin/g++8";
+				"HEADER_SEARCH_PATHS[arch=*]" = "/usr/local/include/**";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				OTHER_LDFLAGS = (
 					"-I/usr/local/include",
@@ -249,8 +292,6 @@
 					"-L/usr/local/lib",
 					"-L/usr/bin",
 					"-L/usr/lib",
-					"-lcurl",
-					"-lcurlpp",
 					"-lpthread",
 					"-lssl",
 					"-lcrypto",
@@ -265,11 +306,13 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_STATIC_ANALYZER_MODE_ON_ANALYZE_ACTION = shallow;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 493N49BXGJ;
-				GCC_VERSION = "";
-				"HEADER_SEARCH_PATHS[arch=*]" = /usr/local/include;
+				GCC_VERSION = "/usr/local/bin/g++8";
+				"HEADER_SEARCH_PATHS[arch=*]" = "/usr/local/include/**";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -281,8 +324,6 @@
 					"-L/usr/local/lib",
 					"-L/usr/bin",
 					"-L/usr/lib",
-					"-lcurl",
-					"-lcurlpp",
 					"-lpthread",
 					"-lssl",
 					"-lcrypto",

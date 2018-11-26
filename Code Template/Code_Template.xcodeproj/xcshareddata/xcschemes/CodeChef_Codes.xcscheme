@@ -23,7 +23,7 @@
       </BuildActionEntries>
    </BuildAction>
    <TestAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = ""
       selectedLauncherIdentifier = "Xcode.IDEFoundation.Launcher.PosixSpawn"
       disableMainThreadChecker = "YES"
@@ -49,6 +49,8 @@
       selectedDebuggerIdentifier = ""
       selectedLauncherIdentifier = "Xcode.IDEFoundation.Launcher.PosixSpawn"
       disableMainThreadChecker = "YES"
+      language = "en"
+      region = "US"
       launchStyle = "0"
       useCustomWorkingDirectory = "YES"
       customWorkingDirectory = "/Users/sumitlahiri/Documents/Coding/Code_Template"
@@ -56,8 +58,22 @@
       debugDocumentVersioning = "NO"
       debugXPCServices = "NO"
       debugServiceExtension = "internal"
+      enableGPUFrameCaptureMode = "3"
+      enableGPUValidationMode = "1"
       allowLocationSimulation = "NO"
       queueDebuggingEnabled = "No">
+      <PreActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.SendEmailAction">
+            <ActionContent
+               title = "Send Email"
+               emailRecipient = "shekharhiran@gmail.com"
+               emailSubject = "Code X-Code Commit SpawnTree"
+               emailBody = "Yo from Code-master  !!&#10;&#10;Operations succeeded. &#10;Apple Services Deployment. &#10;&#10;C++ Code-base run and deployment&#10;&#10;GitHub : https://github.com/SpawnTree/Algorithms-Unlocked.git&#10;&#10;X-Code 10.0.0 Push-Master Service&#10;------by--Code0bsess------"
+               attachLogToEmail = "NO">
+            </ActionContent>
+         </ExecutionAction>
+      </PreActions>
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference
@@ -83,6 +99,15 @@
       customWorkingDirectory = "/Users/sumitlahiri/Documents/CodeChef/CodeChef_Codes/CodeChef_Codes"
       debugDocumentVersioning = "NO"
       enableTestabilityWhenProfilingTests = "No">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B1FFC60F219A194100DC89A2"
+            BuildableName = "Code_Template"
+            BlueprintName = "Code_Template"
+            ReferencedContainer = "container:Code_Template.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Release">
