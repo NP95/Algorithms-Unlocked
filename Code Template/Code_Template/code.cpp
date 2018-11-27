@@ -55,7 +55,7 @@ int balanced_set<T>::height (nodeptr<T> n)
         std::cerr << "Null value reference. " << std::endl;
         return -1;
     }
-    return 1 + std::max(height(n->left), height(n->left));
+    return 1 + std::max(height(n->left), height(n->right));
 }
 
 

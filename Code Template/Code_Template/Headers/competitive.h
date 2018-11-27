@@ -32,7 +32,6 @@
 #define pf push_front
 #define popf pop_front
 #define popb pop_back
-#define max(a, b) (a < b ? b : a)
 #define full_all(x) (x).begin(), (x).end()
 #define rall(x) (x).rbegin(), (x).rend()
 #define rev(A) std::reverse(A.begin(), A.end())
