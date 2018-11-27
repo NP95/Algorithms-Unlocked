@@ -10,7 +10,7 @@ using nodeptr = std::shared_ptr<AVLNode<T> >;
 template <typename T>
 struct AVLNode
 {
-    T data
+    T data;
     int balance;
     nodeptr<T> left, right, parent;
     AVLNode(T value, nodeptr<T> p) : data(value), parent(p),
