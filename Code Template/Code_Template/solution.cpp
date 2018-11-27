@@ -350,17 +350,6 @@ struct AVLNode
 template <typename T>
 class balanced_set
 {
-public:
-    balanced_set (void) noexcept {
-        std::cerr << "AVL Tree __static_initialization__." << std::endl;
-    }
-    ~balanced_set (void) noexcept {
-        std::cerr << "AVL Tree __static_destruction__." << std::endl;
-    }
-    bool insert_key (const T value);
-    bool delete_key (const T value);
-    void print_tree_balance ();
-private:
     nodeptr<T> root;
     nodeptr<T> rotateLeft (nodeptr<T> a);
     nodeptr<T> rotateRight (nodeptr<T> a);
@@ -371,8 +360,51 @@ private:
     void setbalance (nodeptr<T> a);
     void printbalance (nodeptr<T> a);
     void clearnode (nodeptr<T> a);
+public:
+    balanced_set (void) noexcept {
+        std::cerr << "AVL Tree __static_initialization__." << std::endl;
+        root = nullptr;
+    }
+    ~balanced_set (void) noexcept {
+        std::cerr << "AVL Tree __static_destruction__." << std::endl;
+    }
+    bool insert_key (const T value);
+    bool delete_key (const T value);
+    void print_tree_balance ();
 };
 
+template <typename T>
+int balanced_set<T>::height (nodeptr<T> n)
+{
+    if(n == nullptr){
+        std::cerr << "Null value reference. " << std::endl;
+        return -1;
+    }
+    return (1 + std::max(height(n->left), height(n->right)));
+}
+
+template <typename T>
+void balanced_set<T>::setbalance (nodeptr<T> n)
+{
+    n->balance = height(n->right) - height(n->left);
+}
+
+template <typename T>
+void balanced_set<T>::printbalance (nodeptr<T> n)
+{/* Inorder print balance */
+    if(n != nullptr){
+        printbalance (n->left);
+        std::cout << n->balance << ", ";
+        printbalance (n->right);
+    }
+}
+
+template <typename T>
+void balanced_set<T>::print_tree_balance ()
+{
+    printbalance(root);
+    std::cout << std::endl;
+}
 
 
 
