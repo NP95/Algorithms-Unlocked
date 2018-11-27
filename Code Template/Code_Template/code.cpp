@@ -1,5 +1,54 @@
 #include "Headers/headers.h"
 
+template <typename T>
+struct AVLNode;
+
+template <typename T>
+nodeptr = std::shared_ptr<AVLNode<T> >;
+
+/* AVL Tree Node */
+template <typename T>
+struct AVLNode
+{
+    T data
+    int balance;
+    nodeptr<T> left, right, parent;
+    AVLNode(T value, nodeptr<T> p) : data(value), parent(p),
+        left(nullptr), right(nullptr), balance(0){
+            std::cerr << "AVL Tree __static_node_initialization__." << std::endl;
+    }
+    ~AVLNode(){
+        std::cerr << "AVL Tree __static__initialization__and__destruction__.";
+    }
+};
+
+template <typename T>
+class balanced_set
+{
+public:
+    balanced_set (void) noexcept {
+        std::cerr << "AVL Tree __static_initialized__." << std::endl;
+    }
+    ~balanced_set (void) noexcept {
+        std::cerr << "AVL Tree __static_destruction__." << std::endl;
+    }
+    bool insert_key (const T value);
+    bool delete_key (const T value);
+    void print_tree_balance ();
+private:
+    nodeptr<T> root;
+    nodeptr<T> rotateLeft (nodeptr<T> a);
+    nodeptr<T> rotateRight (nodeptr<T> a);
+    nodeptr<T> rotateLeftthenRight (nodeptr<T> a);
+    nodeptr<T> rotateRightthenLeft (nodeptr<T> a);
+    
+
+}
+
+
+
+
+
 void solution(int argc, char* argv[], char* envp[])
 {
     
