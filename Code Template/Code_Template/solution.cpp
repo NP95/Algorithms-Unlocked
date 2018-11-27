@@ -352,7 +352,7 @@ class balanced_set
 {
 public:
     balanced_set (void) noexcept {
-        std::cerr << "AVL Tree __static_initialized__." << std::endl;
+        std::cerr << "AVL Tree __static_initialization__." << std::endl;
     }
     ~balanced_set (void) noexcept {
         std::cerr << "AVL Tree __static_destruction__." << std::endl;
