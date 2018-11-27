@@ -366,10 +366,12 @@ private:
     nodeptr<T> rotateRight (nodeptr<T> a);
     nodeptr<T> rotateLeftthenRight (nodeptr<T> a);
     nodeptr<T> rotateRightthenLeft (nodeptr<T> a);
-    
-
+    void rebalance (nodeptr<T> a);
+    int height (nodeptr<T> a);
+    void setbalance (nodeptr<T> a);
+    void printbalance (nodeptr<T> a);
+    void clearnode (nodeptr<T> a);
 };
-
 
 
 

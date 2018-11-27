@@ -45,7 +45,7 @@ private:
     int height (nodeptr<T> a);
     void setbalance (nodeptr<T> a);
     void printbalance (nodeptr<T> a);
-    void clearnode
+    void clearnode (nodeptr<T> a);
 };
 
 
