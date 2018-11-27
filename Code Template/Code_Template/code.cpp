@@ -48,6 +48,22 @@ private:
     void clearnode (nodeptr<T> a);
 };
 
+template <typename T>
+int balanced_set<T>::height (nodeptr<T> n)
+{
+    if(n == nullptr){
+        std::cerr << "Null value reference. " << std::endl;
+        return -1;
+    }
+    return 1 + std::max(height(n->left), height(n->left));
+}
+
+
+template <typename T>
+void balanced_set<T>::rebalace (nodeptr<T> n)
+{
+    
+}
 
 
 
