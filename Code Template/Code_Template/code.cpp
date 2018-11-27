@@ -4,7 +4,7 @@ template <typename T>
 struct AVLNode;
 
 template <typename T>
-nodeptr = std::shared_ptr<AVLNode<T> >;
+using nodeptr = std::shared_ptr<AVLNode<T> >;
 
 /* AVL Tree Node */
 template <typename T>
@@ -43,7 +43,7 @@ private:
     nodeptr<T> rotateRightthenLeft (nodeptr<T> a);
     
 
-}
+};
 
 
 
