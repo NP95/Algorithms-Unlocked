@@ -194,4 +194,24 @@ static uint64_t ripple_multiply(uint64_t x = 2, uint64_t y = 33)
     return sum;
 }
 
+unsigned int BinaryToGray(unsigned int num)
+{
+    return num ^ (num >> 1);
+}
+
+/*
+ * Each Gray code bit is exclusive-ored with all more significant bits.
+ */
+
+unsigned int GrayToBinary(unsigned int num)
+{
+    unsigned int mask = num >> 1;
+    while (mask != 0)
+    {
+        num = num ^ mask;
+        mask = mask >> 1;
+    }
+    return num;
+}
+
 #endif /* functions_h */
